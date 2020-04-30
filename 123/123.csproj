@@ -1,0 +1,499 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FA7BAE3D-10A2-4093-B63B-D21323E230D0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>_123</RootNamespace>
+    <AssemblyName>123</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CirclePoints.cs" />
+    <Compile Include="Dwg\Dwg_3DSOLID_silhouette.cs" />
+    <Compile Include="Dwg\Dwg_3DSOLID_wire.cs" />
+    <Compile Include="Dwg\Dwg_ACTIONBODY.cs" />
+    <Compile Include="Dwg\Dwg_AuxHeader.cs" />
+    <Compile Include="Dwg\Dwg_Bitcode_2BD.cs" />
+    <Compile Include="Dwg\Dwg_Bitcode_2RD.cs" />
+    <Compile Include="Dwg\Dwg_Bitcode_3BD.cs" />
+    <Compile Include="Dwg\Dwg_Bitcode_3RD.cs" />
+    <Compile Include="Dwg\Dwg_Bitcode_TimeBLL.cs" />
+    <Compile Include="Dwg\Dwg_BorderStyle.cs" />
+    <Compile Include="Dwg\Dwg_CellContentGeometry.cs" />
+    <Compile Include="Dwg\Dwg_CellStyle.cs" />
+    <Compile Include="Dwg\Dwg_CELLSTYLEMAP_Cell.cs" />
+    <Compile Include="Dwg\Dwg_Chain.cs" />
+    <Compile Include="Dwg\Dwg_Class.cs" />
+    <Compile Include="Dwg\Dwg_Color.cs" />
+    <Compile Include="Dwg\Dwg_ContentFormat.cs" />
+    <Compile Include="Dwg\Dwg_Data.cs" />
+    <Compile Include="Dwg\Dwg_DIMASSOC_Ref.cs" />
+    <Compile Include="Dwg\Dwg_DIMENSION_common.cs" />
+    <Compile Include="Dwg\Dwg_DYNAPI_field.cs" />
+    <Compile Include="Dwg\Dwg_Eed.cs" />
+    <Compile Include="Dwg\Dwg_Eed_Data.cs" />
+    <Compile Include="Dwg\Dwg_Entity_ARC.cs" />
+    <Compile Include="Dwg\Dwg_Entity_ARC_DIMENSION.cs" />
+    <Compile Include="Dwg\Dwg_Entity_ATTDEF.cs" />
+    <Compile Include="Dwg\Dwg_Entity_ATTRIB.cs" />
+    <Compile Include="Dwg\Dwg_Entity_BLOCK.cs" />
+    <Compile Include="Dwg\Dwg_Entity_CAMERA.cs" />
+    <Compile Include="Dwg\Dwg_Entity_CIRCLE.cs" />
+    <Compile Include="Dwg\Dwg_Entity_DIMENSION_ALIGNED.cs" />
+    <Compile Include="Dwg\Dwg_Entity_DIMENSION_ANG2LN.cs" />
+    <Compile Include="Dwg\Dwg_Entity_DIMENSION_ANG3PT.cs" />
+    <Compile Include="Dwg\Dwg_Entity_DIMENSION_DIAMETER.cs" />
+    <Compile Include="Dwg\Dwg_Entity_DIMENSION_LINEAR.cs" />
+    <Compile Include="Dwg\Dwg_Entity_DIMENSION_ORDINATE.cs" />
+    <Compile Include="Dwg\Dwg_Entity_DIMENSION_RADIUS.cs" />
+    <Compile Include="Dwg\Dwg_Entity_ELLIPSE.cs" />
+    <Compile Include="Dwg\Dwg_Entity_ENDBLK.cs" />
+    <Compile Include="Dwg\Dwg_Entity_EXTRUDEDSURFACE.cs" />
+    <Compile Include="Dwg\Dwg_Entity_GEOPOSITIONMARKER.cs" />
+    <Compile Include="Dwg\Dwg_Entity_HATCH.cs" />
+    <Compile Include="Dwg\Dwg_Entity_HELIX.cs" />
+    <Compile Include="Dwg\Dwg_Entity_IMAGE.cs" />
+    <Compile Include="Dwg\Dwg_Entity_INSERT.cs" />
+    <Compile Include="Dwg\Dwg_Entity_LEADER.cs" />
+    <Compile Include="Dwg\Dwg_Entity_LIGHT.cs" />
+    <Compile Include="Dwg\Dwg_Entity_LINE.cs" />
+    <Compile Include="Dwg\Dwg_Entity_LOFTEDSURFACE.cs" />
+    <Compile Include="Dwg\Dwg_Entity_LWPOLYLINE.cs" />
+    <Compile Include="Dwg\Dwg_Entity_MESH.cs" />
+    <Compile Include="Dwg\Dwg_Entity_MINSERT.cs" />
+    <Compile Include="Dwg\Dwg_Entity_MLINE.cs" />
+    <Compile Include="Dwg\Dwg_Entity_MTEXT.cs" />
+    <Compile Include="Dwg\Dwg_Entity_MULTILEADER.cs" />
+    <Compile Include="Dwg\Dwg_Entity_OLE2FRAME.cs" />
+    <Compile Include="Dwg\Dwg_Entity_OLEFRAME.cs" />
+    <Compile Include="Dwg\Dwg_Entity_PLANESURFACE.cs" />
+    <Compile Include="Dwg\Dwg_Entity_POINT.cs" />
+    <Compile Include="Dwg\Dwg_Entity_POLYLINE_2D.cs" />
+    <Compile Include="Dwg\Dwg_Entity_POLYLINE_3D.cs" />
+    <Compile Include="Dwg\Dwg_Entity_POLYLINE_MESH.cs" />
+    <Compile Include="Dwg\Dwg_Entity_POLYLINE_PFACE.cs" />
+    <Compile Include="Dwg\Dwg_Entity_PROXY_ENTITY.cs" />
+    <Compile Include="Dwg\Dwg_Entity_PROXY_LWPOLYLINE.cs" />
+    <Compile Include="Dwg\Dwg_Entity_RAY.cs" />
+    <Compile Include="Dwg\Dwg_Entity_REVOLVEDSURFACE.cs" />
+    <Compile Include="Dwg\Dwg_Entity_SEQEND.cs" />
+    <Compile Include="Dwg\Dwg_Entity_SHAPE.cs" />
+    <Compile Include="Dwg\Dwg_Entity_SOLID.cs" />
+    <Compile Include="Dwg\Dwg_Entity_SPLINE.cs" />
+    <Compile Include="Dwg\Dwg_Entity_SWEPTSURFACE.cs" />
+    <Compile Include="Dwg\Dwg_Entity_TABLE.cs" />
+    <Compile Include="Dwg\Dwg_Entity_TEXT.cs" />
+    <Compile Include="Dwg\Dwg_Entity_TOLERANCE.cs" />
+    <Compile Include="Dwg\Dwg_Entity_TRACE.cs" />
+    <Compile Include="Dwg\Dwg_Entity_UNDERLAY.cs" />
+    <Compile Include="Dwg\Dwg_Entity_UNKNOWN_ENT.cs" />
+    <Compile Include="Dwg\Dwg_Entity_VERTEX_2D.cs" />
+    <Compile Include="Dwg\Dwg_Entity_VERTEX_3D.cs" />
+    <Compile Include="Dwg\Dwg_Entity_VERTEX_PFACE_FACE.cs" />
+    <Compile Include="Dwg\Dwg_Entity_VIEWPORT.cs" />
+    <Compile Include="Dwg\Dwg_Entity_WIPEOUT.cs" />
+    <Compile Include="Dwg\Dwg_Entity__3DFACE.cs" />
+    <Compile Include="Dwg\Dwg_Entity__3DSOLID.cs" />
+    <Compile Include="Dwg\Dwg_Error.cs" />
+    <Compile Include="Dwg\Dwg_EVAL_Node.cs" />
+    <Compile Include="Dwg\Dwg_FIELD_ChildValue.cs" />
+    <Compile Include="Dwg\Dwg_FormattedTableData.cs" />
+    <Compile Include="Dwg\Dwg_FormattedTableMerged.cs" />
+    <Compile Include="Dwg\Dwg_GEODATA_meshface.cs" />
+    <Compile Include="Dwg\Dwg_GEODATA_meshpt.cs" />
+    <Compile Include="Dwg\Dwg_Handle.cs" />
+    <Compile Include="Dwg\Dwg_HATCH_Color.cs" />
+    <Compile Include="Dwg\Dwg_HATCH_ControlPoint.cs" />
+    <Compile Include="Dwg\Dwg_HATCH_DefLine.cs" />
+    <Compile Include="Dwg\Dwg_HATCH_Path.cs" />
+    <Compile Include="Dwg\Dwg_HATCH_PathSeg.cs" />
+    <Compile Include="Dwg\Dwg_HATCH_PolylinePath.cs" />
+    <Compile Include="Dwg\Dwg_Header.cs" />
+    <Compile Include="Dwg\Dwg_Header_Variables.cs" />
+    <Compile Include="Dwg\Dwg_LAYER_entry.cs" />
+    <Compile Include="Dwg\Dwg_LEADER_ArrowHead.cs" />
+    <Compile Include="Dwg\Dwg_LEADER_BlockLabel.cs" />
+    <Compile Include="Dwg\Dwg_LEADER_Break.cs" />
+    <Compile Include="Dwg\Dwg_LEADER_Line.cs" />
+    <Compile Include="Dwg\Dwg_LEADER_Node.cs" />
+    <Compile Include="Dwg\Dwg_LinkedData.cs" />
+    <Compile Include="Dwg\Dwg_LinkedTableData.cs" />
+    <Compile Include="Dwg\Dwg_LTYPE_dash.cs" />
+    <Compile Include="Dwg\Dwg_LWPOLYLINE_width.cs" />
+    <Compile Include="Dwg\Dwg_MESH_edge.cs" />
+    <Compile Include="Dwg\Dwg_MLEADER_AnnotContext.cs" />
+    <Compile Include="Dwg\Dwg_MLEADER_Content.cs" />
+    <Compile Include="Dwg\Dwg_MLINESTYLE_line.cs" />
+    <Compile Include="Dwg\Dwg_MLINE_line.cs" />
+    <Compile Include="Dwg\Dwg_MLINE_vertex.cs" />
+    <Compile Include="Dwg\Dwg_Object.cs" />
+    <Compile Include="Dwg\Dwg_Object_ACSH_SWEEP_CLASS.cs" />
+    <Compile Include="Dwg\Dwg_Object_ANNOTSCALEOBJECTCONTEXTDATA.cs" />
+    <Compile Include="Dwg\Dwg_Object_APPID.cs" />
+    <Compile Include="Dwg\Dwg_Object_APPID_CONTROL.cs" />
+    <Compile Include="Dwg\Dwg_Object_ASSOC2DCONSTRAINTGROUP.cs" />
+    <Compile Include="Dwg\Dwg_Object_ASSOCACTION.cs" />
+    <Compile Include="Dwg\Dwg_Object_ASSOCALIGNEDDIMACTIONBODY.cs" />
+    <Compile Include="Dwg\Dwg_Object_ASSOCDEPENDENCY.cs" />
+    <Compile Include="Dwg\Dwg_Object_ASSOCNETWORK.cs" />
+    <Compile Include="Dwg\Dwg_Object_ASSOCOSNAPPOINTREFACTIONPARAM.cs" />
+    <Compile Include="Dwg\Dwg_Object_ASSOCPERSSUBENTMANAGER.cs" />
+    <Compile Include="Dwg\Dwg_Object_ASSOCPLANESURFACEACTIONBODY.cs" />
+    <Compile Include="Dwg\Dwg_Object_BLOCK_CONTROL.cs" />
+    <Compile Include="Dwg\Dwg_Object_BLOCK_HEADER.cs" />
+    <Compile Include="Dwg\Dwg_Object_CELLSTYLEMAP.cs" />
+    <Compile Include="Dwg\Dwg_Object_DATATABLE.cs" />
+    <Compile Include="Dwg\Dwg_Object_DBCOLOR.cs" />
+    <Compile Include="Dwg\Dwg_Object_DICTIONARY.cs" />
+    <Compile Include="Dwg\Dwg_Object_DICTIONARYVAR.cs" />
+    <Compile Include="Dwg\Dwg_Object_DICTIONARYWDFLT.cs" />
+    <Compile Include="Dwg\Dwg_Object_DIMASSOC.cs" />
+    <Compile Include="Dwg\Dwg_Object_DIMSTYLE.cs" />
+    <Compile Include="Dwg\Dwg_Object_DIMSTYLE_CONTROL.cs" />
+    <Compile Include="Dwg\Dwg_Object_DUMMY.cs" />
+    <Compile Include="Dwg\Dwg_Object_DYNAMICBLOCKPURGEPREVENTER.cs" />
+    <Compile Include="Dwg\Dwg_Object_Entity.cs" />
+    <Compile Include="Dwg\Dwg_Object_EVALUATION_GRAPH.cs" />
+    <Compile Include="Dwg\Dwg_Object_FIELD.cs" />
+    <Compile Include="Dwg\Dwg_Object_FIELDLIST.cs" />
+    <Compile Include="Dwg\Dwg_Object_GEODATA.cs" />
+    <Compile Include="Dwg\Dwg_Object_GEOMAPIMAGE.cs" />
+    <Compile Include="Dwg\Dwg_Object_GROUP.cs" />
+    <Compile Include="Dwg\Dwg_Object_IDBUFFER.cs" />
+    <Compile Include="Dwg\Dwg_Object_IMAGEDEF.cs" />
+    <Compile Include="Dwg\Dwg_Object_IMAGEDEF_REACTOR.cs" />
+    <Compile Include="Dwg\Dwg_Object_LAYER.cs" />
+    <Compile Include="Dwg\Dwg_Object_LAYER_CONTROL.cs" />
+    <Compile Include="Dwg\Dwg_Object_LAYER_INDEX.cs" />
+    <Compile Include="Dwg\Dwg_Object_LAYOUT.cs" />
+    <Compile Include="Dwg\Dwg_Object_LIGHTLIST.cs" />
+    <Compile Include="Dwg\Dwg_Object_LONG_TRANSACTION.cs" />
+    <Compile Include="Dwg\Dwg_Object_LTYPE.cs" />
+    <Compile Include="Dwg\Dwg_Object_LTYPE_CONTROL.cs" />
+    <Compile Include="Dwg\Dwg_Object_MATERIAL.cs" />
+    <Compile Include="Dwg\Dwg_Object_MLEADERSTYLE.cs" />
+    <Compile Include="Dwg\Dwg_Object_MLINESTYLE.cs" />
+    <Compile Include="Dwg\Dwg_Object_NAVISWORKSMODELDEF.cs" />
+    <Compile Include="Dwg\Dwg_Object_Object.cs" />
+    <Compile Include="Dwg\Dwg_Object_OBJECTCONTEXTDATA.cs" />
+    <Compile Include="Dwg\Dwg_Object_OBJECT_PTR.cs" />
+    <Compile Include="Dwg\Dwg_Object_PERSSUBENTMANAGER.cs" />
+    <Compile Include="Dwg\Dwg_Object_PLACEHOLDER.cs" />
+    <Compile Include="Dwg\Dwg_Object_PLOTSETTINGS.cs" />
+    <Compile Include="Dwg\Dwg_Object_PROXY_OBJECT.cs" />
+    <Compile Include="Dwg\Dwg_Object_RASTERVARIABLES.cs" />
+    <Compile Include="Dwg\Dwg_Object_Ref.cs" />
+    <Compile Include="Dwg\Dwg_Object_RENDERENVIRONMENT.cs" />
+    <Compile Include="Dwg\Dwg_Object_RENDERGLOBAL.cs" />
+    <Compile Include="Dwg\Dwg_Object_SCALE.cs" />
+    <Compile Include="Dwg\Dwg_Object_SORTENTSTABLE.cs" />
+    <Compile Include="Dwg\Dwg_Object_SPATIAL_FILTER.cs" />
+    <Compile Include="Dwg\Dwg_Object_SPATIAL_INDEX.cs" />
+    <Compile Include="Dwg\Dwg_Object_STYLE.cs" />
+    <Compile Include="Dwg\Dwg_Object_STYLE_CONTROL.cs" />
+    <Compile Include="Dwg\Dwg_Object_SUN.cs" />
+    <Compile Include="Dwg\Dwg_Object_SUNSTUDY.cs" />
+    <Compile Include="Dwg\Dwg_Object_Supertype.cs" />
+    <Compile Include="Dwg\Dwg_Object_TABLECONTENT.cs" />
+    <Compile Include="Dwg\Dwg_Object_TABLEGEOMETRY.cs" />
+    <Compile Include="Dwg\Dwg_Object_TABLESTYLE.cs" />
+    <Compile Include="Dwg\Dwg_Object_Type.cs" />
+    <Compile Include="Dwg\Dwg_Object_UCS.cs" />
+    <Compile Include="Dwg\Dwg_Object_UCS_CONTROL.cs" />
+    <Compile Include="Dwg\Dwg_Object_UNDERLAYDEFINITION.cs" />
+    <Compile Include="Dwg\Dwg_Object_UNKNOWN_OBJ.cs" />
+    <Compile Include="Dwg\Dwg_Object_VBA_PROJECT.cs" />
+    <Compile Include="Dwg\Dwg_Object_VIEW.cs" />
+    <Compile Include="Dwg\Dwg_Object_VIEW_CONTROL.cs" />
+    <Compile Include="Dwg\Dwg_Object_VISUALSTYLE.cs" />
+    <Compile Include="Dwg\Dwg_Object_VPORT.cs" />
+    <Compile Include="Dwg\Dwg_Object_VPORT_CONTROL.cs" />
+    <Compile Include="Dwg\Dwg_Object_VPORT_ENTITY_CONTROL.cs" />
+    <Compile Include="Dwg\Dwg_Object_VPORT_ENTITY_HEADER.cs" />
+    <Compile Include="Dwg\Dwg_Object_WIPEOUTVARIABLES.cs" />
+    <Compile Include="Dwg\Dwg_Object_XRECORD.cs" />
+    <Compile Include="Dwg\Dwg_ODALeader.cs" />
+    <Compile Include="Dwg\Dwg_ODALeader_Line.cs" />
+    <Compile Include="Dwg\Dwg_R2004_Header.cs" />
+    <Compile Include="Dwg\Dwg_Resbuf.cs" />
+    <Compile Include="Dwg\Dwg_Section.cs" />
+    <Compile Include="Dwg\Dwg_Section_Info.cs" />
+    <Compile Include="Dwg\Dwg_Section_InfoHdr.cs" />
+    <Compile Include="Dwg\Dwg_Section_Type.cs" />
+    <Compile Include="Dwg\Dwg_Section_Type_r11.cs" />
+    <Compile Include="Dwg\Dwg_Section_Type_R13.cs" />
+    <Compile Include="Dwg\Dwg_SPLINE_control_point.cs" />
+    <Compile Include="Dwg\Dwg_SPLINE_point.cs" />
+    <Compile Include="Dwg\Dwg_SummaryInfo.cs" />
+    <Compile Include="Dwg\Dwg_SummaryInfo_Property.cs" />
+    <Compile Include="Dwg\Dwg_SUNSTUDY_Dates.cs" />
+    <Compile Include="Dwg\Dwg_TableCell.cs" />
+    <Compile Include="Dwg\Dwg_TableCellContent.cs" />
+    <Compile Include="Dwg\Dwg_TableCellContent_Attr.cs" />
+    <Compile Include="Dwg\Dwg_TableDataColumn.cs" />
+    <Compile Include="Dwg\Dwg_TABLEGEOMETRY_Cell.cs" />
+    <Compile Include="Dwg\Dwg_TableRow.cs" />
+    <Compile Include="Dwg\Dwg_TABLESTYLE_border.cs" />
+    <Compile Include="Dwg\Dwg_TABLESTYLE_Cell.cs" />
+    <Compile Include="Dwg\Dwg_TABLESTYLE_rowstyles.cs" />
+    <Compile Include="Dwg\Dwg_TABLE_BreakHeight.cs" />
+    <Compile Include="Dwg\Dwg_TABLE_BreakRow.cs" />
+    <Compile Include="Dwg\Dwg_TABLE_Cell.cs" />
+    <Compile Include="Dwg\Dwg_TABLE_CustomDataItem.cs" />
+    <Compile Include="Dwg\Dwg_TABLE_value.cs" />
+    <Compile Include="Dwg\Dwg_Version_Type.cs" />
+    <Compile Include="Dwg\eed_data_t.cs" />
+    <Compile Include="Dwg\eed_data_t_eed_0.cs" />
+    <Compile Include="Dwg\eed_data_t_eed_0_r2007.cs" />
+    <Compile Include="Dwg\eed_data_t_eed_1.cs" />
+    <Compile Include="Dwg\eed_data_t_eed_10.cs" />
+    <Compile Include="Dwg\eed_data_t_eed_2.cs" />
+    <Compile Include="Dwg\eed_data_t_eed_3.cs" />
+    <Compile Include="Dwg\eed_data_t_eed_4.cs" />
+    <Compile Include="Dwg\eed_data_t_eed_40.cs" />
+    <Compile Include="Dwg\eed_data_t_eed_5.cs" />
+    <Compile Include="Dwg\eed_data_t_eed_70.cs" />
+    <Compile Include="Dwg\eed_data_t_eed_71.cs" />
+    <Compile Include="Dwg\LibreDWG.cs" />
+    <Compile Include="Dwg\LibreDWGPINVOKE.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_double.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_dwg_entity_DIMENSION_common.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_dwg_object.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_dwg_obj_ent.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_dwg_obj_generic.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_dwg_obj_layer.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_dwg_obj_obj.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_int.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p_char.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_entity_3DSOLID.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_entity_ARC.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_entity_ATTDEF.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_entity_ATTRIB.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_entity_BLOCK.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_entity_CAMERA.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_entity_CIRCLE.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_entity_DIMENSION_ALIGNED.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_entity_DIMENSION_ANG2LN.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_entity_DIMENSION_ANG3PT.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_entity_DIMENSION_DIAMETER.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_entity_DIMENSION_LINEAR.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_entity_DIMENSION_ORDINATE.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_entity_DIMENSION_RADIUS.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_entity_ELLIPSE.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_entity_ENDBLK.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_entity_HATCH.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_entity_HELIX.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_entity_IMAGE.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_entity_INSERT.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_entity_LEADER.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_entity_LIGHT.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_entity_LINE.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_entity_LWPOLYLINE.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_entity_MINSERT.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_entity_MLINE.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_entity_MTEXT.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_entity_MULTILEADER.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_entity_OLE2FRAME.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_entity_OLEFRAME.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_entity_POINT.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_entity_POLYLINE_2D.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_entity_POLYLINE_3D.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_entity_POLYLINE_MESH.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_entity_POLYLINE_PFACE.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_entity_RAY.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_entity_SEQEND.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_entity_SHAPE.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_entity_SOLID.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_entity_SPLINE.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_entity_TEXT.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_entity_TOLERANCE.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_entity_TRACE.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_entity_UNDERLAY.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_entity_VERTEX_2D.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_entity_VERTEX_3D.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_entity_VERTEX_PFACE_FACE.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_entity_VIEWPORT.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_entity_WIPEOUT.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_object_APPID.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_object_APPID_CONTROL.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_object_ASSOCDEPENDENCY.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_object_ASSOCPLANESURFACEACTIONBODY.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_object_BLOCK_CONTROL.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_object_BLOCK_HEADER.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_object_DBCOLOR.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_object_DICTIONARY.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_object_DICTIONARYVAR.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_object_DICTIONARYWDFLT.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_object_DIMASSOC.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_object_DIMSTYLE.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_object_DIMSTYLE_CONTROL.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_object_DYNAMICBLOCKPURGEPREVENTER.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_object_entity.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_object_FIELD.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_object_FIELDLIST.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_object_GEODATA.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_object_GROUP.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_object_IDBUFFER.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_object_IMAGEDEF.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_object_IMAGEDEF_REACTOR.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_object_LAYER.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_object_LAYER_CONTROL.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_object_LAYER_INDEX.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_object_LAYOUT.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_object_LTYPE.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_object_LTYPE_CONTROL.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_object_MLEADERSTYLE.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_object_MLINESTYLE.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_object_OBJECTCONTEXTDATA.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_object_OBJECT_PTR.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_object_PERSSUBENTMANAGER.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_object_PLACEHOLDER.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_object_PROXY_OBJECT.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_object_RASTERVARIABLES.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_object_ref.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_object_SCALE.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_object_SORTENTSTABLE.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_object_SPATIAL_FILTER.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_object_SPATIAL_INDEX.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_object_STYLE.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_object_STYLE_CONTROL.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_object_UCS.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_object_UCS_CONTROL.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_object_UNDERLAYDEFINITION.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_object_VIEW.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_object_VIEW_CONTROL.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_object_VISUALSTYLE.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_object_VPORT.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_object_VPORT_CONTROL.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_object_VPORT_ENTITY_CONTROL.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_object_VPORT_ENTITY_HEADER.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_object_WIPEOUTVARIABLES.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_object_XRECORD.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_p__dwg_section.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_unsigned_char.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_unsigned_int.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_unsigned_short.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p_void.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p__dwg_Leader.cs" />
+    <Compile Include="Dwg\SWIGTYPE_p__inthash.cs" />
+    <Compile Include="Dwg\_content_block.cs" />
+    <Compile Include="Dwg\_content_mtext.cs" />
+    <Compile Include="Dwg\_dwg_binary_chunk.cs" />
+    <Compile Include="Dwg\_dwg_binary_chunk_u.cs" />
+    <Compile Include="Dwg\_dwg_MLINESTYLE_line_lt.cs" />
+    <Compile Include="Dwg\_dwg_object_entity_tio.cs" />
+    <Compile Include="Dwg\_dwg_object_object_tio.cs" />
+    <Compile Include="Dwg\_dwg_object_tio.cs" />
+    <Compile Include="Dwg\_dwg_resbuf_value.cs" />
+    <Compile Include="Dwg\_dwg_second_header.cs" />
+    <Compile Include="Dwg\_handler.cs" />
+    <Compile Include="Dwg\_sections.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Points.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
