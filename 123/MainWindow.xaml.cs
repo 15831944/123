@@ -167,8 +167,8 @@ namespace _123
 
             for (int i = 0; i < Punkty.Count; i++)
             {
- 
-                    geo.Children.Add(DrawLine((Punkty[i].X1), (Punkty[i].Y1), (Punkty[i].X2), (Punkty[i].Y2)))
+
+                geo.Children.Add(DrawLine((Punkty[i].X1), (Punkty[i].Y1), (Punkty[i].X2), (Punkty[i].Y2)));
 
             }
            
