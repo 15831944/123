@@ -8,11 +8,13 @@
         Title="MainWindow" Height="800" Width="800"
        >
     <Grid>
+      
         <Grid.RowDefinitions>
             <RowDefinition Height="50" />
             <RowDefinition Height="*" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
+    
         <DockPanel Grid.Row="0">
             <Button DockPanel.Dock="Top" Content="Rysuj" Click="Button_Click"></Button>
         </DockPanel>
@@ -27,15 +29,8 @@
                     <ScaleTransform ScaleX="{Binding ElementName=ZoomSlider, Path=Value}" ScaleY="{Binding ElementName=ZoomSlider, Path=Value}" />
                 </StackPanel.LayoutTransform>
 
-          
-                <Path Stroke="Black" StrokeThickness="1" >
-                    <Path.Data>
 
-                        <GeometryGroup  x:Name="geo">
-
-                        </GeometryGroup>
-                    </Path.Data>
-                </Path>
+                <Image Name="abc"/>
 
             </StackPanel>
 

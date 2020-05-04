@@ -8,13 +8,13 @@ namespace _123
 {
     class CirclePoints
     {
-        public  double X { get; set; }
+        public  float X { get; set; }
 
-        public double Y { get; set; }
+        public float Y { get; set; }
 
-        public double Radius { get; set; }
+        public float Radius { get; set; }
 
-        public CirclePoints(double x, double y, double radius)
+        public CirclePoints(float x, float y, float radius)
         {
             X = x;
             Y = y;
