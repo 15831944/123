@@ -43,6 +43,17 @@ public class Dwg_FIELD_ChildValue : global::System.IDisposable {
     }
   }
 
+  public Dwg_Object_FIELD parent {
+    set {
+      LibreDWGPINVOKE.Dwg_FIELD_ChildValue_parent_set(swigCPtr, Dwg_Object_FIELD.getCPtr(value));
+    } 
+    get {
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_FIELD_ChildValue_parent_get(swigCPtr);
+      Dwg_Object_FIELD ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Object_FIELD(cPtr, false);
+      return ret;
+    } 
+  }
+
   public string key {
     set {
       LibreDWGPINVOKE.Dwg_FIELD_ChildValue_key_set(swigCPtr, value);
@@ -60,17 +71,6 @@ public class Dwg_FIELD_ChildValue : global::System.IDisposable {
     get {
       global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_FIELD_ChildValue_value_get(swigCPtr);
       Dwg_TABLE_value ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_TABLE_value(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public Dwg_Object_FIELD parent {
-    set {
-      LibreDWGPINVOKE.Dwg_FIELD_ChildValue_parent_set(swigCPtr, Dwg_Object_FIELD.getCPtr(value));
-    } 
-    get {
-      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_FIELD_ChildValue_parent_get(swigCPtr);
-      Dwg_Object_FIELD ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Object_FIELD(cPtr, false);
       return ret;
     } 
   }

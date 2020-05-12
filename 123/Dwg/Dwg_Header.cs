@@ -215,12 +215,12 @@ public class Dwg_Header : global::System.IDisposable {
     } 
   }
 
-  public uint rl_28_80 {
+  public uint r2004_header_address {
     set {
-      LibreDWGPINVOKE.Dwg_Header_rl_28_80_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_Header_r2004_header_address_set(swigCPtr, value);
     } 
     get {
-      uint ret = LibreDWGPINVOKE.Dwg_Header_rl_28_80_get(swigCPtr);
+      uint ret = LibreDWGPINVOKE.Dwg_Header_r2004_header_address_get(swigCPtr);
       return ret;
     } 
   }

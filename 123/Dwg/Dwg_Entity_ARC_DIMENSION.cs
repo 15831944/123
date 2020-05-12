@@ -291,88 +291,108 @@ public class Dwg_Entity_ARC_DIMENSION : global::System.IDisposable {
     } 
   }
 
-  public Dwg_Bitcode_3BD _13_pt {
+  public Dwg_Bitcode_3BD arc_pt {
     set {
-      LibreDWGPINVOKE.Dwg_Entity_ARC_DIMENSION__13_pt_set(swigCPtr, Dwg_Bitcode_3BD.getCPtr(value));
+      LibreDWGPINVOKE.Dwg_Entity_ARC_DIMENSION_arc_pt_set(swigCPtr, Dwg_Bitcode_3BD.getCPtr(value));
     } 
     get {
-      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Entity_ARC_DIMENSION__13_pt_get(swigCPtr);
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Entity_ARC_DIMENSION_arc_pt_get(swigCPtr);
       Dwg_Bitcode_3BD ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Bitcode_3BD(cPtr, false);
       return ret;
     } 
   }
 
-  public Dwg_Bitcode_3BD _14_pt {
+  public Dwg_Bitcode_3BD xline1_pt {
     set {
-      LibreDWGPINVOKE.Dwg_Entity_ARC_DIMENSION__14_pt_set(swigCPtr, Dwg_Bitcode_3BD.getCPtr(value));
+      LibreDWGPINVOKE.Dwg_Entity_ARC_DIMENSION_xline1_pt_set(swigCPtr, Dwg_Bitcode_3BD.getCPtr(value));
     } 
     get {
-      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Entity_ARC_DIMENSION__14_pt_get(swigCPtr);
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Entity_ARC_DIMENSION_xline1_pt_get(swigCPtr);
       Dwg_Bitcode_3BD ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Bitcode_3BD(cPtr, false);
       return ret;
     } 
   }
 
-  public Dwg_Bitcode_3BD _15_pt {
+  public Dwg_Bitcode_3BD xline2_pt {
     set {
-      LibreDWGPINVOKE.Dwg_Entity_ARC_DIMENSION__15_pt_set(swigCPtr, Dwg_Bitcode_3BD.getCPtr(value));
+      LibreDWGPINVOKE.Dwg_Entity_ARC_DIMENSION_xline2_pt_set(swigCPtr, Dwg_Bitcode_3BD.getCPtr(value));
     } 
     get {
-      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Entity_ARC_DIMENSION__15_pt_get(swigCPtr);
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Entity_ARC_DIMENSION_xline2_pt_get(swigCPtr);
       Dwg_Bitcode_3BD ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Bitcode_3BD(cPtr, false);
       return ret;
     } 
   }
 
-  public Dwg_Bitcode_3BD unknown_pt {
+  public Dwg_Bitcode_3BD center_pt {
     set {
-      LibreDWGPINVOKE.Dwg_Entity_ARC_DIMENSION_unknown_pt_set(swigCPtr, Dwg_Bitcode_3BD.getCPtr(value));
+      LibreDWGPINVOKE.Dwg_Entity_ARC_DIMENSION_center_pt_set(swigCPtr, Dwg_Bitcode_3BD.getCPtr(value));
     } 
     get {
-      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Entity_ARC_DIMENSION_unknown_pt_get(swigCPtr);
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Entity_ARC_DIMENSION_center_pt_get(swigCPtr);
       Dwg_Bitcode_3BD ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Bitcode_3BD(cPtr, false);
       return ret;
     } 
   }
 
-  public Dwg_Bitcode_3BD _16_pt {
+  public byte is_partial {
     set {
-      LibreDWGPINVOKE.Dwg_Entity_ARC_DIMENSION__16_pt_set(swigCPtr, Dwg_Bitcode_3BD.getCPtr(value));
+      LibreDWGPINVOKE.Dwg_Entity_ARC_DIMENSION_is_partial_set(swigCPtr, value);
     } 
     get {
-      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Entity_ARC_DIMENSION__16_pt_get(swigCPtr);
+      byte ret = LibreDWGPINVOKE.Dwg_Entity_ARC_DIMENSION_is_partial_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public double arc_start_param {
+    set {
+      LibreDWGPINVOKE.Dwg_Entity_ARC_DIMENSION_arc_start_param_set(swigCPtr, value);
+    } 
+    get {
+      double ret = LibreDWGPINVOKE.Dwg_Entity_ARC_DIMENSION_arc_start_param_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public double arc_end_param {
+    set {
+      LibreDWGPINVOKE.Dwg_Entity_ARC_DIMENSION_arc_end_param_set(swigCPtr, value);
+    } 
+    get {
+      double ret = LibreDWGPINVOKE.Dwg_Entity_ARC_DIMENSION_arc_end_param_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public byte has_leader {
+    set {
+      LibreDWGPINVOKE.Dwg_Entity_ARC_DIMENSION_has_leader_set(swigCPtr, value);
+    } 
+    get {
+      byte ret = LibreDWGPINVOKE.Dwg_Entity_ARC_DIMENSION_has_leader_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public Dwg_Bitcode_3BD leader1_pt {
+    set {
+      LibreDWGPINVOKE.Dwg_Entity_ARC_DIMENSION_leader1_pt_set(swigCPtr, Dwg_Bitcode_3BD.getCPtr(value));
+    } 
+    get {
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Entity_ARC_DIMENSION_leader1_pt_get(swigCPtr);
       Dwg_Bitcode_3BD ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Bitcode_3BD(cPtr, false);
       return ret;
     } 
   }
 
-  public Dwg_Bitcode_3BD _17_pt {
+  public Dwg_Bitcode_3BD leader2_pt {
     set {
-      LibreDWGPINVOKE.Dwg_Entity_ARC_DIMENSION__17_pt_set(swigCPtr, Dwg_Bitcode_3BD.getCPtr(value));
+      LibreDWGPINVOKE.Dwg_Entity_ARC_DIMENSION_leader2_pt_set(swigCPtr, Dwg_Bitcode_3BD.getCPtr(value));
     } 
     get {
-      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Entity_ARC_DIMENSION__17_pt_get(swigCPtr);
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Entity_ARC_DIMENSION_leader2_pt_get(swigCPtr);
       Dwg_Bitcode_3BD ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Bitcode_3BD(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public double leader_len {
-    set {
-      LibreDWGPINVOKE.Dwg_Entity_ARC_DIMENSION_leader_len_set(swigCPtr, value);
-    } 
-    get {
-      double ret = LibreDWGPINVOKE.Dwg_Entity_ARC_DIMENSION_leader_len_get(swigCPtr);
-      return ret;
-    } 
-  }
-
-  public byte flag2 {
-    set {
-      LibreDWGPINVOKE.Dwg_Entity_ARC_DIMENSION_flag2_set(swigCPtr, value);
-    } 
-    get {
-      byte ret = LibreDWGPINVOKE.Dwg_Entity_ARC_DIMENSION_flag2_get(swigCPtr);
       return ret;
     } 
   }

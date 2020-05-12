@@ -54,6 +54,57 @@ public class Dwg_Object_DATATABLE : global::System.IDisposable {
     } 
   }
 
+  public ushort flags {
+    set {
+      LibreDWGPINVOKE.Dwg_Object_DATATABLE_flags_set(swigCPtr, value);
+    } 
+    get {
+      ushort ret = LibreDWGPINVOKE.Dwg_Object_DATATABLE_flags_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public uint num_cols {
+    set {
+      LibreDWGPINVOKE.Dwg_Object_DATATABLE_num_cols_set(swigCPtr, value);
+    } 
+    get {
+      uint ret = LibreDWGPINVOKE.Dwg_Object_DATATABLE_num_cols_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public uint num_rows {
+    set {
+      LibreDWGPINVOKE.Dwg_Object_DATATABLE_num_rows_set(swigCPtr, value);
+    } 
+    get {
+      uint ret = LibreDWGPINVOKE.Dwg_Object_DATATABLE_num_rows_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public string table_name {
+    set {
+      LibreDWGPINVOKE.Dwg_Object_DATATABLE_table_name_set(swigCPtr, value);
+    } 
+    get {
+      string ret = LibreDWGPINVOKE.Dwg_Object_DATATABLE_table_name_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public Dwg_DATATABLE_column cols {
+    set {
+      LibreDWGPINVOKE.Dwg_Object_DATATABLE_cols_set(swigCPtr, Dwg_DATATABLE_column.getCPtr(value));
+    } 
+    get {
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Object_DATATABLE_cols_get(swigCPtr);
+      Dwg_DATATABLE_column ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_DATATABLE_column(cPtr, false);
+      return ret;
+    } 
+  }
+
   public Dwg_Object_DATATABLE() : this(LibreDWGPINVOKE.new_Dwg_Object_DATATABLE(), true) {
   }
 

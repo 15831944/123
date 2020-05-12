@@ -54,52 +54,102 @@ public class Dwg_Object_VISUALSTYLE : global::System.IDisposable {
     } 
   }
 
-  public string desc {
+  public string description {
     set {
-      LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_desc_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_description_set(swigCPtr, value);
     } 
     get {
-      string ret = LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_desc_get(swigCPtr);
+      string ret = LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_description_get(swigCPtr);
       return ret;
     } 
   }
 
-  public ushort type {
+  public uint style_type {
     set {
-      LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_type_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_style_type_set(swigCPtr, value);
     } 
     get {
-      ushort ret = LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_type_get(swigCPtr);
+      uint ret = LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_style_type_get(swigCPtr);
       return ret;
     } 
   }
 
-  public ushort face_lighting_model {
+  public ushort ext_lighting_model {
+    set {
+      LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_ext_lighting_model_set(swigCPtr, value);
+    } 
+    get {
+      ushort ret = LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_ext_lighting_model_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public byte int_only {
+    set {
+      LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_int_only_set(swigCPtr, value);
+    } 
+    get {
+      byte ret = LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_int_only_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public uint face_lighting_model {
     set {
       LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_face_lighting_model_set(swigCPtr, value);
     } 
     get {
-      ushort ret = LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_face_lighting_model_get(swigCPtr);
+      uint ret = LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_face_lighting_model_get(swigCPtr);
       return ret;
     } 
   }
 
-  public ushort face_lighting_quality {
+  public ushort face_lighting_model_int {
+    set {
+      LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_face_lighting_model_int_set(swigCPtr, value);
+    } 
+    get {
+      ushort ret = LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_face_lighting_model_int_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public uint face_lighting_quality {
     set {
       LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_face_lighting_quality_set(swigCPtr, value);
     } 
     get {
-      ushort ret = LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_face_lighting_quality_get(swigCPtr);
+      uint ret = LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_face_lighting_quality_get(swigCPtr);
       return ret;
     } 
   }
 
-  public ushort face_color_mode {
+  public ushort face_lighting_quality_int {
+    set {
+      LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_face_lighting_quality_int_set(swigCPtr, value);
+    } 
+    get {
+      ushort ret = LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_face_lighting_quality_int_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public uint face_color_mode {
     set {
       LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_face_color_mode_set(swigCPtr, value);
     } 
     get {
-      ushort ret = LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_face_color_mode_get(swigCPtr);
+      uint ret = LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_face_color_mode_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public ushort face_color_mode_int {
+    set {
+      LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_face_color_mode_int_set(swigCPtr, value);
+    } 
+    get {
+      ushort ret = LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_face_color_mode_int_get(swigCPtr);
       return ret;
     } 
   }
@@ -114,12 +164,32 @@ public class Dwg_Object_VISUALSTYLE : global::System.IDisposable {
     } 
   }
 
+  public ushort face_opacity_int {
+    set {
+      LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_face_opacity_int_set(swigCPtr, value);
+    } 
+    get {
+      ushort ret = LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_face_opacity_int_get(swigCPtr);
+      return ret;
+    } 
+  }
+
   public double face_specular {
     set {
       LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_face_specular_set(swigCPtr, value);
     } 
     get {
       double ret = LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_face_specular_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public ushort face_specular_int {
+    set {
+      LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_face_specular_int_set(swigCPtr, value);
+    } 
+    get {
+      ushort ret = LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_face_specular_int_get(swigCPtr);
       return ret;
     } 
   }
@@ -134,13 +204,12 @@ public class Dwg_Object_VISUALSTYLE : global::System.IDisposable {
     } 
   }
 
-  public Dwg_Color color {
+  public ushort face_modifier_int {
     set {
-      LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_color_set(swigCPtr, Dwg_Color.getCPtr(value));
+      LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_face_modifier_int_set(swigCPtr, value);
     } 
     get {
-      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_color_get(swigCPtr);
-      Dwg_Color ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Color(cPtr, false);
+      ushort ret = LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_face_modifier_int_get(swigCPtr);
       return ret;
     } 
   }
@@ -156,6 +225,16 @@ public class Dwg_Object_VISUALSTYLE : global::System.IDisposable {
     } 
   }
 
+  public ushort face_mono_color_int {
+    set {
+      LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_face_mono_color_int_set(swigCPtr, value);
+    } 
+    get {
+      ushort ret = LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_face_mono_color_int_get(swigCPtr);
+      return ret;
+    } 
+  }
+
   public ushort edge_model {
     set {
       LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_edge_model_set(swigCPtr, value);
@@ -166,12 +245,32 @@ public class Dwg_Object_VISUALSTYLE : global::System.IDisposable {
     } 
   }
 
+  public ushort edge_model_int {
+    set {
+      LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_edge_model_int_set(swigCPtr, value);
+    } 
+    get {
+      ushort ret = LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_edge_model_int_get(swigCPtr);
+      return ret;
+    } 
+  }
+
   public uint edge_style {
     set {
       LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_edge_style_set(swigCPtr, value);
     } 
     get {
       uint ret = LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_edge_style_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public ushort edge_style_int {
+    set {
+      LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_edge_style_int_set(swigCPtr, value);
+    } 
+    get {
+      ushort ret = LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_edge_style_int_get(swigCPtr);
       return ret;
     } 
   }
@@ -187,6 +286,16 @@ public class Dwg_Object_VISUALSTYLE : global::System.IDisposable {
     } 
   }
 
+  public ushort edge_intersection_color_int {
+    set {
+      LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_edge_intersection_color_int_set(swigCPtr, value);
+    } 
+    get {
+      ushort ret = LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_edge_intersection_color_int_get(swigCPtr);
+      return ret;
+    } 
+  }
+
   public Dwg_Color edge_obscured_color {
     set {
       LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_edge_obscured_color_set(swigCPtr, Dwg_Color.getCPtr(value));
@@ -194,6 +303,16 @@ public class Dwg_Object_VISUALSTYLE : global::System.IDisposable {
     get {
       global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_edge_obscured_color_get(swigCPtr);
       Dwg_Color ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Color(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public ushort edge_obscured_color_int {
+    set {
+      LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_edge_obscured_color_int_set(swigCPtr, value);
+    } 
+    get {
+      ushort ret = LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_edge_obscured_color_int_get(swigCPtr);
       return ret;
     } 
   }
@@ -208,12 +327,32 @@ public class Dwg_Object_VISUALSTYLE : global::System.IDisposable {
     } 
   }
 
+  public ushort edge_obscured_line_pattern_int {
+    set {
+      LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_edge_obscured_line_pattern_int_set(swigCPtr, value);
+    } 
+    get {
+      ushort ret = LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_edge_obscured_line_pattern_int_get(swigCPtr);
+      return ret;
+    } 
+  }
+
   public ushort edge_intersection_line_pattern {
     set {
       LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_edge_intersection_line_pattern_set(swigCPtr, value);
     } 
     get {
       ushort ret = LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_edge_intersection_line_pattern_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public ushort edge_intersection_line_pattern_int {
+    set {
+      LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_edge_intersection_line_pattern_int_set(swigCPtr, value);
+    } 
+    get {
+      ushort ret = LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_edge_intersection_line_pattern_int_get(swigCPtr);
       return ret;
     } 
   }
@@ -228,12 +367,32 @@ public class Dwg_Object_VISUALSTYLE : global::System.IDisposable {
     } 
   }
 
+  public ushort edge_crease_angle_int {
+    set {
+      LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_edge_crease_angle_int_set(swigCPtr, value);
+    } 
+    get {
+      ushort ret = LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_edge_crease_angle_int_get(swigCPtr);
+      return ret;
+    } 
+  }
+
   public ushort edge_modifier {
     set {
       LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_edge_modifier_set(swigCPtr, value);
     } 
     get {
       ushort ret = LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_edge_modifier_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public ushort edge_modifier_int {
+    set {
+      LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_edge_modifier_int_set(swigCPtr, value);
+    } 
+    get {
+      ushort ret = LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_edge_modifier_int_get(swigCPtr);
       return ret;
     } 
   }
@@ -249,12 +408,32 @@ public class Dwg_Object_VISUALSTYLE : global::System.IDisposable {
     } 
   }
 
+  public ushort edge_color_int {
+    set {
+      LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_edge_color_int_set(swigCPtr, value);
+    } 
+    get {
+      ushort ret = LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_edge_color_int_get(swigCPtr);
+      return ret;
+    } 
+  }
+
   public double edge_opacity {
     set {
       LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_edge_opacity_set(swigCPtr, value);
     } 
     get {
       double ret = LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_edge_opacity_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public ushort edge_opacity_int {
+    set {
+      LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_edge_opacity_int_set(swigCPtr, value);
+    } 
+    get {
+      ushort ret = LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_edge_opacity_int_get(swigCPtr);
       return ret;
     } 
   }
@@ -269,6 +448,16 @@ public class Dwg_Object_VISUALSTYLE : global::System.IDisposable {
     } 
   }
 
+  public ushort edge_width_int {
+    set {
+      LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_edge_width_int_set(swigCPtr, value);
+    } 
+    get {
+      ushort ret = LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_edge_width_int_get(swigCPtr);
+      return ret;
+    } 
+  }
+
   public ushort edge_overhang {
     set {
       LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_edge_overhang_set(swigCPtr, value);
@@ -279,12 +468,32 @@ public class Dwg_Object_VISUALSTYLE : global::System.IDisposable {
     } 
   }
 
+  public ushort edge_overhang_int {
+    set {
+      LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_edge_overhang_int_set(swigCPtr, value);
+    } 
+    get {
+      ushort ret = LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_edge_overhang_int_get(swigCPtr);
+      return ret;
+    } 
+  }
+
   public ushort edge_jitter {
     set {
       LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_edge_jitter_set(swigCPtr, value);
     } 
     get {
       ushort ret = LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_edge_jitter_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public ushort edge_jitter_int {
+    set {
+      LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_edge_jitter_int_set(swigCPtr, value);
+    } 
+    get {
+      ushort ret = LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_edge_jitter_int_get(swigCPtr);
       return ret;
     } 
   }
@@ -300,12 +509,32 @@ public class Dwg_Object_VISUALSTYLE : global::System.IDisposable {
     } 
   }
 
+  public ushort edge_silhouette_color_int {
+    set {
+      LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_edge_silhouette_color_int_set(swigCPtr, value);
+    } 
+    get {
+      ushort ret = LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_edge_silhouette_color_int_get(swigCPtr);
+      return ret;
+    } 
+  }
+
   public ushort edge_silhouette_width {
     set {
       LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_edge_silhouette_width_set(swigCPtr, value);
     } 
     get {
       ushort ret = LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_edge_silhouette_width_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public ushort edge_silhouette_width_int {
+    set {
+      LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_edge_silhouette_width_int_set(swigCPtr, value);
+    } 
+    get {
+      ushort ret = LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_edge_silhouette_width_int_get(swigCPtr);
       return ret;
     } 
   }
@@ -320,22 +549,52 @@ public class Dwg_Object_VISUALSTYLE : global::System.IDisposable {
     } 
   }
 
-  public ushort num_edge_isolines {
+  public ushort edge_halo_gap_int {
     set {
-      LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_num_edge_isolines_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_edge_halo_gap_int_set(swigCPtr, value);
     } 
     get {
-      ushort ret = LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_num_edge_isolines_get(swigCPtr);
+      ushort ret = LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_edge_halo_gap_int_get(swigCPtr);
       return ret;
     } 
   }
 
-  public ushort edge_hide_precision_flag {
+  public ushort numedge_isolines {
+    set {
+      LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_numedge_isolines_set(swigCPtr, value);
+    } 
+    get {
+      ushort ret = LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_numedge_isolines_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public ushort numedge_isolines_int {
+    set {
+      LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_numedge_isolines_int_set(swigCPtr, value);
+    } 
+    get {
+      ushort ret = LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_numedge_isolines_int_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public byte edge_hide_precision_flag {
     set {
       LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_edge_hide_precision_flag_set(swigCPtr, value);
     } 
     get {
-      ushort ret = LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_edge_hide_precision_flag_get(swigCPtr);
+      byte ret = LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_edge_hide_precision_flag_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public ushort edge_hide_precision_flag_int {
+    set {
+      LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_edge_hide_precision_flag_int_set(swigCPtr, value);
+    } 
+    get {
+      ushort ret = LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_edge_hide_precision_flag_int_get(swigCPtr);
       return ret;
     } 
   }
@@ -350,6 +609,16 @@ public class Dwg_Object_VISUALSTYLE : global::System.IDisposable {
     } 
   }
 
+  public ushort edge_style_apply_flag_int {
+    set {
+      LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_edge_style_apply_flag_int_set(swigCPtr, value);
+    } 
+    get {
+      ushort ret = LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_edge_style_apply_flag_int_get(swigCPtr);
+      return ret;
+    } 
+  }
+
   public ushort display_style {
     set {
       LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_display_style_set(swigCPtr, value);
@@ -360,12 +629,32 @@ public class Dwg_Object_VISUALSTYLE : global::System.IDisposable {
     } 
   }
 
-  public double display_brightness {
+  public ushort display_style_int {
+    set {
+      LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_display_style_int_set(swigCPtr, value);
+    } 
+    get {
+      ushort ret = LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_display_style_int_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public uint display_brightness {
     set {
       LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_display_brightness_set(swigCPtr, value);
     } 
     get {
-      double ret = LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_display_brightness_get(swigCPtr);
+      uint ret = LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_display_brightness_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public ushort display_brightness_int {
+    set {
+      LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_display_brightness_int_set(swigCPtr, value);
+    } 
+    get {
+      ushort ret = LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_display_brightness_int_get(swigCPtr);
       return ret;
     } 
   }
@@ -380,22 +669,22 @@ public class Dwg_Object_VISUALSTYLE : global::System.IDisposable {
     } 
   }
 
-  public ushort is_internal_use_only {
+  public ushort display_shadow_type_int {
     set {
-      LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_is_internal_use_only_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_display_shadow_type_int_set(swigCPtr, value);
     } 
     get {
-      ushort ret = LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_is_internal_use_only_get(swigCPtr);
+      ushort ret = LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_display_shadow_type_int_get(swigCPtr);
       return ret;
     } 
   }
 
-  public ushort unknown_float45 {
+  public double unknown_float45 {
     set {
       LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_unknown_float45_set(swigCPtr, value);
     } 
     get {
-      ushort ret = LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_unknown_float45_get(swigCPtr);
+      double ret = LibreDWGPINVOKE.Dwg_Object_VISUALSTYLE_unknown_float45_get(swigCPtr);
       return ret;
     } 
   }

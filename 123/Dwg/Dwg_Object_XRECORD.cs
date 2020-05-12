@@ -54,22 +54,22 @@ public class Dwg_Object_XRECORD : global::System.IDisposable {
     } 
   }
 
-  public uint num_databytes {
-    set {
-      LibreDWGPINVOKE.Dwg_Object_XRECORD_num_databytes_set(swigCPtr, value);
-    } 
-    get {
-      uint ret = LibreDWGPINVOKE.Dwg_Object_XRECORD_num_databytes_get(swigCPtr);
-      return ret;
-    } 
-  }
-
   public ushort cloning_flags {
     set {
       LibreDWGPINVOKE.Dwg_Object_XRECORD_cloning_flags_set(swigCPtr, value);
     } 
     get {
       ushort ret = LibreDWGPINVOKE.Dwg_Object_XRECORD_cloning_flags_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public uint xdata_size {
+    set {
+      LibreDWGPINVOKE.Dwg_Object_XRECORD_xdata_size_set(swigCPtr, value);
+    } 
+    get {
+      uint ret = LibreDWGPINVOKE.Dwg_Object_XRECORD_xdata_size_get(swigCPtr);
       return ret;
     } 
   }

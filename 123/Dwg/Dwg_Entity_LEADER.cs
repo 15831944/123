@@ -138,12 +138,12 @@ public class Dwg_Entity_LEADER : global::System.IDisposable {
     } 
   }
 
-  public Dwg_Bitcode_3BD offset_to_block_ins_pt {
+  public Dwg_Bitcode_3BD inspt_offset {
     set {
-      LibreDWGPINVOKE.Dwg_Entity_LEADER_offset_to_block_ins_pt_set(swigCPtr, Dwg_Bitcode_3BD.getCPtr(value));
+      LibreDWGPINVOKE.Dwg_Entity_LEADER_inspt_offset_set(swigCPtr, Dwg_Bitcode_3BD.getCPtr(value));
     } 
     get {
-      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Entity_LEADER_offset_to_block_ins_pt_get(swigCPtr);
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Entity_LEADER_inspt_offset_get(swigCPtr);
       Dwg_Bitcode_3BD ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Bitcode_3BD(cPtr, false);
       return ret;
     } 

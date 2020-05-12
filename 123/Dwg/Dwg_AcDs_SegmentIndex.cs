@@ -9,20 +9,20 @@
 //------------------------------------------------------------------------------
 
 
-public class Dwg_SPLINE_point : global::System.IDisposable {
+public class Dwg_AcDs_SegmentIndex : global::System.IDisposable {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   protected bool swigCMemOwn;
 
-  internal Dwg_SPLINE_point(global::System.IntPtr cPtr, bool cMemoryOwn) {
+  internal Dwg_AcDs_SegmentIndex(global::System.IntPtr cPtr, bool cMemoryOwn) {
     swigCMemOwn = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
 
-  internal static global::System.Runtime.InteropServices.HandleRef getCPtr(Dwg_SPLINE_point obj) {
+  internal static global::System.Runtime.InteropServices.HandleRef getCPtr(Dwg_AcDs_SegmentIndex obj) {
     return (obj == null) ? new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero) : obj.swigCPtr;
   }
 
-  ~Dwg_SPLINE_point() {
+  ~Dwg_AcDs_SegmentIndex() {
     Dispose(false);
   }
 
@@ -36,55 +36,34 @@ public class Dwg_SPLINE_point : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          LibreDWGPINVOKE.delete_Dwg_SPLINE_point(swigCPtr);
+          LibreDWGPINVOKE.delete_Dwg_AcDs_SegmentIndex(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
     }
   }
 
-  public Dwg_Entity_SPLINE parent {
+  public ulong offset {
     set {
-      LibreDWGPINVOKE.Dwg_SPLINE_point_parent_set(swigCPtr, Dwg_Entity_SPLINE.getCPtr(value));
+      LibreDWGPINVOKE.Dwg_AcDs_SegmentIndex_offset_set(swigCPtr, value);
     } 
     get {
-      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_SPLINE_point_parent_get(swigCPtr);
-      Dwg_Entity_SPLINE ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Entity_SPLINE(cPtr, false);
+      ulong ret = LibreDWGPINVOKE.Dwg_AcDs_SegmentIndex_offset_get(swigCPtr);
       return ret;
     } 
   }
 
-  public double x {
+  public uint size {
     set {
-      LibreDWGPINVOKE.Dwg_SPLINE_point_x_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_AcDs_SegmentIndex_size_set(swigCPtr, value);
     } 
     get {
-      double ret = LibreDWGPINVOKE.Dwg_SPLINE_point_x_get(swigCPtr);
+      uint ret = LibreDWGPINVOKE.Dwg_AcDs_SegmentIndex_size_get(swigCPtr);
       return ret;
     } 
   }
 
-  public double y {
-    set {
-      LibreDWGPINVOKE.Dwg_SPLINE_point_y_set(swigCPtr, value);
-    } 
-    get {
-      double ret = LibreDWGPINVOKE.Dwg_SPLINE_point_y_get(swigCPtr);
-      return ret;
-    } 
-  }
-
-  public double z {
-    set {
-      LibreDWGPINVOKE.Dwg_SPLINE_point_z_set(swigCPtr, value);
-    } 
-    get {
-      double ret = LibreDWGPINVOKE.Dwg_SPLINE_point_z_get(swigCPtr);
-      return ret;
-    } 
-  }
-
-  public Dwg_SPLINE_point() : this(LibreDWGPINVOKE.new_Dwg_SPLINE_point(), true) {
+  public Dwg_AcDs_SegmentIndex() : this(LibreDWGPINVOKE.new_Dwg_AcDs_SegmentIndex(), true) {
   }
 
 }

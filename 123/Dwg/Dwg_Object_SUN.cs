@@ -74,16 +74,6 @@ public class Dwg_Object_SUN : global::System.IDisposable {
     } 
   }
 
-  public ushort unknown {
-    set {
-      LibreDWGPINVOKE.Dwg_Object_SUN_unknown_set(swigCPtr, value);
-    } 
-    get {
-      ushort ret = LibreDWGPINVOKE.Dwg_Object_SUN_unknown_get(swigCPtr);
-      return ret;
-    } 
-  }
-
   public Dwg_Color color {
     set {
       LibreDWGPINVOKE.Dwg_Object_SUN_color_set(swigCPtr, Dwg_Color.getCPtr(value));
@@ -105,6 +95,16 @@ public class Dwg_Object_SUN : global::System.IDisposable {
     } 
   }
 
+  public byte has_shadow {
+    set {
+      LibreDWGPINVOKE.Dwg_Object_SUN_has_shadow_set(swigCPtr, value);
+    } 
+    get {
+      byte ret = LibreDWGPINVOKE.Dwg_Object_SUN_has_shadow_get(swigCPtr);
+      return ret;
+    } 
+  }
+
   public uint julian_day {
     set {
       LibreDWGPINVOKE.Dwg_Object_SUN_julian_day_set(swigCPtr, value);
@@ -115,12 +115,12 @@ public class Dwg_Object_SUN : global::System.IDisposable {
     } 
   }
 
-  public uint time {
+  public uint msecs {
     set {
-      LibreDWGPINVOKE.Dwg_Object_SUN_time_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_Object_SUN_msecs_set(swigCPtr, value);
     } 
     get {
-      uint ret = LibreDWGPINVOKE.Dwg_Object_SUN_time_get(swigCPtr);
+      uint ret = LibreDWGPINVOKE.Dwg_Object_SUN_msecs_get(swigCPtr);
       return ret;
     } 
   }
@@ -135,22 +135,12 @@ public class Dwg_Object_SUN : global::System.IDisposable {
     } 
   }
 
-  public byte has_shadow {
-    set {
-      LibreDWGPINVOKE.Dwg_Object_SUN_has_shadow_set(swigCPtr, value);
-    } 
-    get {
-      byte ret = LibreDWGPINVOKE.Dwg_Object_SUN_has_shadow_get(swigCPtr);
-      return ret;
-    } 
-  }
-
-  public ushort shadow_type {
+  public uint shadow_type {
     set {
       LibreDWGPINVOKE.Dwg_Object_SUN_shadow_type_set(swigCPtr, value);
     } 
     get {
-      ushort ret = LibreDWGPINVOKE.Dwg_Object_SUN_shadow_type_get(swigCPtr);
+      uint ret = LibreDWGPINVOKE.Dwg_Object_SUN_shadow_type_get(swigCPtr);
       return ret;
     } 
   }
@@ -165,23 +155,12 @@ public class Dwg_Object_SUN : global::System.IDisposable {
     } 
   }
 
-  public ushort shadow_softness {
+  public byte shadow_softness {
     set {
       LibreDWGPINVOKE.Dwg_Object_SUN_shadow_softness_set(swigCPtr, value);
     } 
     get {
-      ushort ret = LibreDWGPINVOKE.Dwg_Object_SUN_shadow_softness_get(swigCPtr);
-      return ret;
-    } 
-  }
-
-  public Dwg_Object_Ref skyparams {
-    set {
-      LibreDWGPINVOKE.Dwg_Object_SUN_skyparams_set(swigCPtr, Dwg_Object_Ref.getCPtr(value));
-    } 
-    get {
-      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Object_SUN_skyparams_get(swigCPtr);
-      Dwg_Object_Ref ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Object_Ref(cPtr, false);
+      byte ret = LibreDWGPINVOKE.Dwg_Object_SUN_shadow_softness_get(swigCPtr);
       return ret;
     } 
   }

@@ -54,12 +54,12 @@ public class Dwg_Object_ASSOC2DCONSTRAINTGROUP : global::System.IDisposable {
     } 
   }
 
-  public uint solution_status {
+  public ushort class_version {
     set {
-      LibreDWGPINVOKE.Dwg_Object_ASSOC2DCONSTRAINTGROUP_solution_status_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_Object_ASSOC2DCONSTRAINTGROUP_class_version_set(swigCPtr, value);
     } 
     get {
-      uint ret = LibreDWGPINVOKE.Dwg_Object_ASSOC2DCONSTRAINTGROUP_solution_status_get(swigCPtr);
+      ushort ret = LibreDWGPINVOKE.Dwg_Object_ASSOC2DCONSTRAINTGROUP_class_version_get(swigCPtr);
       return ret;
     } 
   }
@@ -74,54 +74,107 @@ public class Dwg_Object_ASSOC2DCONSTRAINTGROUP : global::System.IDisposable {
     } 
   }
 
-  public Dwg_Object_Ref readdep {
+  public Dwg_Object_Ref owningnetwork {
     set {
-      LibreDWGPINVOKE.Dwg_Object_ASSOC2DCONSTRAINTGROUP_readdep_set(swigCPtr, Dwg_Object_Ref.getCPtr(value));
+      LibreDWGPINVOKE.Dwg_Object_ASSOC2DCONSTRAINTGROUP_owningnetwork_set(swigCPtr, Dwg_Object_Ref.getCPtr(value));
     } 
     get {
-      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Object_ASSOC2DCONSTRAINTGROUP_readdep_get(swigCPtr);
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Object_ASSOC2DCONSTRAINTGROUP_owningnetwork_get(swigCPtr);
       Dwg_Object_Ref ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Object_Ref(cPtr, false);
       return ret;
     } 
   }
 
-  public Dwg_Object_Ref writedep {
+  public Dwg_Object_Ref actionbody {
     set {
-      LibreDWGPINVOKE.Dwg_Object_ASSOC2DCONSTRAINTGROUP_writedep_set(swigCPtr, Dwg_Object_Ref.getCPtr(value));
+      LibreDWGPINVOKE.Dwg_Object_ASSOC2DCONSTRAINTGROUP_actionbody_set(swigCPtr, Dwg_Object_Ref.getCPtr(value));
     } 
     get {
-      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Object_ASSOC2DCONSTRAINTGROUP_writedep_get(swigCPtr);
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Object_ASSOC2DCONSTRAINTGROUP_actionbody_get(swigCPtr);
       Dwg_Object_Ref ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Object_Ref(cPtr, false);
       return ret;
     } 
   }
 
-  public uint constraint_status {
+  public uint action_index {
     set {
-      LibreDWGPINVOKE.Dwg_Object_ASSOC2DCONSTRAINTGROUP_constraint_status_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_Object_ASSOC2DCONSTRAINTGROUP_action_index_set(swigCPtr, value);
     } 
     get {
-      uint ret = LibreDWGPINVOKE.Dwg_Object_ASSOC2DCONSTRAINTGROUP_constraint_status_get(swigCPtr);
+      uint ret = LibreDWGPINVOKE.Dwg_Object_ASSOC2DCONSTRAINTGROUP_action_index_get(swigCPtr);
       return ret;
     } 
   }
 
-  public uint dof {
+  public uint max_assoc_dep_index {
     set {
-      LibreDWGPINVOKE.Dwg_Object_ASSOC2DCONSTRAINTGROUP_dof_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_Object_ASSOC2DCONSTRAINTGROUP_max_assoc_dep_index_set(swigCPtr, value);
     } 
     get {
-      uint ret = LibreDWGPINVOKE.Dwg_Object_ASSOC2DCONSTRAINTGROUP_dof_get(swigCPtr);
+      uint ret = LibreDWGPINVOKE.Dwg_Object_ASSOC2DCONSTRAINTGROUP_max_assoc_dep_index_get(swigCPtr);
       return ret;
     } 
   }
 
-  public byte is_body_a_proxy {
+  public uint num_deps {
     set {
-      LibreDWGPINVOKE.Dwg_Object_ASSOC2DCONSTRAINTGROUP_is_body_a_proxy_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_Object_ASSOC2DCONSTRAINTGROUP_num_deps_set(swigCPtr, value);
     } 
     get {
-      byte ret = LibreDWGPINVOKE.Dwg_Object_ASSOC2DCONSTRAINTGROUP_is_body_a_proxy_get(swigCPtr);
+      uint ret = LibreDWGPINVOKE.Dwg_Object_ASSOC2DCONSTRAINTGROUP_num_deps_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public Dwg_ASSOCACTION_Deps deps {
+    set {
+      LibreDWGPINVOKE.Dwg_Object_ASSOC2DCONSTRAINTGROUP_deps_set(swigCPtr, Dwg_ASSOCACTION_Deps.getCPtr(value));
+    } 
+    get {
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Object_ASSOC2DCONSTRAINTGROUP_deps_get(swigCPtr);
+      Dwg_ASSOCACTION_Deps ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_ASSOCACTION_Deps(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public uint num_owned_params {
+    set {
+      LibreDWGPINVOKE.Dwg_Object_ASSOC2DCONSTRAINTGROUP_num_owned_params_set(swigCPtr, value);
+    } 
+    get {
+      uint ret = LibreDWGPINVOKE.Dwg_Object_ASSOC2DCONSTRAINTGROUP_num_owned_params_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public SWIGTYPE_p_p__dwg_object_ref owned_params {
+    set {
+      LibreDWGPINVOKE.Dwg_Object_ASSOC2DCONSTRAINTGROUP_owned_params_set(swigCPtr, SWIGTYPE_p_p__dwg_object_ref.getCPtr(value));
+    } 
+    get {
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Object_ASSOC2DCONSTRAINTGROUP_owned_params_get(swigCPtr);
+      SWIGTYPE_p_p__dwg_object_ref ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_p__dwg_object_ref(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public uint num_owned_value_param_names {
+    set {
+      LibreDWGPINVOKE.Dwg_Object_ASSOC2DCONSTRAINTGROUP_num_owned_value_param_names_set(swigCPtr, value);
+    } 
+    get {
+      uint ret = LibreDWGPINVOKE.Dwg_Object_ASSOC2DCONSTRAINTGROUP_num_owned_value_param_names_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public SWIGTYPE_p_p__dwg_object_ref owned_value_param_names {
+    set {
+      LibreDWGPINVOKE.Dwg_Object_ASSOC2DCONSTRAINTGROUP_owned_value_param_names_set(swigCPtr, SWIGTYPE_p_p__dwg_object_ref.getCPtr(value));
+    } 
+    get {
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Object_ASSOC2DCONSTRAINTGROUP_owned_value_param_names_get(swigCPtr);
+      SWIGTYPE_p_p__dwg_object_ref ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_p__dwg_object_ref(cPtr, false);
       return ret;
     } 
   }
@@ -157,12 +210,34 @@ public class Dwg_Object_ASSOC2DCONSTRAINTGROUP : global::System.IDisposable {
     } 
   }
 
-  public uint l6 {
+  public Dwg_Object_Ref h1 {
     set {
-      LibreDWGPINVOKE.Dwg_Object_ASSOC2DCONSTRAINTGROUP_l6_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_Object_ASSOC2DCONSTRAINTGROUP_h1_set(swigCPtr, Dwg_Object_Ref.getCPtr(value));
     } 
     get {
-      uint ret = LibreDWGPINVOKE.Dwg_Object_ASSOC2DCONSTRAINTGROUP_l6_get(swigCPtr);
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Object_ASSOC2DCONSTRAINTGROUP_h1_get(swigCPtr);
+      Dwg_Object_Ref ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Object_Ref(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public uint num_actions {
+    set {
+      LibreDWGPINVOKE.Dwg_Object_ASSOC2DCONSTRAINTGROUP_num_actions_set(swigCPtr, value);
+    } 
+    get {
+      uint ret = LibreDWGPINVOKE.Dwg_Object_ASSOC2DCONSTRAINTGROUP_num_actions_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public SWIGTYPE_p_p__dwg_object_ref actions {
+    set {
+      LibreDWGPINVOKE.Dwg_Object_ASSOC2DCONSTRAINTGROUP_actions_set(swigCPtr, SWIGTYPE_p_p__dwg_object_ref.getCPtr(value));
+    } 
+    get {
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Object_ASSOC2DCONSTRAINTGROUP_actions_get(swigCPtr);
+      SWIGTYPE_p_p__dwg_object_ref ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_p__dwg_object_ref(cPtr, false);
       return ret;
     } 
   }
@@ -183,6 +258,27 @@ public class Dwg_Object_ASSOC2DCONSTRAINTGROUP : global::System.IDisposable {
     } 
     get {
       uint ret = LibreDWGPINVOKE.Dwg_Object_ASSOC2DCONSTRAINTGROUP_l8_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public string t1 {
+    set {
+      LibreDWGPINVOKE.Dwg_Object_ASSOC2DCONSTRAINTGROUP_t1_set(swigCPtr, value);
+    } 
+    get {
+      string ret = LibreDWGPINVOKE.Dwg_Object_ASSOC2DCONSTRAINTGROUP_t1_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public Dwg_Object_Ref h2 {
+    set {
+      LibreDWGPINVOKE.Dwg_Object_ASSOC2DCONSTRAINTGROUP_h2_set(swigCPtr, Dwg_Object_Ref.getCPtr(value));
+    } 
+    get {
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Object_ASSOC2DCONSTRAINTGROUP_h2_get(swigCPtr);
+      Dwg_Object_Ref ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Object_Ref(cPtr, false);
       return ret;
     } 
   }
@@ -223,6 +319,17 @@ public class Dwg_Object_ASSOC2DCONSTRAINTGROUP : global::System.IDisposable {
     } 
     get {
       uint ret = LibreDWGPINVOKE.Dwg_Object_ASSOC2DCONSTRAINTGROUP_cl3_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public Dwg_Object_Ref h3 {
+    set {
+      LibreDWGPINVOKE.Dwg_Object_ASSOC2DCONSTRAINTGROUP_h3_set(swigCPtr, Dwg_Object_Ref.getCPtr(value));
+    } 
+    get {
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Object_ASSOC2DCONSTRAINTGROUP_h3_get(swigCPtr);
+      Dwg_Object_Ref ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Object_Ref(cPtr, false);
       return ret;
     } 
   }
@@ -296,6 +403,16 @@ public class Dwg_Object_ASSOC2DCONSTRAINTGROUP : global::System.IDisposable {
     } 
     get {
       double ret = LibreDWGPINVOKE.Dwg_Object_ASSOC2DCONSTRAINTGROUP_w3_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public string t2 {
+    set {
+      LibreDWGPINVOKE.Dwg_Object_ASSOC2DCONSTRAINTGROUP_t2_set(swigCPtr, value);
+    } 
+    get {
+      string ret = LibreDWGPINVOKE.Dwg_Object_ASSOC2DCONSTRAINTGROUP_t2_get(swigCPtr);
       return ret;
     } 
   }

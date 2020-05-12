@@ -53,12 +53,13 @@ public class eed_data_t_eed_4 : global::System.IDisposable {
     } 
   }
 
-  public string data {
+  public SWIGTYPE_p_unsigned_char data {
     set {
-      LibreDWGPINVOKE.eed_data_t_eed_4_data_set(swigCPtr, value);
+      LibreDWGPINVOKE.eed_data_t_eed_4_data_set(swigCPtr, SWIGTYPE_p_unsigned_char.getCPtr(value));
     } 
     get {
-      string ret = LibreDWGPINVOKE.eed_data_t_eed_4_data_get(swigCPtr);
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.eed_data_t_eed_4_data_get(swigCPtr);
+      SWIGTYPE_p_unsigned_char ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_unsigned_char(cPtr, false);
       return ret;
     } 
   }

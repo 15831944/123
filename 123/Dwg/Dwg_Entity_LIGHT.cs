@@ -74,12 +74,12 @@ public class Dwg_Entity_LIGHT : global::System.IDisposable {
     } 
   }
 
-  public ushort type {
+  public uint type {
     set {
       LibreDWGPINVOKE.Dwg_Entity_LIGHT_type_set(swigCPtr, value);
     } 
     get {
-      ushort ret = LibreDWGPINVOKE.Dwg_Entity_LIGHT_type_get(swigCPtr);
+      uint ret = LibreDWGPINVOKE.Dwg_Entity_LIGHT_type_get(swigCPtr);
       return ret;
     } 
   }
@@ -147,12 +147,12 @@ public class Dwg_Entity_LIGHT : global::System.IDisposable {
     } 
   }
 
-  public ushort attenuation_type {
+  public uint attenuation_type {
     set {
       LibreDWGPINVOKE.Dwg_Entity_LIGHT_attenuation_type_set(swigCPtr, value);
     } 
     get {
-      ushort ret = LibreDWGPINVOKE.Dwg_Entity_LIGHT_attenuation_type_get(swigCPtr);
+      uint ret = LibreDWGPINVOKE.Dwg_Entity_LIGHT_attenuation_type_get(swigCPtr);
       return ret;
     } 
   }
@@ -217,12 +217,12 @@ public class Dwg_Entity_LIGHT : global::System.IDisposable {
     } 
   }
 
-  public ushort shadow_type {
+  public uint shadow_type {
     set {
       LibreDWGPINVOKE.Dwg_Entity_LIGHT_shadow_type_set(swigCPtr, value);
     } 
     get {
-      ushort ret = LibreDWGPINVOKE.Dwg_Entity_LIGHT_shadow_type_get(swigCPtr);
+      uint ret = LibreDWGPINVOKE.Dwg_Entity_LIGHT_shadow_type_get(swigCPtr);
       return ret;
     } 
   }
@@ -247,13 +247,263 @@ public class Dwg_Entity_LIGHT : global::System.IDisposable {
     } 
   }
 
-  public Dwg_Object_Ref lights_layer {
+  public byte is_photometric {
     set {
-      LibreDWGPINVOKE.Dwg_Entity_LIGHT_lights_layer_set(swigCPtr, Dwg_Object_Ref.getCPtr(value));
+      LibreDWGPINVOKE.Dwg_Entity_LIGHT_is_photometric_set(swigCPtr, value);
     } 
     get {
-      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Entity_LIGHT_lights_layer_get(swigCPtr);
-      Dwg_Object_Ref ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Object_Ref(cPtr, false);
+      byte ret = LibreDWGPINVOKE.Dwg_Entity_LIGHT_is_photometric_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public byte has_photometric_data {
+    set {
+      LibreDWGPINVOKE.Dwg_Entity_LIGHT_has_photometric_data_set(swigCPtr, value);
+    } 
+    get {
+      byte ret = LibreDWGPINVOKE.Dwg_Entity_LIGHT_has_photometric_data_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public byte has_webfile {
+    set {
+      LibreDWGPINVOKE.Dwg_Entity_LIGHT_has_webfile_set(swigCPtr, value);
+    } 
+    get {
+      byte ret = LibreDWGPINVOKE.Dwg_Entity_LIGHT_has_webfile_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public string webfile {
+    set {
+      LibreDWGPINVOKE.Dwg_Entity_LIGHT_webfile_set(swigCPtr, value);
+    } 
+    get {
+      string ret = LibreDWGPINVOKE.Dwg_Entity_LIGHT_webfile_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public ushort physical_intensity_method {
+    set {
+      LibreDWGPINVOKE.Dwg_Entity_LIGHT_physical_intensity_method_set(swigCPtr, value);
+    } 
+    get {
+      ushort ret = LibreDWGPINVOKE.Dwg_Entity_LIGHT_physical_intensity_method_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public double physical_intensity {
+    set {
+      LibreDWGPINVOKE.Dwg_Entity_LIGHT_physical_intensity_set(swigCPtr, value);
+    } 
+    get {
+      double ret = LibreDWGPINVOKE.Dwg_Entity_LIGHT_physical_intensity_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public double illuminance_dist {
+    set {
+      LibreDWGPINVOKE.Dwg_Entity_LIGHT_illuminance_dist_set(swigCPtr, value);
+    } 
+    get {
+      double ret = LibreDWGPINVOKE.Dwg_Entity_LIGHT_illuminance_dist_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public ushort lamp_color_type {
+    set {
+      LibreDWGPINVOKE.Dwg_Entity_LIGHT_lamp_color_type_set(swigCPtr, value);
+    } 
+    get {
+      ushort ret = LibreDWGPINVOKE.Dwg_Entity_LIGHT_lamp_color_type_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public double lamp_color_temp {
+    set {
+      LibreDWGPINVOKE.Dwg_Entity_LIGHT_lamp_color_temp_set(swigCPtr, value);
+    } 
+    get {
+      double ret = LibreDWGPINVOKE.Dwg_Entity_LIGHT_lamp_color_temp_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public ushort lamp_color_preset {
+    set {
+      LibreDWGPINVOKE.Dwg_Entity_LIGHT_lamp_color_preset_set(swigCPtr, value);
+    } 
+    get {
+      ushort ret = LibreDWGPINVOKE.Dwg_Entity_LIGHT_lamp_color_preset_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public uint lamp_color_rgb {
+    set {
+      LibreDWGPINVOKE.Dwg_Entity_LIGHT_lamp_color_rgb_set(swigCPtr, value);
+    } 
+    get {
+      uint ret = LibreDWGPINVOKE.Dwg_Entity_LIGHT_lamp_color_rgb_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public Dwg_Bitcode_3BD web_rotation {
+    set {
+      LibreDWGPINVOKE.Dwg_Entity_LIGHT_web_rotation_set(swigCPtr, Dwg_Bitcode_3BD.getCPtr(value));
+    } 
+    get {
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Entity_LIGHT_web_rotation_get(swigCPtr);
+      Dwg_Bitcode_3BD ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Bitcode_3BD(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public ushort extlight_shape {
+    set {
+      LibreDWGPINVOKE.Dwg_Entity_LIGHT_extlight_shape_set(swigCPtr, value);
+    } 
+    get {
+      ushort ret = LibreDWGPINVOKE.Dwg_Entity_LIGHT_extlight_shape_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public double extlight_length {
+    set {
+      LibreDWGPINVOKE.Dwg_Entity_LIGHT_extlight_length_set(swigCPtr, value);
+    } 
+    get {
+      double ret = LibreDWGPINVOKE.Dwg_Entity_LIGHT_extlight_length_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public double extlight_width {
+    set {
+      LibreDWGPINVOKE.Dwg_Entity_LIGHT_extlight_width_set(swigCPtr, value);
+    } 
+    get {
+      double ret = LibreDWGPINVOKE.Dwg_Entity_LIGHT_extlight_width_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public double extlight_radius {
+    set {
+      LibreDWGPINVOKE.Dwg_Entity_LIGHT_extlight_radius_set(swigCPtr, value);
+    } 
+    get {
+      double ret = LibreDWGPINVOKE.Dwg_Entity_LIGHT_extlight_radius_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public ushort webfile_type {
+    set {
+      LibreDWGPINVOKE.Dwg_Entity_LIGHT_webfile_type_set(swigCPtr, value);
+    } 
+    get {
+      ushort ret = LibreDWGPINVOKE.Dwg_Entity_LIGHT_webfile_type_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public ushort web_symetry {
+    set {
+      LibreDWGPINVOKE.Dwg_Entity_LIGHT_web_symetry_set(swigCPtr, value);
+    } 
+    get {
+      ushort ret = LibreDWGPINVOKE.Dwg_Entity_LIGHT_web_symetry_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public ushort has_target_grip {
+    set {
+      LibreDWGPINVOKE.Dwg_Entity_LIGHT_has_target_grip_set(swigCPtr, value);
+    } 
+    get {
+      ushort ret = LibreDWGPINVOKE.Dwg_Entity_LIGHT_has_target_grip_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public double web_flux {
+    set {
+      LibreDWGPINVOKE.Dwg_Entity_LIGHT_web_flux_set(swigCPtr, value);
+    } 
+    get {
+      double ret = LibreDWGPINVOKE.Dwg_Entity_LIGHT_web_flux_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public double web_angle1 {
+    set {
+      LibreDWGPINVOKE.Dwg_Entity_LIGHT_web_angle1_set(swigCPtr, value);
+    } 
+    get {
+      double ret = LibreDWGPINVOKE.Dwg_Entity_LIGHT_web_angle1_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public double web_angle2 {
+    set {
+      LibreDWGPINVOKE.Dwg_Entity_LIGHT_web_angle2_set(swigCPtr, value);
+    } 
+    get {
+      double ret = LibreDWGPINVOKE.Dwg_Entity_LIGHT_web_angle2_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public double web_angle3 {
+    set {
+      LibreDWGPINVOKE.Dwg_Entity_LIGHT_web_angle3_set(swigCPtr, value);
+    } 
+    get {
+      double ret = LibreDWGPINVOKE.Dwg_Entity_LIGHT_web_angle3_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public double web_angle4 {
+    set {
+      LibreDWGPINVOKE.Dwg_Entity_LIGHT_web_angle4_set(swigCPtr, value);
+    } 
+    get {
+      double ret = LibreDWGPINVOKE.Dwg_Entity_LIGHT_web_angle4_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public double web_angle5 {
+    set {
+      LibreDWGPINVOKE.Dwg_Entity_LIGHT_web_angle5_set(swigCPtr, value);
+    } 
+    get {
+      double ret = LibreDWGPINVOKE.Dwg_Entity_LIGHT_web_angle5_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public ushort glyph_display_type {
+    set {
+      LibreDWGPINVOKE.Dwg_Entity_LIGHT_glyph_display_type_set(swigCPtr, value);
+    } 
+    get {
+      ushort ret = LibreDWGPINVOKE.Dwg_Entity_LIGHT_glyph_display_type_get(swigCPtr);
       return ret;
     } 
   }

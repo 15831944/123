@@ -54,22 +54,12 @@ public class Dwg_Entity_MESH : global::System.IDisposable {
     } 
   }
 
-  public uint class_version {
-    set {
-      LibreDWGPINVOKE.Dwg_Entity_MESH_class_version_set(swigCPtr, value);
-    } 
-    get {
-      uint ret = LibreDWGPINVOKE.Dwg_Entity_MESH_class_version_get(swigCPtr);
-      return ret;
-    } 
-  }
-
-  public byte dlevel {
+  public ushort dlevel {
     set {
       LibreDWGPINVOKE.Dwg_Entity_MESH_dlevel_set(swigCPtr, value);
     } 
     get {
-      byte ret = LibreDWGPINVOKE.Dwg_Entity_MESH_dlevel_get(swigCPtr);
+      ushort ret = LibreDWGPINVOKE.Dwg_Entity_MESH_dlevel_get(swigCPtr);
       return ret;
     } 
   }

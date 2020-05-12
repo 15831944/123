@@ -30,6 +30,11 @@ public class LibreDWG {
     if (LibreDWGPINVOKE.SWIGPendingException.Pending) throw LibreDWGPINVOKE.SWIGPendingException.Retrieve();
   }
 
+  public static string dwg_color_method_name(uint method) {
+    string ret = LibreDWGPINVOKE.dwg_color_method_name(method);
+    return ret;
+  }
+
   public static int dwg_read_file(string filename, Dwg_Data dwg) {
     int ret = LibreDWGPINVOKE.dwg_read_file(filename, Dwg_Data.getCPtr(dwg));
     return ret;
@@ -80,8 +85,19 @@ public class LibreDWG {
     return ret;
   }
 
+  public static Dwg_Object_Ref dwg_find_dicthandle_objname(Dwg_Data dwg, Dwg_Object_Ref dict, string name) {
+    global::System.IntPtr cPtr = LibreDWGPINVOKE.dwg_find_dicthandle_objname(Dwg_Data.getCPtr(dwg), Dwg_Object_Ref.getCPtr(dict), name);
+    Dwg_Object_Ref ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Object_Ref(cPtr, false);
+    return ret;
+  }
+
   public static string dwg_find_table_extname(Dwg_Data dwg, Dwg_Object obj) {
     string ret = LibreDWGPINVOKE.dwg_find_table_extname(Dwg_Data.getCPtr(dwg), Dwg_Object.getCPtr(obj));
+    return ret;
+  }
+
+  public static string dwg_variable_dict(Dwg_Data dwg, string name) {
+    string ret = LibreDWGPINVOKE.dwg_variable_dict(Dwg_Data.getCPtr(dwg), name);
     return ret;
   }
 
@@ -228,6 +244,12 @@ public class LibreDWG {
     return ret;
   }
 
+  public static Dwg_Object dwg_next_entity(Dwg_Object obj) {
+    global::System.IntPtr cPtr = LibreDWGPINVOKE.dwg_next_entity(Dwg_Object.getCPtr(obj));
+    Dwg_Object ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Object(cPtr, false);
+    return ret;
+  }
+
   public static Dwg_Object dwg_ref_object(Dwg_Data dwg, Dwg_Object_Ref ref_) {
     global::System.IntPtr cPtr = LibreDWGPINVOKE.dwg_ref_object(Dwg_Data.getCPtr(dwg), Dwg_Object_Ref.getCPtr(ref_));
     Dwg_Object ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Object(cPtr, false);
@@ -288,6 +310,12 @@ public class LibreDWG {
     return ret;
   }
 
+  public static Dwg_Object get_next_owned_block_entity(Dwg_Object hdr, Dwg_Object current) {
+    global::System.IntPtr cPtr = LibreDWGPINVOKE.get_next_owned_block_entity(Dwg_Object.getCPtr(hdr), Dwg_Object.getCPtr(current));
+    Dwg_Object ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Object(cPtr, false);
+    return ret;
+  }
+
   public static Dwg_Object dwg_resolve_handle(Dwg_Data dwg, uint absref) {
     global::System.IntPtr cPtr = LibreDWGPINVOKE.dwg_resolve_handle(Dwg_Data.getCPtr(dwg), absref);
     Dwg_Object ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Object(cPtr, false);
@@ -305,8 +333,18 @@ public class LibreDWG {
     return ret;
   }
 
-  public static Dwg_Section_Type dwg_section_type(SWIGTYPE_p_unsigned_short wname) {
-    Dwg_Section_Type ret = (Dwg_Section_Type)LibreDWGPINVOKE.dwg_section_type(SWIGTYPE_p_unsigned_short.getCPtr(wname));
+  public static Dwg_Section_Type dwg_section_type(string name) {
+    Dwg_Section_Type ret = (Dwg_Section_Type)LibreDWGPINVOKE.dwg_section_type(name);
+    return ret;
+  }
+
+  public static Dwg_Section_Type dwg_section_wtype(SWIGTYPE_p_unsigned_short wname) {
+    Dwg_Section_Type ret = (Dwg_Section_Type)LibreDWGPINVOKE.dwg_section_wtype(SWIGTYPE_p_unsigned_short.getCPtr(wname));
+    return ret;
+  }
+
+  public static string dwg_section_name(Dwg_Data dwg, uint sec_id) {
+    string ret = LibreDWGPINVOKE.dwg_section_name(Dwg_Data.getCPtr(dwg), sec_id);
     return ret;
   }
 
@@ -335,578 +373,663 @@ public class LibreDWG {
     return ret;
   }
 
+  public static string dwg_version_type(Dwg_Version_Type version) {
+    string ret = LibreDWGPINVOKE.dwg_version_type((int)version);
+    return ret;
+  }
+
+  public static Dwg_Version_Type dwg_version_as(string version) {
+    Dwg_Version_Type ret = (Dwg_Version_Type)LibreDWGPINVOKE.dwg_version_as(version);
+    return ret;
+  }
+
+  public static void dwg_errstrings(int error) {
+    LibreDWGPINVOKE.dwg_errstrings(error);
+  }
+
+  public static Dwg_RGB_Palette dwg_rgb_palette() {
+    global::System.IntPtr cPtr = LibreDWGPINVOKE.dwg_rgb_palette();
+    Dwg_RGB_Palette ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_RGB_Palette(cPtr, false);
+    return ret;
+  }
+
+  public static ushort dwg_find_color_index(uint rgb) {
+    ushort ret = LibreDWGPINVOKE.dwg_find_color_index(rgb);
+    return ret;
+  }
+
   public static int dwg_add_object(Dwg_Data dwg) {
     int ret = LibreDWGPINVOKE.dwg_add_object(Dwg_Data.getCPtr(dwg));
     return ret;
   }
 
-  public static int dwg_add_TEXT(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_TEXT(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_TEXT(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_TEXT(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_ATTRIB(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_ATTRIB(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_ATTRIB(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_ATTRIB(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_ATTDEF(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_ATTDEF(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_ATTDEF(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_ATTDEF(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_BLOCK(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_BLOCK(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_BLOCK(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_BLOCK(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_ENDBLK(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_ENDBLK(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_ENDBLK(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_ENDBLK(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_SEQEND(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_SEQEND(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_SEQEND(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_SEQEND(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_INSERT(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_INSERT(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_INSERT(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_INSERT(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_MINSERT(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_MINSERT(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_MINSERT(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_MINSERT(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_VERTEX_2D(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_VERTEX_2D(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_VERTEX_2D(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_VERTEX_2D(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_VERTEX_3D(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_VERTEX_3D(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_VERTEX_3D(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_VERTEX_3D(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_VERTEX_MESH(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_VERTEX_MESH(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_VERTEX_MESH(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_VERTEX_MESH(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_VERTEX_PFACE(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_VERTEX_PFACE(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_VERTEX_PFACE(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_VERTEX_PFACE(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_VERTEX_PFACE_FACE(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_VERTEX_PFACE_FACE(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_VERTEX_PFACE_FACE(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_VERTEX_PFACE_FACE(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_POLYLINE_2D(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_POLYLINE_2D(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_POLYLINE_2D(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_POLYLINE_2D(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_POLYLINE_3D(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_POLYLINE_3D(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_POLYLINE_3D(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_POLYLINE_3D(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_ARC(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_ARC(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_ARC(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_ARC(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_CIRCLE(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_CIRCLE(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_CIRCLE(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_CIRCLE(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_LINE(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_LINE(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_LINE(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_LINE(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_DIMENSION_ORDINATE(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_DIMENSION_ORDINATE(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_DIMENSION_ORDINATE(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_DIMENSION_ORDINATE(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_DIMENSION_LINEAR(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_DIMENSION_LINEAR(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_DIMENSION_LINEAR(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_DIMENSION_LINEAR(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_DIMENSION_ALIGNED(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_DIMENSION_ALIGNED(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_DIMENSION_ALIGNED(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_DIMENSION_ALIGNED(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_DIMENSION_ANG3PT(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_DIMENSION_ANG3PT(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_DIMENSION_ANG3PT(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_DIMENSION_ANG3PT(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_DIMENSION_ANG2LN(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_DIMENSION_ANG2LN(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_DIMENSION_ANG2LN(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_DIMENSION_ANG2LN(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_DIMENSION_RADIUS(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_DIMENSION_RADIUS(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_DIMENSION_RADIUS(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_DIMENSION_RADIUS(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_DIMENSION_DIAMETER(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_DIMENSION_DIAMETER(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_DIMENSION_DIAMETER(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_DIMENSION_DIAMETER(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_POINT(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_POINT(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_POINT(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_POINT(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add__3DFACE(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add__3DFACE(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup__3DFACE(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup__3DFACE(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add__3DSOLID(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add__3DSOLID(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup__3DSOLID(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup__3DSOLID(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_POLYLINE_PFACE(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_POLYLINE_PFACE(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_POLYLINE_PFACE(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_POLYLINE_PFACE(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_POLYLINE_MESH(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_POLYLINE_MESH(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_POLYLINE_MESH(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_POLYLINE_MESH(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_SOLID(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_SOLID(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_SOLID(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_SOLID(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_TRACE(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_TRACE(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_TRACE(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_TRACE(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_SHAPE(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_SHAPE(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_SHAPE(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_SHAPE(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_VIEWPORT(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_VIEWPORT(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_VIEWPORT(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_VIEWPORT(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_ELLIPSE(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_ELLIPSE(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_ELLIPSE(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_ELLIPSE(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_SPLINE(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_SPLINE(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_SPLINE(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_SPLINE(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_REGION(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_REGION(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_REGION(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_REGION(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_BODY(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_BODY(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_BODY(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_BODY(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_RAY(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_RAY(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_RAY(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_RAY(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_XLINE(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_XLINE(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_XLINE(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_XLINE(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_DICTIONARY(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_DICTIONARY(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_DICTIONARY(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_DICTIONARY(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_OLEFRAME(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_OLEFRAME(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_OLEFRAME(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_OLEFRAME(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_MTEXT(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_MTEXT(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_MTEXT(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_MTEXT(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_LEADER(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_LEADER(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_LEADER(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_LEADER(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_TOLERANCE(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_TOLERANCE(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_TOLERANCE(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_TOLERANCE(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_MLINE(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_MLINE(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_MLINE(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_MLINE(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_BLOCK_CONTROL(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_BLOCK_CONTROL(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_BLOCK_CONTROL(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_BLOCK_CONTROL(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_BLOCK_HEADER(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_BLOCK_HEADER(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_BLOCK_HEADER(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_BLOCK_HEADER(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_LAYER_CONTROL(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_LAYER_CONTROL(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_LAYER_CONTROL(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_LAYER_CONTROL(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_LAYER(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_LAYER(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_LAYER(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_LAYER(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_STYLE_CONTROL(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_STYLE_CONTROL(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_STYLE_CONTROL(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_STYLE_CONTROL(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_STYLE(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_STYLE(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_STYLE(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_STYLE(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_LTYPE_CONTROL(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_LTYPE_CONTROL(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_LTYPE_CONTROL(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_LTYPE_CONTROL(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_LTYPE(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_LTYPE(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_LTYPE(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_LTYPE(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_VIEW_CONTROL(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_VIEW_CONTROL(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_VIEW_CONTROL(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_VIEW_CONTROL(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_VIEW(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_VIEW(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_VIEW(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_VIEW(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_UCS_CONTROL(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_UCS_CONTROL(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_UCS_CONTROL(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_UCS_CONTROL(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_UCS(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_UCS(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_UCS(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_UCS(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_VPORT_CONTROL(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_VPORT_CONTROL(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_VPORT_CONTROL(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_VPORT_CONTROL(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_VPORT(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_VPORT(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_VPORT(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_VPORT(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_APPID_CONTROL(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_APPID_CONTROL(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_APPID_CONTROL(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_APPID_CONTROL(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_APPID(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_APPID(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_APPID(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_APPID(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_DIMSTYLE_CONTROL(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_DIMSTYLE_CONTROL(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_DIMSTYLE_CONTROL(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_DIMSTYLE_CONTROL(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_DIMSTYLE(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_DIMSTYLE(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_DIMSTYLE(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_DIMSTYLE(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_VPORT_ENTITY_CONTROL(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_VPORT_ENTITY_CONTROL(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_VPORT_ENTITY_CONTROL(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_VPORT_ENTITY_CONTROL(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_VPORT_ENTITY_HEADER(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_VPORT_ENTITY_HEADER(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_VPORT_ENTITY_HEADER(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_VPORT_ENTITY_HEADER(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_GROUP(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_GROUP(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_GROUP(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_GROUP(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_MLINESTYLE(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_MLINESTYLE(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_MLINESTYLE(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_MLINESTYLE(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_OLE2FRAME(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_OLE2FRAME(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_OLE2FRAME(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_OLE2FRAME(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_DUMMY(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_DUMMY(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_DUMMY(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_DUMMY(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_LONG_TRANSACTION(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_LONG_TRANSACTION(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_LONG_TRANSACTION(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_LONG_TRANSACTION(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_LWPOLYLINE(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_LWPOLYLINE(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_LWPOLYLINE(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_LWPOLYLINE(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_HATCH(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_HATCH(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_HATCH(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_HATCH(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_XRECORD(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_XRECORD(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_XRECORD(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_XRECORD(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_PLACEHOLDER(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_PLACEHOLDER(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_PLACEHOLDER(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_PLACEHOLDER(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_LAYOUT(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_LAYOUT(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_LAYOUT(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_LAYOUT(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_PROXY_ENTITY(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_PROXY_ENTITY(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_PROXY_ENTITY(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_PROXY_ENTITY(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_PROXY_OBJECT(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_PROXY_OBJECT(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_PROXY_OBJECT(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_PROXY_OBJECT(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_UNKNOWN_ENT(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_UNKNOWN_ENT(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_UNKNOWN_ENT(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_UNKNOWN_ENT(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_UNKNOWN_OBJ(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_UNKNOWN_OBJ(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_UNKNOWN_OBJ(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_UNKNOWN_OBJ(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_DICTIONARYVAR(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_DICTIONARYVAR(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_DICTIONARYVAR(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_DICTIONARYVAR(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_DICTIONARYWDFLT(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_DICTIONARYWDFLT(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_DICTIONARYWDFLT(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_DICTIONARYWDFLT(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_FIELD(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_FIELD(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_DYNAMICBLOCKPURGEPREVENTER(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_DYNAMICBLOCKPURGEPREVENTER(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_FIELDLIST(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_FIELDLIST(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_FIELD(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_FIELD(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_IDBUFFER(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_IDBUFFER(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_FIELDLIST(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_FIELDLIST(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_IMAGE(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_IMAGE(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_IDBUFFER(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_IDBUFFER(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_IMAGEDEF(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_IMAGEDEF(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_IMAGE(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_IMAGE(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_IMAGEDEF_REACTOR(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_IMAGEDEF_REACTOR(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_IMAGEDEF(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_IMAGEDEF(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_LAYER_INDEX(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_LAYER_INDEX(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_IMAGEDEF_REACTOR(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_IMAGEDEF_REACTOR(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_MLEADERSTYLE(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_MLEADERSTYLE(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_LAYER_INDEX(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_LAYER_INDEX(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_OBJECTCONTEXTDATA(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_OBJECTCONTEXTDATA(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_MLEADERSTYLE(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_MLEADERSTYLE(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_RASTERVARIABLES(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_RASTERVARIABLES(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_RASTERVARIABLES(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_RASTERVARIABLES(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_SCALE(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_SCALE(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_SCALE(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_SCALE(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_SORTENTSTABLE(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_SORTENTSTABLE(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_SORTENTSTABLE(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_SORTENTSTABLE(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_SPATIAL_FILTER(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_SPATIAL_FILTER(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_SPATIAL_FILTER(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_SPATIAL_FILTER(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_SPATIAL_INDEX(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_SPATIAL_INDEX(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_SPATIAL_INDEX(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_SPATIAL_INDEX(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_WIPEOUTVARIABLES(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_WIPEOUTVARIABLES(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_WIPEOUTVARIABLES(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_WIPEOUTVARIABLES(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_WIPEOUT(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_WIPEOUT(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_WIPEOUT(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_WIPEOUT(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_ASSOCDEPENDENCY(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_ASSOCDEPENDENCY(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_ARC_DIMENSION(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_ARC_DIMENSION(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_ASSOCPLANESURFACEACTIONBODY(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_ASSOCPLANESURFACEACTIONBODY(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_ASSOCDEPENDENCY(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_ASSOCDEPENDENCY(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_CAMERA(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_CAMERA(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_ASSOCALIGNEDDIMACTIONBODY(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_ASSOCALIGNEDDIMACTIONBODY(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_DIMASSOC(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_DIMASSOC(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_ASSOCPLANESURFACEACTIONBODY(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_ASSOCPLANESURFACEACTIONBODY(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_DBCOLOR(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_DBCOLOR(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_CAMERA(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_CAMERA(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_DYNAMICBLOCKPURGEPREVENTER(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_DYNAMICBLOCKPURGEPREVENTER(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_DIMASSOC(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_DIMASSOC(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_GEODATA(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_GEODATA(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_DBCOLOR(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_DBCOLOR(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_HELIX(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_HELIX(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_GEODATA(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_GEODATA(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_LIGHT(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_LIGHT(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_HELIX(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_HELIX(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_MULTILEADER(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_MULTILEADER(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_LIGHT(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_LIGHT(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_OBJECT_PTR(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_OBJECT_PTR(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_LIGHTLIST(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_LIGHTLIST(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_PERSSUBENTMANAGER(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_PERSSUBENTMANAGER(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_MATERIAL(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_MATERIAL(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_TABLESTYLE(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_TABLESTYLE(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_MENTALRAYRENDERSETTINGS(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_MENTALRAYRENDERSETTINGS(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_UNDERLAY(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_UNDERLAY(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_MESH(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_MESH(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_UNDERLAYDEFINITION(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_UNDERLAYDEFINITION(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_MULTILEADER(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_MULTILEADER(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
-  public static int dwg_add_VISUALSTYLE(Dwg_Object obj) {
-    int ret = LibreDWGPINVOKE.dwg_add_VISUALSTYLE(Dwg_Object.getCPtr(obj));
+  public static int dwg_setup_OBJECT_PTR(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_OBJECT_PTR(Dwg_Object.getCPtr(obj));
+    return ret;
+  }
+
+  public static int dwg_setup_PERSUBENTMGR(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_PERSUBENTMGR(Dwg_Object.getCPtr(obj));
+    return ret;
+  }
+
+  public static int dwg_setup_PLOTSETTINGS(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_PLOTSETTINGS(Dwg_Object.getCPtr(obj));
+    return ret;
+  }
+
+  public static int dwg_setup_RENDERSETTINGS(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_RENDERSETTINGS(Dwg_Object.getCPtr(obj));
+    return ret;
+  }
+
+  public static int dwg_setup_RAPIDRTRENDERSETTINGS(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_RAPIDRTRENDERSETTINGS(Dwg_Object.getCPtr(obj));
+    return ret;
+  }
+
+  public static int dwg_setup_SECTIONOBJECT(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_SECTIONOBJECT(Dwg_Object.getCPtr(obj));
+    return ret;
+  }
+
+  public static int dwg_setup_SECTION_MANAGER(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_SECTION_MANAGER(Dwg_Object.getCPtr(obj));
+    return ret;
+  }
+
+  public static int dwg_setup_SUN(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_SUN(Dwg_Object.getCPtr(obj));
+    return ret;
+  }
+
+  public static int dwg_setup_TABLEGEOMETRY(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_TABLEGEOMETRY(Dwg_Object.getCPtr(obj));
+    return ret;
+  }
+
+  public static int dwg_setup_TABLESTYLE(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_TABLESTYLE(Dwg_Object.getCPtr(obj));
+    return ret;
+  }
+
+  public static int dwg_setup_UNDERLAY(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_UNDERLAY(Dwg_Object.getCPtr(obj));
+    return ret;
+  }
+
+  public static int dwg_setup_UNDERLAYDEFINITION(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_UNDERLAYDEFINITION(Dwg_Object.getCPtr(obj));
+    return ret;
+  }
+
+  public static int dwg_setup_VISUALSTYLE(Dwg_Object obj) {
+    int ret = LibreDWGPINVOKE.dwg_setup_VISUALSTYLE(Dwg_Object.getCPtr(obj));
     return ret;
   }
 
@@ -932,6 +1055,11 @@ public class LibreDWG {
 
   public static bool dwg_dynapi_common_value(SWIGTYPE_p_void _obj, string fieldname, SWIGTYPE_p_void out_, Dwg_DYNAPI_field fp) {
     bool ret = LibreDWGPINVOKE.dwg_dynapi_common_value(SWIGTYPE_p_void.getCPtr(_obj), fieldname, SWIGTYPE_p_void.getCPtr(out_), Dwg_DYNAPI_field.getCPtr(fp));
+    return ret;
+  }
+
+  public static bool dwg_dynapi_subclass_value(SWIGTYPE_p_void ptr, string subclass, string fieldname, SWIGTYPE_p_void out_, Dwg_DYNAPI_field fp) {
+    bool ret = LibreDWGPINVOKE.dwg_dynapi_subclass_value(SWIGTYPE_p_void.getCPtr(ptr), subclass, fieldname, SWIGTYPE_p_void.getCPtr(out_), Dwg_DYNAPI_field.getCPtr(fp));
     return ret;
   }
 
@@ -982,6 +1110,12 @@ public class LibreDWG {
     return ret;
   }
 
+  public static Dwg_DYNAPI_field dwg_dynapi_subclass_field(string name, string fieldname) {
+    global::System.IntPtr cPtr = LibreDWGPINVOKE.dwg_dynapi_subclass_field(name, fieldname);
+    Dwg_DYNAPI_field ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_DYNAPI_field(cPtr, false);
+    return ret;
+  }
+
   public static Dwg_DYNAPI_field dwg_dynapi_common_entity_field(string fieldname) {
     global::System.IntPtr cPtr = LibreDWGPINVOKE.dwg_dynapi_common_entity_field(fieldname);
     Dwg_DYNAPI_field ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_DYNAPI_field(cPtr, false);
@@ -1015,6 +1149,11 @@ public class LibreDWG {
   public static Dwg_DYNAPI_field dwg_dynapi_subclass_fields(string name) {
     global::System.IntPtr cPtr = LibreDWGPINVOKE.dwg_dynapi_subclass_fields(name);
     Dwg_DYNAPI_field ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_DYNAPI_field(cPtr, false);
+    return ret;
+  }
+
+  public static int dwg_dynapi_fields_size(string name) {
+    int ret = LibreDWGPINVOKE.dwg_dynapi_fields_size(name);
     return ret;
   }
 
@@ -1411,9 +1550,15 @@ public class LibreDWG {
     return ret;
   }
 
-  public static SWIGTYPE_p_p__dwg_entity_IMAGE dwg_getall_IMAGE(Dwg_Object_Ref hdr) {
-    global::System.IntPtr cPtr = LibreDWGPINVOKE.dwg_getall_IMAGE(Dwg_Object_Ref.getCPtr(hdr));
-    SWIGTYPE_p_p__dwg_entity_IMAGE ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_p__dwg_entity_IMAGE(cPtr, false);
+  public static SWIGTYPE_p_p__dwg_entity_PROXY_ENTITY dwg_getall_PROXY_ENTITY(Dwg_Object_Ref hdr) {
+    global::System.IntPtr cPtr = LibreDWGPINVOKE.dwg_getall_PROXY_ENTITY(Dwg_Object_Ref.getCPtr(hdr));
+    SWIGTYPE_p_p__dwg_entity_PROXY_ENTITY ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_p__dwg_entity_PROXY_ENTITY(cPtr, false);
+    return ret;
+  }
+
+  public static SWIGTYPE_p_p__dwg_entity_UNKNOWN_ENT dwg_getall_UNKNOWN_ENT(Dwg_Object_Ref hdr) {
+    global::System.IntPtr cPtr = LibreDWGPINVOKE.dwg_getall_UNKNOWN_ENT(Dwg_Object_Ref.getCPtr(hdr));
+    SWIGTYPE_p_p__dwg_entity_UNKNOWN_ENT ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_p__dwg_entity_UNKNOWN_ENT(cPtr, false);
     return ret;
   }
 
@@ -1429,6 +1574,12 @@ public class LibreDWG {
     return ret;
   }
 
+  public static SWIGTYPE_p_p__dwg_entity_IMAGE dwg_getall_IMAGE(Dwg_Object_Ref hdr) {
+    global::System.IntPtr cPtr = LibreDWGPINVOKE.dwg_getall_IMAGE(Dwg_Object_Ref.getCPtr(hdr));
+    SWIGTYPE_p_p__dwg_entity_IMAGE ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_p__dwg_entity_IMAGE(cPtr, false);
+    return ret;
+  }
+
   public static SWIGTYPE_p_p__dwg_entity_LIGHT dwg_getall_LIGHT(Dwg_Object_Ref hdr) {
     global::System.IntPtr cPtr = LibreDWGPINVOKE.dwg_getall_LIGHT(Dwg_Object_Ref.getCPtr(hdr));
     SWIGTYPE_p_p__dwg_entity_LIGHT ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_p__dwg_entity_LIGHT(cPtr, false);
@@ -1441,6 +1592,12 @@ public class LibreDWG {
     return ret;
   }
 
+  public static SWIGTYPE_p_p__dwg_entity_SECTIONOBJECT dwg_getall_SECTIONOBJECT(Dwg_Object_Ref hdr) {
+    global::System.IntPtr cPtr = LibreDWGPINVOKE.dwg_getall_SECTIONOBJECT(Dwg_Object_Ref.getCPtr(hdr));
+    SWIGTYPE_p_p__dwg_entity_SECTIONOBJECT ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_p__dwg_entity_SECTIONOBJECT(cPtr, false);
+    return ret;
+  }
+
   public static SWIGTYPE_p_p__dwg_entity_UNDERLAY dwg_getall_UNDERLAY(Dwg_Object_Ref hdr) {
     global::System.IntPtr cPtr = LibreDWGPINVOKE.dwg_getall_UNDERLAY(Dwg_Object_Ref.getCPtr(hdr));
     SWIGTYPE_p_p__dwg_entity_UNDERLAY ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_p__dwg_entity_UNDERLAY(cPtr, false);
@@ -1450,6 +1607,66 @@ public class LibreDWG {
   public static SWIGTYPE_p_p__dwg_entity_WIPEOUT dwg_getall_WIPEOUT(Dwg_Object_Ref hdr) {
     global::System.IntPtr cPtr = LibreDWGPINVOKE.dwg_getall_WIPEOUT(Dwg_Object_Ref.getCPtr(hdr));
     SWIGTYPE_p_p__dwg_entity_WIPEOUT ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_p__dwg_entity_WIPEOUT(cPtr, false);
+    return ret;
+  }
+
+  public static SWIGTYPE_p_p__dwg_entity_ARC_DIMENSION dwg_getall_ARC_DIMENSION(Dwg_Object_Ref hdr) {
+    global::System.IntPtr cPtr = LibreDWGPINVOKE.dwg_getall_ARC_DIMENSION(Dwg_Object_Ref.getCPtr(hdr));
+    SWIGTYPE_p_p__dwg_entity_ARC_DIMENSION ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_p__dwg_entity_ARC_DIMENSION(cPtr, false);
+    return ret;
+  }
+
+  public static SWIGTYPE_p_p__dwg_entity_EXTRUDEDSURFACE dwg_getall_EXTRUDEDSURFACE(Dwg_Object_Ref hdr) {
+    global::System.IntPtr cPtr = LibreDWGPINVOKE.dwg_getall_EXTRUDEDSURFACE(Dwg_Object_Ref.getCPtr(hdr));
+    SWIGTYPE_p_p__dwg_entity_EXTRUDEDSURFACE ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_p__dwg_entity_EXTRUDEDSURFACE(cPtr, false);
+    return ret;
+  }
+
+  public static SWIGTYPE_p_p__dwg_entity_GEOPOSITIONMARKER dwg_getall_GEOPOSITIONMARKER(Dwg_Object_Ref hdr) {
+    global::System.IntPtr cPtr = LibreDWGPINVOKE.dwg_getall_GEOPOSITIONMARKER(Dwg_Object_Ref.getCPtr(hdr));
+    SWIGTYPE_p_p__dwg_entity_GEOPOSITIONMARKER ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_p__dwg_entity_GEOPOSITIONMARKER(cPtr, false);
+    return ret;
+  }
+
+  public static SWIGTYPE_p_p__dwg_entity_LOFTEDSURFACE dwg_getall_LOFTEDSURFACE(Dwg_Object_Ref hdr) {
+    global::System.IntPtr cPtr = LibreDWGPINVOKE.dwg_getall_LOFTEDSURFACE(Dwg_Object_Ref.getCPtr(hdr));
+    SWIGTYPE_p_p__dwg_entity_LOFTEDSURFACE ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_p__dwg_entity_LOFTEDSURFACE(cPtr, false);
+    return ret;
+  }
+
+  public static SWIGTYPE_p_p__dwg_entity_MESH dwg_getall_MESH(Dwg_Object_Ref hdr) {
+    global::System.IntPtr cPtr = LibreDWGPINVOKE.dwg_getall_MESH(Dwg_Object_Ref.getCPtr(hdr));
+    SWIGTYPE_p_p__dwg_entity_MESH ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_p__dwg_entity_MESH(cPtr, false);
+    return ret;
+  }
+
+  public static SWIGTYPE_p_p__dwg_entity_NAVISWORKSMODEL dwg_getall_NAVISWORKSMODEL(Dwg_Object_Ref hdr) {
+    global::System.IntPtr cPtr = LibreDWGPINVOKE.dwg_getall_NAVISWORKSMODEL(Dwg_Object_Ref.getCPtr(hdr));
+    SWIGTYPE_p_p__dwg_entity_NAVISWORKSMODEL ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_p__dwg_entity_NAVISWORKSMODEL(cPtr, false);
+    return ret;
+  }
+
+  public static SWIGTYPE_p_p__dwg_entity_PLANESURFACE dwg_getall_PLANESURFACE(Dwg_Object_Ref hdr) {
+    global::System.IntPtr cPtr = LibreDWGPINVOKE.dwg_getall_PLANESURFACE(Dwg_Object_Ref.getCPtr(hdr));
+    SWIGTYPE_p_p__dwg_entity_PLANESURFACE ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_p__dwg_entity_PLANESURFACE(cPtr, false);
+    return ret;
+  }
+
+  public static SWIGTYPE_p_p__dwg_entity_REVOLVEDSURFACE dwg_getall_REVOLVEDSURFACE(Dwg_Object_Ref hdr) {
+    global::System.IntPtr cPtr = LibreDWGPINVOKE.dwg_getall_REVOLVEDSURFACE(Dwg_Object_Ref.getCPtr(hdr));
+    SWIGTYPE_p_p__dwg_entity_REVOLVEDSURFACE ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_p__dwg_entity_REVOLVEDSURFACE(cPtr, false);
+    return ret;
+  }
+
+  public static SWIGTYPE_p_p__dwg_entity_SWEPTSURFACE dwg_getall_SWEPTSURFACE(Dwg_Object_Ref hdr) {
+    global::System.IntPtr cPtr = LibreDWGPINVOKE.dwg_getall_SWEPTSURFACE(Dwg_Object_Ref.getCPtr(hdr));
+    SWIGTYPE_p_p__dwg_entity_SWEPTSURFACE ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_p__dwg_entity_SWEPTSURFACE(cPtr, false);
+    return ret;
+  }
+
+  public static SWIGTYPE_p_p__dwg_entity_TABLE dwg_getall_TABLE(Dwg_Object_Ref hdr) {
+    global::System.IntPtr cPtr = LibreDWGPINVOKE.dwg_getall_TABLE(Dwg_Object_Ref.getCPtr(hdr));
+    SWIGTYPE_p_p__dwg_entity_TABLE ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_p__dwg_entity_TABLE(cPtr, false);
     return ret;
   }
 
@@ -1585,9 +1802,9 @@ public class LibreDWG {
     return ret;
   }
 
-  public static SWIGTYPE_p_p__dwg_object_PROXY_OBJECT dwg_getall_PROXY_OBJECT(Dwg_Data dwg) {
-    global::System.IntPtr cPtr = LibreDWGPINVOKE.dwg_getall_PROXY_OBJECT(Dwg_Data.getCPtr(dwg));
-    SWIGTYPE_p_p__dwg_object_PROXY_OBJECT ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_p__dwg_object_PROXY_OBJECT(cPtr, false);
+  public static SWIGTYPE_p_p__dwg_object_UNKNOWN_OBJ dwg_getall_UNKNOWN_OBJ(Dwg_Data dwg) {
+    global::System.IntPtr cPtr = LibreDWGPINVOKE.dwg_getall_UNKNOWN_OBJ(Dwg_Data.getCPtr(dwg));
+    SWIGTYPE_p_p__dwg_object_UNKNOWN_OBJ ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_p__dwg_object_UNKNOWN_OBJ(cPtr, false);
     return ret;
   }
 
@@ -1606,6 +1823,12 @@ public class LibreDWG {
   public static SWIGTYPE_p_p__dwg_object_FIELD dwg_getall_FIELD(Dwg_Data dwg) {
     global::System.IntPtr cPtr = LibreDWGPINVOKE.dwg_getall_FIELD(Dwg_Data.getCPtr(dwg));
     SWIGTYPE_p_p__dwg_object_FIELD ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_p__dwg_object_FIELD(cPtr, false);
+    return ret;
+  }
+
+  public static SWIGTYPE_p_p__dwg_object_DUMMY dwg_getall_DUMMY(Dwg_Data dwg) {
+    global::System.IntPtr cPtr = LibreDWGPINVOKE.dwg_getall_DUMMY(Dwg_Data.getCPtr(dwg));
+    SWIGTYPE_p_p__dwg_object_DUMMY ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_p__dwg_object_DUMMY(cPtr, false);
     return ret;
   }
 
@@ -1657,15 +1880,15 @@ public class LibreDWG {
     return ret;
   }
 
-  public static SWIGTYPE_p_p__dwg_object_OBJECTCONTEXTDATA dwg_getall_OBJECTCONTEXTDATA(Dwg_Data dwg) {
-    global::System.IntPtr cPtr = LibreDWGPINVOKE.dwg_getall_OBJECTCONTEXTDATA(Dwg_Data.getCPtr(dwg));
-    SWIGTYPE_p_p__dwg_object_OBJECTCONTEXTDATA ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_p__dwg_object_OBJECTCONTEXTDATA(cPtr, false);
-    return ret;
-  }
-
   public static SWIGTYPE_p_p__dwg_object_PLACEHOLDER dwg_getall_PLACEHOLDER(Dwg_Data dwg) {
     global::System.IntPtr cPtr = LibreDWGPINVOKE.dwg_getall_PLACEHOLDER(Dwg_Data.getCPtr(dwg));
     SWIGTYPE_p_p__dwg_object_PLACEHOLDER ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_p__dwg_object_PLACEHOLDER(cPtr, false);
+    return ret;
+  }
+
+  public static SWIGTYPE_p_p__dwg_object_PROXY_OBJECT dwg_getall_PROXY_OBJECT(Dwg_Data dwg) {
+    global::System.IntPtr cPtr = LibreDWGPINVOKE.dwg_getall_PROXY_OBJECT(Dwg_Data.getCPtr(dwg));
+    SWIGTYPE_p_p__dwg_object_PROXY_OBJECT ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_p__dwg_object_PROXY_OBJECT(cPtr, false);
     return ret;
   }
 
@@ -1711,6 +1934,12 @@ public class LibreDWG {
     return ret;
   }
 
+  public static SWIGTYPE_p_p__dwg_object_ASSOCALIGNEDDIMACTIONBODY dwg_getall_ASSOCALIGNEDDIMACTIONBODY(Dwg_Data dwg) {
+    global::System.IntPtr cPtr = LibreDWGPINVOKE.dwg_getall_ASSOCALIGNEDDIMACTIONBODY(Dwg_Data.getCPtr(dwg));
+    SWIGTYPE_p_p__dwg_object_ASSOCALIGNEDDIMACTIONBODY ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_p__dwg_object_ASSOCALIGNEDDIMACTIONBODY(cPtr, false);
+    return ret;
+  }
+
   public static SWIGTYPE_p_p__dwg_object_ASSOCDEPENDENCY dwg_getall_ASSOCDEPENDENCY(Dwg_Data dwg) {
     global::System.IntPtr cPtr = LibreDWGPINVOKE.dwg_getall_ASSOCDEPENDENCY(Dwg_Data.getCPtr(dwg));
     SWIGTYPE_p_p__dwg_object_ASSOCDEPENDENCY ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_p__dwg_object_ASSOCDEPENDENCY(cPtr, false);
@@ -1723,15 +1952,15 @@ public class LibreDWG {
     return ret;
   }
 
-  public static SWIGTYPE_p_p__dwg_object_DIMASSOC dwg_getall_DIMASSOC(Dwg_Data dwg) {
-    global::System.IntPtr cPtr = LibreDWGPINVOKE.dwg_getall_DIMASSOC(Dwg_Data.getCPtr(dwg));
-    SWIGTYPE_p_p__dwg_object_DIMASSOC ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_p__dwg_object_DIMASSOC(cPtr, false);
-    return ret;
-  }
-
   public static SWIGTYPE_p_p__dwg_object_DBCOLOR dwg_getall_DBCOLOR(Dwg_Data dwg) {
     global::System.IntPtr cPtr = LibreDWGPINVOKE.dwg_getall_DBCOLOR(Dwg_Data.getCPtr(dwg));
     SWIGTYPE_p_p__dwg_object_DBCOLOR ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_p__dwg_object_DBCOLOR(cPtr, false);
+    return ret;
+  }
+
+  public static SWIGTYPE_p_p__dwg_object_DIMASSOC dwg_getall_DIMASSOC(Dwg_Data dwg) {
+    global::System.IntPtr cPtr = LibreDWGPINVOKE.dwg_getall_DIMASSOC(Dwg_Data.getCPtr(dwg));
+    SWIGTYPE_p_p__dwg_object_DIMASSOC ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_p__dwg_object_DIMASSOC(cPtr, false);
     return ret;
   }
 
@@ -1747,15 +1976,39 @@ public class LibreDWG {
     return ret;
   }
 
+  public static SWIGTYPE_p_p__dwg_object_LONG_TRANSACTION dwg_getall_LONG_TRANSACTION(Dwg_Data dwg) {
+    global::System.IntPtr cPtr = LibreDWGPINVOKE.dwg_getall_LONG_TRANSACTION(Dwg_Data.getCPtr(dwg));
+    SWIGTYPE_p_p__dwg_object_LONG_TRANSACTION ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_p__dwg_object_LONG_TRANSACTION(cPtr, false);
+    return ret;
+  }
+
   public static SWIGTYPE_p_p__dwg_object_OBJECT_PTR dwg_getall_OBJECT_PTR(Dwg_Data dwg) {
     global::System.IntPtr cPtr = LibreDWGPINVOKE.dwg_getall_OBJECT_PTR(Dwg_Data.getCPtr(dwg));
     SWIGTYPE_p_p__dwg_object_OBJECT_PTR ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_p__dwg_object_OBJECT_PTR(cPtr, false);
     return ret;
   }
 
-  public static SWIGTYPE_p_p__dwg_object_PERSSUBENTMANAGER dwg_getall_PERSSUBENTMANAGER(Dwg_Data dwg) {
-    global::System.IntPtr cPtr = LibreDWGPINVOKE.dwg_getall_PERSSUBENTMANAGER(Dwg_Data.getCPtr(dwg));
-    SWIGTYPE_p_p__dwg_object_PERSSUBENTMANAGER ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_p__dwg_object_PERSSUBENTMANAGER(cPtr, false);
+  public static SWIGTYPE_p_p__dwg_object_PERSUBENTMGR dwg_getall_PERSUBENTMGR(Dwg_Data dwg) {
+    global::System.IntPtr cPtr = LibreDWGPINVOKE.dwg_getall_PERSUBENTMGR(Dwg_Data.getCPtr(dwg));
+    SWIGTYPE_p_p__dwg_object_PERSUBENTMGR ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_p__dwg_object_PERSUBENTMGR(cPtr, false);
+    return ret;
+  }
+
+  public static SWIGTYPE_p_p__dwg_object_SECTION_MANAGER dwg_getall_SECTION_MANAGER(Dwg_Data dwg) {
+    global::System.IntPtr cPtr = LibreDWGPINVOKE.dwg_getall_SECTION_MANAGER(Dwg_Data.getCPtr(dwg));
+    SWIGTYPE_p_p__dwg_object_SECTION_MANAGER ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_p__dwg_object_SECTION_MANAGER(cPtr, false);
+    return ret;
+  }
+
+  public static SWIGTYPE_p_p__dwg_object_TABLEGEOMETRY dwg_getall_TABLEGEOMETRY(Dwg_Data dwg) {
+    global::System.IntPtr cPtr = LibreDWGPINVOKE.dwg_getall_TABLEGEOMETRY(Dwg_Data.getCPtr(dwg));
+    SWIGTYPE_p_p__dwg_object_TABLEGEOMETRY ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_p__dwg_object_TABLEGEOMETRY(cPtr, false);
+    return ret;
+  }
+
+  public static SWIGTYPE_p_p__dwg_object_TABLESTYLE dwg_getall_TABLESTYLE(Dwg_Data dwg) {
+    global::System.IntPtr cPtr = LibreDWGPINVOKE.dwg_getall_TABLESTYLE(Dwg_Data.getCPtr(dwg));
+    SWIGTYPE_p_p__dwg_object_TABLESTYLE ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_p__dwg_object_TABLESTYLE(cPtr, false);
     return ret;
   }
 
@@ -2035,9 +2288,9 @@ public class LibreDWG {
     return ret;
   }
 
-  public static Dwg_Entity_LWPOLYLINE dwg_object_to_LWPOLYLINE(Dwg_Object obj) {
-    global::System.IntPtr cPtr = LibreDWGPINVOKE.dwg_object_to_LWPOLYLINE(Dwg_Object.getCPtr(obj));
-    Dwg_Entity_LWPOLYLINE ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Entity_LWPOLYLINE(cPtr, false);
+  public static Dwg_Entity_PROXY_ENTITY dwg_object_to_PROXY_ENTITY(Dwg_Object obj) {
+    global::System.IntPtr cPtr = LibreDWGPINVOKE.dwg_object_to_PROXY_ENTITY(Dwg_Object.getCPtr(obj));
+    Dwg_Entity_PROXY_ENTITY ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Entity_PROXY_ENTITY(cPtr, false);
     return ret;
   }
 
@@ -2047,9 +2300,9 @@ public class LibreDWG {
     return ret;
   }
 
-  public static Dwg_Entity_IMAGE dwg_object_to_IMAGE(Dwg_Object obj) {
-    global::System.IntPtr cPtr = LibreDWGPINVOKE.dwg_object_to_IMAGE(Dwg_Object.getCPtr(obj));
-    Dwg_Entity_IMAGE ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Entity_IMAGE(cPtr, false);
+  public static Dwg_Entity_UNKNOWN_ENT dwg_object_to_UNKNOWN_ENT(Dwg_Object obj) {
+    global::System.IntPtr cPtr = LibreDWGPINVOKE.dwg_object_to_UNKNOWN_ENT(Dwg_Object.getCPtr(obj));
+    Dwg_Entity_UNKNOWN_ENT ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Entity_UNKNOWN_ENT(cPtr, false);
     return ret;
   }
 
@@ -2065,15 +2318,33 @@ public class LibreDWG {
     return ret;
   }
 
+  public static Dwg_Entity_IMAGE dwg_object_to_IMAGE(Dwg_Object obj) {
+    global::System.IntPtr cPtr = LibreDWGPINVOKE.dwg_object_to_IMAGE(Dwg_Object.getCPtr(obj));
+    Dwg_Entity_IMAGE ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Entity_IMAGE(cPtr, false);
+    return ret;
+  }
+
   public static Dwg_Entity_LIGHT dwg_object_to_LIGHT(Dwg_Object obj) {
     global::System.IntPtr cPtr = LibreDWGPINVOKE.dwg_object_to_LIGHT(Dwg_Object.getCPtr(obj));
     Dwg_Entity_LIGHT ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Entity_LIGHT(cPtr, false);
     return ret;
   }
 
+  public static Dwg_Entity_LWPOLYLINE dwg_object_to_LWPOLYLINE(Dwg_Object obj) {
+    global::System.IntPtr cPtr = LibreDWGPINVOKE.dwg_object_to_LWPOLYLINE(Dwg_Object.getCPtr(obj));
+    Dwg_Entity_LWPOLYLINE ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Entity_LWPOLYLINE(cPtr, false);
+    return ret;
+  }
+
   public static Dwg_Entity_MULTILEADER dwg_object_to_MULTILEADER(Dwg_Object obj) {
     global::System.IntPtr cPtr = LibreDWGPINVOKE.dwg_object_to_MULTILEADER(Dwg_Object.getCPtr(obj));
     Dwg_Entity_MULTILEADER ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Entity_MULTILEADER(cPtr, false);
+    return ret;
+  }
+
+  public static Dwg_Entity_SECTIONOBJECT dwg_object_to_SECTIONOBJECT(Dwg_Object obj) {
+    global::System.IntPtr cPtr = LibreDWGPINVOKE.dwg_object_to_SECTIONOBJECT(Dwg_Object.getCPtr(obj));
+    Dwg_Entity_SECTIONOBJECT ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Entity_SECTIONOBJECT(cPtr, false);
     return ret;
   }
 
@@ -2293,12 +2564,6 @@ public class LibreDWG {
     return ret;
   }
 
-  public static Dwg_Object_OBJECTCONTEXTDATA dwg_object_to_OBJECTCONTEXTDATA(Dwg_Object obj) {
-    global::System.IntPtr cPtr = LibreDWGPINVOKE.dwg_object_to_OBJECTCONTEXTDATA(Dwg_Object.getCPtr(obj));
-    Dwg_Object_OBJECTCONTEXTDATA ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Object_OBJECTCONTEXTDATA(cPtr, false);
-    return ret;
-  }
-
   public static Dwg_Object_PLACEHOLDER dwg_object_to_PLACEHOLDER(Dwg_Object obj) {
     global::System.IntPtr cPtr = LibreDWGPINVOKE.dwg_object_to_PLACEHOLDER(Dwg_Object.getCPtr(obj));
     Dwg_Object_PLACEHOLDER ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Object_PLACEHOLDER(cPtr, false);
@@ -2341,6 +2606,12 @@ public class LibreDWG {
     return ret;
   }
 
+  public static Dwg_Object_ASSOCALIGNEDDIMACTIONBODY dwg_object_to_ASSOCALIGNEDDIMACTIONBODY(Dwg_Object obj) {
+    global::System.IntPtr cPtr = LibreDWGPINVOKE.dwg_object_to_ASSOCALIGNEDDIMACTIONBODY(Dwg_Object.getCPtr(obj));
+    Dwg_Object_ASSOCALIGNEDDIMACTIONBODY ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Object_ASSOCALIGNEDDIMACTIONBODY(cPtr, false);
+    return ret;
+  }
+
   public static Dwg_Object_ASSOCDEPENDENCY dwg_object_to_ASSOCDEPENDENCY(Dwg_Object obj) {
     global::System.IntPtr cPtr = LibreDWGPINVOKE.dwg_object_to_ASSOCDEPENDENCY(Dwg_Object.getCPtr(obj));
     Dwg_Object_ASSOCDEPENDENCY ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Object_ASSOCDEPENDENCY(cPtr, false);
@@ -2353,15 +2624,21 @@ public class LibreDWG {
     return ret;
   }
 
+  public static Dwg_Object_DBCOLOR dwg_object_to_DBCOLOR(Dwg_Object obj) {
+    global::System.IntPtr cPtr = LibreDWGPINVOKE.dwg_object_to_DBCOLOR(Dwg_Object.getCPtr(obj));
+    Dwg_Object_DBCOLOR ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Object_DBCOLOR(cPtr, false);
+    return ret;
+  }
+
   public static Dwg_Object_DIMASSOC dwg_object_to_DIMASSOC(Dwg_Object obj) {
     global::System.IntPtr cPtr = LibreDWGPINVOKE.dwg_object_to_DIMASSOC(Dwg_Object.getCPtr(obj));
     Dwg_Object_DIMASSOC ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Object_DIMASSOC(cPtr, false);
     return ret;
   }
 
-  public static Dwg_Object_DBCOLOR dwg_object_to_DBCOLOR(Dwg_Object obj) {
-    global::System.IntPtr cPtr = LibreDWGPINVOKE.dwg_object_to_DBCOLOR(Dwg_Object.getCPtr(obj));
-    Dwg_Object_DBCOLOR ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Object_DBCOLOR(cPtr, false);
+  public static Dwg_Object_DUMMY dwg_object_to_DUMMY(Dwg_Object obj) {
+    global::System.IntPtr cPtr = LibreDWGPINVOKE.dwg_object_to_DUMMY(Dwg_Object.getCPtr(obj));
+    Dwg_Object_DUMMY ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Object_DUMMY(cPtr, false);
     return ret;
   }
 
@@ -2377,15 +2654,39 @@ public class LibreDWG {
     return ret;
   }
 
+  public static Dwg_Object_LONG_TRANSACTION dwg_object_to_LONG_TRANSACTION(Dwg_Object obj) {
+    global::System.IntPtr cPtr = LibreDWGPINVOKE.dwg_object_to_LONG_TRANSACTION(Dwg_Object.getCPtr(obj));
+    Dwg_Object_LONG_TRANSACTION ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Object_LONG_TRANSACTION(cPtr, false);
+    return ret;
+  }
+
   public static Dwg_Object_OBJECT_PTR dwg_object_to_OBJECT_PTR(Dwg_Object obj) {
     global::System.IntPtr cPtr = LibreDWGPINVOKE.dwg_object_to_OBJECT_PTR(Dwg_Object.getCPtr(obj));
     Dwg_Object_OBJECT_PTR ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Object_OBJECT_PTR(cPtr, false);
     return ret;
   }
 
-  public static Dwg_Object_PERSSUBENTMANAGER dwg_object_to_PERSSUBENTMANAGER(Dwg_Object obj) {
-    global::System.IntPtr cPtr = LibreDWGPINVOKE.dwg_object_to_PERSSUBENTMANAGER(Dwg_Object.getCPtr(obj));
-    Dwg_Object_PERSSUBENTMANAGER ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Object_PERSSUBENTMANAGER(cPtr, false);
+  public static Dwg_Object_PERSUBENTMGR dwg_object_to_PERSUBENTMGR(Dwg_Object obj) {
+    global::System.IntPtr cPtr = LibreDWGPINVOKE.dwg_object_to_PERSUBENTMGR(Dwg_Object.getCPtr(obj));
+    Dwg_Object_PERSUBENTMGR ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Object_PERSUBENTMGR(cPtr, false);
+    return ret;
+  }
+
+  public static Dwg_Object_SECTION_MANAGER dwg_object_to_SECTION_MANAGER(Dwg_Object obj) {
+    global::System.IntPtr cPtr = LibreDWGPINVOKE.dwg_object_to_SECTION_MANAGER(Dwg_Object.getCPtr(obj));
+    Dwg_Object_SECTION_MANAGER ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Object_SECTION_MANAGER(cPtr, false);
+    return ret;
+  }
+
+  public static Dwg_Object_TABLEGEOMETRY dwg_object_to_TABLEGEOMETRY(Dwg_Object obj) {
+    global::System.IntPtr cPtr = LibreDWGPINVOKE.dwg_object_to_TABLEGEOMETRY(Dwg_Object.getCPtr(obj));
+    Dwg_Object_TABLEGEOMETRY ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Object_TABLEGEOMETRY(cPtr, false);
+    return ret;
+  }
+
+  public static Dwg_Object_TABLESTYLE dwg_object_to_TABLESTYLE(Dwg_Object obj) {
+    global::System.IntPtr cPtr = LibreDWGPINVOKE.dwg_object_to_TABLESTYLE(Dwg_Object.getCPtr(obj));
+    Dwg_Object_TABLESTYLE ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Object_TABLESTYLE(cPtr, false);
     return ret;
   }
 
@@ -2407,6 +2708,7 @@ public class LibreDWG {
   public static readonly string FORMAT_RC = LibreDWGPINVOKE.FORMAT_RC_get();
   public static readonly string FORMAT_RCd = LibreDWGPINVOKE.FORMAT_RCd_get();
   public static readonly string FORMAT_RCu = LibreDWGPINVOKE.FORMAT_RCu_get();
+  public static readonly string FORMAT_RCx = LibreDWGPINVOKE.FORMAT_RCx_get();
   public static readonly string FORMAT_B = LibreDWGPINVOKE.FORMAT_B_get();
   public static readonly string FORMAT_BB = LibreDWGPINVOKE.FORMAT_BB_get();
   public static readonly string FORMAT_3B = LibreDWGPINVOKE.FORMAT_3B_get();
@@ -2415,15 +2717,22 @@ public class LibreDWG {
   public static readonly string FORMAT_RD = LibreDWGPINVOKE.FORMAT_RD_get();
   public static readonly string FORMAT_TF = LibreDWGPINVOKE.FORMAT_TF_get();
   public static readonly string FORMAT_TV = LibreDWGPINVOKE.FORMAT_TV_get();
+  public static readonly string FORMAT_T16 = LibreDWGPINVOKE.FORMAT_T16_get();
+  public static readonly string FORMAT_T32 = LibreDWGPINVOKE.FORMAT_T32_get();
+  public static readonly string FORMAT_TU32 = LibreDWGPINVOKE.FORMAT_TU32_get();
   public static readonly string FORMAT_BT = LibreDWGPINVOKE.FORMAT_BT_get();
   public static readonly string FORMAT_DD = LibreDWGPINVOKE.FORMAT_DD_get();
   public static readonly string FORMAT_BD = LibreDWGPINVOKE.FORMAT_BD_get();
   public static readonly string FORMAT_4BITS = LibreDWGPINVOKE.FORMAT_4BITS_get();
+  public static readonly string FORMAT_D2T = LibreDWGPINVOKE.FORMAT_D2T_get();
   public static readonly string FORMAT_TU = LibreDWGPINVOKE.FORMAT_TU_get();
   public static readonly string FORMAT_H = LibreDWGPINVOKE.FORMAT_H_get();
   public static readonly string FORMAT_REF = LibreDWGPINVOKE.FORMAT_REF_get();
   public static readonly int DWG_OPTS_LOGLEVEL = LibreDWGPINVOKE.DWG_OPTS_LOGLEVEL_get();
   public static readonly int DWG_OPTS_MINIMAL = LibreDWGPINVOKE.DWG_OPTS_MINIMAL_get();
-  public static readonly int DWG_OPTS_INDXF = LibreDWGPINVOKE.DWG_OPTS_INDXF_get();
   public static readonly int DWG_OPTS_DXFB = LibreDWGPINVOKE.DWG_OPTS_DXFB_get();
+  public static readonly int DWG_OPTS_JSONFIRST = LibreDWGPINVOKE.DWG_OPTS_JSONFIRST_get();
+  public static readonly int DWG_OPTS_INDXF = LibreDWGPINVOKE.DWG_OPTS_INDXF_get();
+  public static readonly int DWG_OPTS_INJSON = LibreDWGPINVOKE.DWG_OPTS_INJSON_get();
+  public static readonly int DWG_OPTS_IN = LibreDWGPINVOKE.DWG_OPTS_IN_get();
 }

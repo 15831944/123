@@ -54,12 +54,12 @@ public class Dwg_Object_LTYPE : global::System.IDisposable {
     } 
   }
 
-  public byte flag {
+  public ushort flag {
     set {
       LibreDWGPINVOKE.Dwg_Object_LTYPE_flag_set(swigCPtr, value);
     } 
     get {
-      byte ret = LibreDWGPINVOKE.Dwg_Object_LTYPE_flag_get(swigCPtr);
+      ushort ret = LibreDWGPINVOKE.Dwg_Object_LTYPE_flag_get(swigCPtr);
       return ret;
     } 
   }
@@ -84,32 +84,43 @@ public class Dwg_Object_LTYPE : global::System.IDisposable {
     } 
   }
 
-  public byte xrefref {
+  public byte is_xref_ref {
     set {
-      LibreDWGPINVOKE.Dwg_Object_LTYPE_xrefref_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_Object_LTYPE_is_xref_ref_set(swigCPtr, value);
     } 
     get {
-      byte ret = LibreDWGPINVOKE.Dwg_Object_LTYPE_xrefref_get(swigCPtr);
+      byte ret = LibreDWGPINVOKE.Dwg_Object_LTYPE_is_xref_ref_get(swigCPtr);
       return ret;
     } 
   }
 
-  public ushort xrefindex_plus1 {
+  public ushort is_xref_resolved {
     set {
-      LibreDWGPINVOKE.Dwg_Object_LTYPE_xrefindex_plus1_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_Object_LTYPE_is_xref_resolved_set(swigCPtr, value);
     } 
     get {
-      ushort ret = LibreDWGPINVOKE.Dwg_Object_LTYPE_xrefindex_plus1_get(swigCPtr);
+      ushort ret = LibreDWGPINVOKE.Dwg_Object_LTYPE_is_xref_resolved_get(swigCPtr);
       return ret;
     } 
   }
 
-  public byte xrefdep {
+  public byte is_xref_dep {
     set {
-      LibreDWGPINVOKE.Dwg_Object_LTYPE_xrefdep_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_Object_LTYPE_is_xref_dep_set(swigCPtr, value);
     } 
     get {
-      byte ret = LibreDWGPINVOKE.Dwg_Object_LTYPE_xrefdep_get(swigCPtr);
+      byte ret = LibreDWGPINVOKE.Dwg_Object_LTYPE_is_xref_dep_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public Dwg_Object_Ref xref {
+    set {
+      LibreDWGPINVOKE.Dwg_Object_LTYPE_xref_set(swigCPtr, Dwg_Object_Ref.getCPtr(value));
+    } 
+    get {
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Object_LTYPE_xref_get(swigCPtr);
+      Dwg_Object_Ref ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Object_Ref(cPtr, false);
       return ret;
     } 
   }
@@ -176,44 +187,23 @@ public class Dwg_Object_LTYPE : global::System.IDisposable {
     } 
   }
 
-  public byte text_area_is_present {
+  public byte has_strings_area {
     set {
-      LibreDWGPINVOKE.Dwg_Object_LTYPE_text_area_is_present_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_Object_LTYPE_has_strings_area_set(swigCPtr, value);
     } 
     get {
-      byte ret = LibreDWGPINVOKE.Dwg_Object_LTYPE_text_area_is_present_get(swigCPtr);
+      byte ret = LibreDWGPINVOKE.Dwg_Object_LTYPE_has_strings_area_get(swigCPtr);
       return ret;
     } 
   }
 
-  public string strings_area {
+  public SWIGTYPE_p_unsigned_char strings_area {
     set {
-      LibreDWGPINVOKE.Dwg_Object_LTYPE_strings_area_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_Object_LTYPE_strings_area_set(swigCPtr, SWIGTYPE_p_unsigned_char.getCPtr(value));
     } 
     get {
-      string ret = LibreDWGPINVOKE.Dwg_Object_LTYPE_strings_area_get(swigCPtr);
-      return ret;
-    } 
-  }
-
-  public Dwg_Object_Ref extref_handle {
-    set {
-      LibreDWGPINVOKE.Dwg_Object_LTYPE_extref_handle_set(swigCPtr, Dwg_Object_Ref.getCPtr(value));
-    } 
-    get {
-      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Object_LTYPE_extref_handle_get(swigCPtr);
-      Dwg_Object_Ref ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Object_Ref(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public SWIGTYPE_p_p__dwg_object_ref styles {
-    set {
-      LibreDWGPINVOKE.Dwg_Object_LTYPE_styles_set(swigCPtr, SWIGTYPE_p_p__dwg_object_ref.getCPtr(value));
-    } 
-    get {
-      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Object_LTYPE_styles_get(swigCPtr);
-      SWIGTYPE_p_p__dwg_object_ref ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_p__dwg_object_ref(cPtr, false);
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Object_LTYPE_strings_area_get(swigCPtr);
+      SWIGTYPE_p_unsigned_char ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_unsigned_char(cPtr, false);
       return ret;
     } 
   }

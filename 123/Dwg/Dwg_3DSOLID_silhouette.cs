@@ -107,6 +107,16 @@ public class Dwg_3DSOLID_silhouette : global::System.IDisposable {
     } 
   }
 
+  public byte has_wires {
+    set {
+      LibreDWGPINVOKE.Dwg_3DSOLID_silhouette_has_wires_set(swigCPtr, value);
+    } 
+    get {
+      byte ret = LibreDWGPINVOKE.Dwg_3DSOLID_silhouette_has_wires_get(swigCPtr);
+      return ret;
+    } 
+  }
+
   public uint num_wires {
     set {
       LibreDWGPINVOKE.Dwg_3DSOLID_silhouette_num_wires_set(swigCPtr, value);

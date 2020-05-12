@@ -74,6 +74,17 @@ public class Dwg_LTYPE_dash : global::System.IDisposable {
     } 
   }
 
+  public Dwg_Object_Ref style {
+    set {
+      LibreDWGPINVOKE.Dwg_LTYPE_dash_style_set(swigCPtr, Dwg_Object_Ref.getCPtr(value));
+    } 
+    get {
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_LTYPE_dash_style_get(swigCPtr);
+      Dwg_Object_Ref ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Object_Ref(cPtr, false);
+      return ret;
+    } 
+  }
+
   public double x_offset {
     set {
       LibreDWGPINVOKE.Dwg_LTYPE_dash_x_offset_set(swigCPtr, value);
@@ -120,6 +131,16 @@ public class Dwg_LTYPE_dash : global::System.IDisposable {
     } 
     get {
       ushort ret = LibreDWGPINVOKE.Dwg_LTYPE_dash_shape_flag_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public string text {
+    set {
+      LibreDWGPINVOKE.Dwg_LTYPE_dash_text_set(swigCPtr, value);
+    } 
+    get {
+      string ret = LibreDWGPINVOKE.Dwg_LTYPE_dash_text_get(swigCPtr);
       return ret;
     } 
   }

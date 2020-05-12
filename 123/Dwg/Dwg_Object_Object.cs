@@ -136,22 +136,22 @@ public class Dwg_Object_Object : global::System.IDisposable {
     } 
   }
 
-  public byte xdic_missing_flag {
+  public byte is_xdic_missing {
     set {
-      LibreDWGPINVOKE.Dwg_Object_Object_xdic_missing_flag_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_Object_Object_is_xdic_missing_set(swigCPtr, value);
     } 
     get {
-      byte ret = LibreDWGPINVOKE.Dwg_Object_Object_xdic_missing_flag_get(swigCPtr);
+      byte ret = LibreDWGPINVOKE.Dwg_Object_Object_is_xdic_missing_get(swigCPtr);
       return ret;
     } 
   }
 
-  public byte has_ds_binary_data {
+  public byte has_ds_data {
     set {
-      LibreDWGPINVOKE.Dwg_Object_Object_has_ds_binary_data_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_Object_Object_has_ds_data_set(swigCPtr, value);
     } 
     get {
-      byte ret = LibreDWGPINVOKE.Dwg_Object_Object_has_ds_binary_data_get(swigCPtr);
+      byte ret = LibreDWGPINVOKE.Dwg_Object_Object_has_ds_data_get(swigCPtr);
       return ret;
     } 
   }

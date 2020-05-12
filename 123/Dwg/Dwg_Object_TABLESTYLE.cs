@@ -134,6 +134,58 @@ public class Dwg_Object_TABLESTYLE : global::System.IDisposable {
     } 
   }
 
+  public byte unknown_rc {
+    set {
+      LibreDWGPINVOKE.Dwg_Object_TABLESTYLE_unknown_rc_set(swigCPtr, value);
+    } 
+    get {
+      byte ret = LibreDWGPINVOKE.Dwg_Object_TABLESTYLE_unknown_rc_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public uint unknown_bl1 {
+    set {
+      LibreDWGPINVOKE.Dwg_Object_TABLESTYLE_unknown_bl1_set(swigCPtr, value);
+    } 
+    get {
+      uint ret = LibreDWGPINVOKE.Dwg_Object_TABLESTYLE_unknown_bl1_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public uint unknown_bl2 {
+    set {
+      LibreDWGPINVOKE.Dwg_Object_TABLESTYLE_unknown_bl2_set(swigCPtr, value);
+    } 
+    get {
+      uint ret = LibreDWGPINVOKE.Dwg_Object_TABLESTYLE_unknown_bl2_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public Dwg_Object_Ref cellstyle_handle {
+    set {
+      LibreDWGPINVOKE.Dwg_Object_TABLESTYLE_cellstyle_handle_set(swigCPtr, Dwg_Object_Ref.getCPtr(value));
+    } 
+    get {
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Object_TABLESTYLE_cellstyle_handle_get(swigCPtr);
+      Dwg_Object_Ref ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Object_Ref(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public Dwg_TABLESTYLE_Cell cellstyle {
+    set {
+      LibreDWGPINVOKE.Dwg_Object_TABLESTYLE_cellstyle_set(swigCPtr, Dwg_TABLESTYLE_Cell.getCPtr(value));
+    } 
+    get {
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Object_TABLESTYLE_cellstyle_get(swigCPtr);
+      Dwg_TABLESTYLE_Cell ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_TABLESTYLE_Cell(cPtr, false);
+      return ret;
+    } 
+  }
+
   public uint num_rowstyles {
     set {
       LibreDWGPINVOKE.Dwg_Object_TABLESTYLE_num_rowstyles_set(swigCPtr, value);

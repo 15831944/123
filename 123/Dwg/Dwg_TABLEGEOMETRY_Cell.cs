@@ -43,12 +43,23 @@ public class Dwg_TABLEGEOMETRY_Cell : global::System.IDisposable {
     }
   }
 
-  public uint flag {
+  public Dwg_Object_TABLEGEOMETRY parent {
     set {
-      LibreDWGPINVOKE.Dwg_TABLEGEOMETRY_Cell_flag_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_TABLEGEOMETRY_Cell_parent_set(swigCPtr, Dwg_Object_TABLEGEOMETRY.getCPtr(value));
     } 
     get {
-      uint ret = LibreDWGPINVOKE.Dwg_TABLEGEOMETRY_Cell_flag_get(swigCPtr);
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_TABLEGEOMETRY_Cell_parent_get(swigCPtr);
+      Dwg_Object_TABLEGEOMETRY ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Object_TABLEGEOMETRY(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public uint geom_data_flag {
+    set {
+      LibreDWGPINVOKE.Dwg_TABLEGEOMETRY_Cell_geom_data_flag_set(swigCPtr, value);
+    } 
+    get {
+      uint ret = LibreDWGPINVOKE.Dwg_TABLEGEOMETRY_Cell_geom_data_flag_get(swigCPtr);
       return ret;
     } 
   }
@@ -73,45 +84,34 @@ public class Dwg_TABLEGEOMETRY_Cell : global::System.IDisposable {
     } 
   }
 
-  public Dwg_Object_Ref unknown {
+  public Dwg_Object_Ref tablegeometry {
     set {
-      LibreDWGPINVOKE.Dwg_TABLEGEOMETRY_Cell_unknown_set(swigCPtr, Dwg_Object_Ref.getCPtr(value));
+      LibreDWGPINVOKE.Dwg_TABLEGEOMETRY_Cell_tablegeometry_set(swigCPtr, Dwg_Object_Ref.getCPtr(value));
     } 
     get {
-      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_TABLEGEOMETRY_Cell_unknown_get(swigCPtr);
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_TABLEGEOMETRY_Cell_tablegeometry_get(swigCPtr);
       Dwg_Object_Ref ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Object_Ref(cPtr, false);
       return ret;
     } 
   }
 
-  public uint num_geom_data {
+  public uint num_geometry {
     set {
-      LibreDWGPINVOKE.Dwg_TABLEGEOMETRY_Cell_num_geom_data_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_TABLEGEOMETRY_Cell_num_geometry_set(swigCPtr, value);
     } 
     get {
-      uint ret = LibreDWGPINVOKE.Dwg_TABLEGEOMETRY_Cell_num_geom_data_get(swigCPtr);
+      uint ret = LibreDWGPINVOKE.Dwg_TABLEGEOMETRY_Cell_num_geometry_get(swigCPtr);
       return ret;
     } 
   }
 
-  public Dwg_CellContentGeometry geom_data {
+  public Dwg_CellContentGeometry geometry {
     set {
-      LibreDWGPINVOKE.Dwg_TABLEGEOMETRY_Cell_geom_data_set(swigCPtr, Dwg_CellContentGeometry.getCPtr(value));
+      LibreDWGPINVOKE.Dwg_TABLEGEOMETRY_Cell_geometry_set(swigCPtr, Dwg_CellContentGeometry.getCPtr(value));
     } 
     get {
-      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_TABLEGEOMETRY_Cell_geom_data_get(swigCPtr);
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_TABLEGEOMETRY_Cell_geometry_get(swigCPtr);
       Dwg_CellContentGeometry ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_CellContentGeometry(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public Dwg_Object_TABLEGEOMETRY parent {
-    set {
-      LibreDWGPINVOKE.Dwg_TABLEGEOMETRY_Cell_parent_set(swigCPtr, Dwg_Object_TABLEGEOMETRY.getCPtr(value));
-    } 
-    get {
-      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_TABLEGEOMETRY_Cell_parent_get(swigCPtr);
-      Dwg_Object_TABLEGEOMETRY ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Object_TABLEGEOMETRY(cPtr, false);
       return ret;
     } 
   }

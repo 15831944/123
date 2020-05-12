@@ -75,12 +75,13 @@ public class Dwg_Eed : global::System.IDisposable {
     } 
   }
 
-  public string raw {
+  public SWIGTYPE_p_unsigned_char raw {
     set {
-      LibreDWGPINVOKE.Dwg_Eed_raw_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_Eed_raw_set(swigCPtr, SWIGTYPE_p_unsigned_char.getCPtr(value));
     } 
     get {
-      string ret = LibreDWGPINVOKE.Dwg_Eed_raw_get(swigCPtr);
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Eed_raw_get(swigCPtr);
+      SWIGTYPE_p_unsigned_char ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_unsigned_char(cPtr, false);
       return ret;
     } 
   }

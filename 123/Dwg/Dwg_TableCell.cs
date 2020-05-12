@@ -196,53 +196,53 @@ public class Dwg_TableCell : global::System.IDisposable {
     } 
   }
 
-  public double unknown_d40 {
+  public double width_w_gap {
     set {
-      LibreDWGPINVOKE.Dwg_TableCell_unknown_d40_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_TableCell_width_w_gap_set(swigCPtr, value);
     } 
     get {
-      double ret = LibreDWGPINVOKE.Dwg_TableCell_unknown_d40_get(swigCPtr);
+      double ret = LibreDWGPINVOKE.Dwg_TableCell_width_w_gap_get(swigCPtr);
       return ret;
     } 
   }
 
-  public double unknown_d41 {
+  public double height_w_gap {
     set {
-      LibreDWGPINVOKE.Dwg_TableCell_unknown_d41_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_TableCell_height_w_gap_set(swigCPtr, value);
     } 
     get {
-      double ret = LibreDWGPINVOKE.Dwg_TableCell_unknown_d41_get(swigCPtr);
+      double ret = LibreDWGPINVOKE.Dwg_TableCell_height_w_gap_get(swigCPtr);
       return ret;
     } 
   }
 
-  public uint has_cell_geom {
+  public Dwg_Object_Ref tablegeometry {
     set {
-      LibreDWGPINVOKE.Dwg_TableCell_has_cell_geom_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_TableCell_tablegeometry_set(swigCPtr, Dwg_Object_Ref.getCPtr(value));
     } 
     get {
-      uint ret = LibreDWGPINVOKE.Dwg_TableCell_has_cell_geom_get(swigCPtr);
-      return ret;
-    } 
-  }
-
-  public Dwg_Object_Ref cell_geom_handle {
-    set {
-      LibreDWGPINVOKE.Dwg_TableCell_cell_geom_handle_set(swigCPtr, Dwg_Object_Ref.getCPtr(value));
-    } 
-    get {
-      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_TableCell_cell_geom_handle_get(swigCPtr);
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_TableCell_tablegeometry_get(swigCPtr);
       Dwg_Object_Ref ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Object_Ref(cPtr, false);
       return ret;
     } 
   }
 
-  public Dwg_CellContentGeometry geom_data {
+  public uint num_geometry {
     set {
-      LibreDWGPINVOKE.Dwg_TableCell_geom_data_set(swigCPtr, Dwg_CellContentGeometry.getCPtr(value));
+      LibreDWGPINVOKE.Dwg_TableCell_num_geometry_set(swigCPtr, value);
     } 
     get {
-      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_TableCell_geom_data_get(swigCPtr);
+      uint ret = LibreDWGPINVOKE.Dwg_TableCell_num_geometry_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public Dwg_CellContentGeometry geometry {
+    set {
+      LibreDWGPINVOKE.Dwg_TableCell_geometry_set(swigCPtr, Dwg_CellContentGeometry.getCPtr(value));
+    } 
+    get {
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_TableCell_geometry_get(swigCPtr);
       Dwg_CellContentGeometry ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_CellContentGeometry(cPtr, false);
       return ret;
     } 

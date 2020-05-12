@@ -53,12 +53,12 @@ public class Dwg_SUNSTUDY_Dates : global::System.IDisposable {
     } 
   }
 
-  public uint time {
+  public uint msecs {
     set {
-      LibreDWGPINVOKE.Dwg_SUNSTUDY_Dates_time_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_SUNSTUDY_Dates_msecs_set(swigCPtr, value);
     } 
     get {
-      uint ret = LibreDWGPINVOKE.Dwg_SUNSTUDY_Dates_time_get(swigCPtr);
+      uint ret = LibreDWGPINVOKE.Dwg_SUNSTUDY_Dates_msecs_get(swigCPtr);
       return ret;
     } 
   }

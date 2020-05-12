@@ -54,22 +54,23 @@ public class Dwg_Object_VBA_PROJECT : global::System.IDisposable {
     } 
   }
 
-  public uint num_bytes {
+  public uint data_size {
     set {
-      LibreDWGPINVOKE.Dwg_Object_VBA_PROJECT_num_bytes_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_Object_VBA_PROJECT_data_size_set(swigCPtr, value);
     } 
     get {
-      uint ret = LibreDWGPINVOKE.Dwg_Object_VBA_PROJECT_num_bytes_get(swigCPtr);
+      uint ret = LibreDWGPINVOKE.Dwg_Object_VBA_PROJECT_data_size_get(swigCPtr);
       return ret;
     } 
   }
 
-  public string bytes {
+  public SWIGTYPE_p_unsigned_char data {
     set {
-      LibreDWGPINVOKE.Dwg_Object_VBA_PROJECT_bytes_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_Object_VBA_PROJECT_data_set(swigCPtr, SWIGTYPE_p_unsigned_char.getCPtr(value));
     } 
     get {
-      string ret = LibreDWGPINVOKE.Dwg_Object_VBA_PROJECT_bytes_get(swigCPtr);
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Object_VBA_PROJECT_data_get(swigCPtr);
+      SWIGTYPE_p_unsigned_char ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_unsigned_char(cPtr, false);
       return ret;
     } 
   }

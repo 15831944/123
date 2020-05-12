@@ -158,12 +158,12 @@ public class Dwg_Entity_EXTRUDEDSURFACE : global::System.IDisposable {
     } 
   }
 
-  public uint num_isolines {
+  public uint isolines {
     set {
-      LibreDWGPINVOKE.Dwg_Entity_EXTRUDEDSURFACE_num_isolines_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_Entity_EXTRUDEDSURFACE_isolines_set(swigCPtr, value);
     } 
     get {
-      uint ret = LibreDWGPINVOKE.Dwg_Entity_EXTRUDEDSURFACE_num_isolines_get(swigCPtr);
+      uint ret = LibreDWGPINVOKE.Dwg_Entity_EXTRUDEDSURFACE_isolines_get(swigCPtr);
       return ret;
     } 
   }
@@ -282,22 +282,23 @@ public class Dwg_Entity_EXTRUDEDSURFACE : global::System.IDisposable {
     } 
   }
 
-  public uint size_bindata {
+  public uint bindata_size {
     set {
-      LibreDWGPINVOKE.Dwg_Entity_EXTRUDEDSURFACE_size_bindata_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_Entity_EXTRUDEDSURFACE_bindata_size_set(swigCPtr, value);
     } 
     get {
-      uint ret = LibreDWGPINVOKE.Dwg_Entity_EXTRUDEDSURFACE_size_bindata_get(swigCPtr);
+      uint ret = LibreDWGPINVOKE.Dwg_Entity_EXTRUDEDSURFACE_bindata_size_get(swigCPtr);
       return ret;
     } 
   }
 
-  public string bindata {
+  public SWIGTYPE_p_unsigned_char bindata {
     set {
-      LibreDWGPINVOKE.Dwg_Entity_EXTRUDEDSURFACE_bindata_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_Entity_EXTRUDEDSURFACE_bindata_set(swigCPtr, SWIGTYPE_p_unsigned_char.getCPtr(value));
     } 
     get {
-      string ret = LibreDWGPINVOKE.Dwg_Entity_EXTRUDEDSURFACE_bindata_get(swigCPtr);
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Entity_EXTRUDEDSURFACE_bindata_get(swigCPtr);
+      SWIGTYPE_p_unsigned_char ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_unsigned_char(cPtr, false);
       return ret;
     } 
   }

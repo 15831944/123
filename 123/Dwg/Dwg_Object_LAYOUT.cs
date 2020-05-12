@@ -165,12 +165,12 @@ public class Dwg_Object_LAYOUT : global::System.IDisposable {
     } 
   }
 
-  public ushort paper_units {
+  public ushort plot_paper_unit {
     set {
-      LibreDWGPINVOKE.Dwg_Object_LAYOUT_paper_units_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_Object_LAYOUT_plot_paper_unit_set(swigCPtr, value);
     } 
     get {
-      ushort ret = LibreDWGPINVOKE.Dwg_Object_LAYOUT_paper_units_get(swigCPtr);
+      ushort ret = LibreDWGPINVOKE.Dwg_Object_LAYOUT_plot_paper_unit_get(swigCPtr);
       return ret;
     } 
   }
@@ -195,23 +195,23 @@ public class Dwg_Object_LAYOUT : global::System.IDisposable {
     } 
   }
 
-  public Dwg_Bitcode_2BD window_min {
+  public Dwg_Bitcode_2BD plot_window_ll {
     set {
-      LibreDWGPINVOKE.Dwg_Object_LAYOUT_window_min_set(swigCPtr, Dwg_Bitcode_2BD.getCPtr(value));
+      LibreDWGPINVOKE.Dwg_Object_LAYOUT_plot_window_ll_set(swigCPtr, Dwg_Bitcode_2BD.getCPtr(value));
     } 
     get {
-      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Object_LAYOUT_window_min_get(swigCPtr);
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Object_LAYOUT_plot_window_ll_get(swigCPtr);
       Dwg_Bitcode_2BD ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Bitcode_2BD(cPtr, false);
       return ret;
     } 
   }
 
-  public Dwg_Bitcode_2BD window_max {
+  public Dwg_Bitcode_2BD plot_window_ur {
     set {
-      LibreDWGPINVOKE.Dwg_Object_LAYOUT_window_max_set(swigCPtr, Dwg_Bitcode_2BD.getCPtr(value));
+      LibreDWGPINVOKE.Dwg_Object_LAYOUT_plot_window_ur_set(swigCPtr, Dwg_Bitcode_2BD.getCPtr(value));
     } 
     get {
-      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Object_LAYOUT_window_max_get(swigCPtr);
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Object_LAYOUT_plot_window_ur_get(swigCPtr);
       Dwg_Bitcode_2BD ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Bitcode_2BD(cPtr, false);
       return ret;
     } 
@@ -227,12 +227,12 @@ public class Dwg_Object_LAYOUT : global::System.IDisposable {
     } 
   }
 
-  public double real_world_units {
+  public double paper_units {
     set {
-      LibreDWGPINVOKE.Dwg_Object_LAYOUT_real_world_units_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_Object_LAYOUT_paper_units_set(swigCPtr, value);
     } 
     get {
-      double ret = LibreDWGPINVOKE.Dwg_Object_LAYOUT_real_world_units_get(swigCPtr);
+      double ret = LibreDWGPINVOKE.Dwg_Object_LAYOUT_paper_units_get(swigCPtr);
       return ret;
     } 
   }
@@ -298,22 +298,22 @@ public class Dwg_Object_LAYOUT : global::System.IDisposable {
     } 
   }
 
-  public ushort shade_plot_res_level {
+  public ushort shade_plot_reslevel {
     set {
-      LibreDWGPINVOKE.Dwg_Object_LAYOUT_shade_plot_res_level_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_Object_LAYOUT_shade_plot_reslevel_set(swigCPtr, value);
     } 
     get {
-      ushort ret = LibreDWGPINVOKE.Dwg_Object_LAYOUT_shade_plot_res_level_get(swigCPtr);
+      ushort ret = LibreDWGPINVOKE.Dwg_Object_LAYOUT_shade_plot_reslevel_get(swigCPtr);
       return ret;
     } 
   }
 
-  public ushort shade_plot_custom_dpi {
+  public ushort shade_plot_customdpi {
     set {
-      LibreDWGPINVOKE.Dwg_Object_LAYOUT_shade_plot_custom_dpi_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_Object_LAYOUT_shade_plot_customdpi_set(swigCPtr, value);
     } 
     get {
-      ushort ret = LibreDWGPINVOKE.Dwg_Object_LAYOUT_shade_plot_custom_dpi_get(swigCPtr);
+      ushort ret = LibreDWGPINVOKE.Dwg_Object_LAYOUT_shade_plot_customdpi_get(swigCPtr);
       return ret;
     } 
   }
@@ -456,12 +456,12 @@ public class Dwg_Object_LAYOUT : global::System.IDisposable {
     } 
   }
 
-  public Dwg_Object_Ref plot_view {
+  public Dwg_Object_Ref plotview {
     set {
-      LibreDWGPINVOKE.Dwg_Object_LAYOUT_plot_view_set(swigCPtr, Dwg_Object_Ref.getCPtr(value));
+      LibreDWGPINVOKE.Dwg_Object_LAYOUT_plotview_set(swigCPtr, Dwg_Object_Ref.getCPtr(value));
     } 
     get {
-      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Object_LAYOUT_plot_view_get(swigCPtr);
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Object_LAYOUT_plotview_get(swigCPtr);
       Dwg_Object_Ref ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Object_Ref(cPtr, false);
       return ret;
     } 

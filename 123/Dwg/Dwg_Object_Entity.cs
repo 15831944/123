@@ -103,6 +103,16 @@ public class Dwg_Object_Entity : global::System.IDisposable {
     } 
   }
 
+  public byte preview_is_proxy {
+    set {
+      LibreDWGPINVOKE.Dwg_Object_Entity_preview_is_proxy_set(swigCPtr, value);
+    } 
+    get {
+      byte ret = LibreDWGPINVOKE.Dwg_Object_Entity_preview_is_proxy_get(swigCPtr);
+      return ret;
+    } 
+  }
+
   public ulong preview_size {
     set {
       LibreDWGPINVOKE.Dwg_Object_Entity_preview_size_set(swigCPtr, value);
@@ -113,12 +123,13 @@ public class Dwg_Object_Entity : global::System.IDisposable {
     } 
   }
 
-  public string preview {
+  public SWIGTYPE_p_unsigned_char preview {
     set {
-      LibreDWGPINVOKE.Dwg_Object_Entity_preview_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_Object_Entity_preview_set(swigCPtr, SWIGTYPE_p_unsigned_char.getCPtr(value));
     } 
     get {
-      string ret = LibreDWGPINVOKE.Dwg_Object_Entity_preview_get(swigCPtr);
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Object_Entity_preview_get(swigCPtr);
+      SWIGTYPE_p_unsigned_char ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_unsigned_char(cPtr, false);
       return ret;
     } 
   }
@@ -143,12 +154,12 @@ public class Dwg_Object_Entity : global::System.IDisposable {
     } 
   }
 
-  public byte xdic_missing_flag {
+  public byte is_xdic_missing {
     set {
-      LibreDWGPINVOKE.Dwg_Object_Entity_xdic_missing_flag_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_Object_Entity_is_xdic_missing_set(swigCPtr, value);
     } 
     get {
-      byte ret = LibreDWGPINVOKE.Dwg_Object_Entity_xdic_missing_flag_get(swigCPtr);
+      byte ret = LibreDWGPINVOKE.Dwg_Object_Entity_is_xdic_missing_get(swigCPtr);
       return ret;
     } 
   }
@@ -173,12 +184,12 @@ public class Dwg_Object_Entity : global::System.IDisposable {
     } 
   }
 
-  public byte has_ds_binary_data {
+  public byte has_ds_data {
     set {
-      LibreDWGPINVOKE.Dwg_Object_Entity_has_ds_binary_data_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_Object_Entity_has_ds_data_set(swigCPtr, value);
     } 
     get {
-      byte ret = LibreDWGPINVOKE.Dwg_Object_Entity_has_ds_binary_data_get(swigCPtr);
+      byte ret = LibreDWGPINVOKE.Dwg_Object_Entity_has_ds_data_get(swigCPtr);
       return ret;
     } 
   }

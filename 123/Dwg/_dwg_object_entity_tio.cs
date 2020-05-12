@@ -230,6 +230,17 @@ public class _dwg_object_entity_tio : global::System.IDisposable {
     } 
   }
 
+  public Dwg_Entity_ATEXT ATEXT {
+    set {
+      LibreDWGPINVOKE._dwg_object_entity_tio_ATEXT_set(swigCPtr, Dwg_Entity_ATEXT.getCPtr(value));
+    } 
+    get {
+      global::System.IntPtr cPtr = LibreDWGPINVOKE._dwg_object_entity_tio_ATEXT_get(swigCPtr);
+      Dwg_Entity_ATEXT ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Entity_ATEXT(cPtr, false);
+      return ret;
+    } 
+  }
+
   public Dwg_Entity_CIRCLE CIRCLE {
     set {
       LibreDWGPINVOKE._dwg_object_entity_tio_CIRCLE_set(swigCPtr, Dwg_Entity_CIRCLE.getCPtr(value));
@@ -659,6 +670,17 @@ public class _dwg_object_entity_tio : global::System.IDisposable {
     } 
   }
 
+  public Dwg_Entity_SECTIONOBJECT SECTIONOBJECT {
+    set {
+      LibreDWGPINVOKE._dwg_object_entity_tio_SECTIONOBJECT_set(swigCPtr, Dwg_Entity_SECTIONOBJECT.getCPtr(value));
+    } 
+    get {
+      global::System.IntPtr cPtr = LibreDWGPINVOKE._dwg_object_entity_tio_SECTIONOBJECT_get(swigCPtr);
+      Dwg_Entity_SECTIONOBJECT ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Entity_SECTIONOBJECT(cPtr, false);
+      return ret;
+    } 
+  }
+
   public Dwg_Entity_PROXY_ENTITY PROXY_ENTITY {
     set {
       LibreDWGPINVOKE._dwg_object_entity_tio_PROXY_ENTITY_set(swigCPtr, Dwg_Entity_PROXY_ENTITY.getCPtr(value));
@@ -677,6 +699,17 @@ public class _dwg_object_entity_tio : global::System.IDisposable {
     get {
       global::System.IntPtr cPtr = LibreDWGPINVOKE._dwg_object_entity_tio_PROXY_LWPOLYLINE_get(swigCPtr);
       Dwg_Entity_PROXY_LWPOLYLINE ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Entity_PROXY_LWPOLYLINE(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public Dwg_Entity_NURBSURFACE NURBSURFACE {
+    set {
+      LibreDWGPINVOKE._dwg_object_entity_tio_NURBSURFACE_set(swigCPtr, Dwg_Entity_NURBSURFACE.getCPtr(value));
+    } 
+    get {
+      global::System.IntPtr cPtr = LibreDWGPINVOKE._dwg_object_entity_tio_NURBSURFACE_get(swigCPtr);
+      Dwg_Entity_NURBSURFACE ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Entity_NURBSURFACE(cPtr, false);
       return ret;
     } 
   }
@@ -787,6 +820,28 @@ public class _dwg_object_entity_tio : global::System.IDisposable {
     get {
       global::System.IntPtr cPtr = LibreDWGPINVOKE._dwg_object_entity_tio_MESH_get(swigCPtr);
       Dwg_Entity_MESH ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Entity_MESH(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public Dwg_Entity_NAVISWORKSMODEL NAVISWORKSMODEL {
+    set {
+      LibreDWGPINVOKE._dwg_object_entity_tio_NAVISWORKSMODEL_set(swigCPtr, Dwg_Entity_NAVISWORKSMODEL.getCPtr(value));
+    } 
+    get {
+      global::System.IntPtr cPtr = LibreDWGPINVOKE._dwg_object_entity_tio_NAVISWORKSMODEL_get(swigCPtr);
+      Dwg_Entity_NAVISWORKSMODEL ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Entity_NAVISWORKSMODEL(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public Dwg_Entity_RTEXT RTEXT {
+    set {
+      LibreDWGPINVOKE._dwg_object_entity_tio_RTEXT_set(swigCPtr, Dwg_Entity_RTEXT.getCPtr(value));
+    } 
+    get {
+      global::System.IntPtr cPtr = LibreDWGPINVOKE._dwg_object_entity_tio_RTEXT_get(swigCPtr);
+      Dwg_Entity_RTEXT ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Entity_RTEXT(cPtr, false);
       return ret;
     } 
   }

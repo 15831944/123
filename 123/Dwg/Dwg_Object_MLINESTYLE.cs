@@ -64,12 +64,12 @@ public class Dwg_Object_MLINESTYLE : global::System.IDisposable {
     } 
   }
 
-  public string desc {
+  public string description {
     set {
-      LibreDWGPINVOKE.Dwg_Object_MLINESTYLE_desc_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_Object_MLINESTYLE_description_set(swigCPtr, value);
     } 
     get {
-      string ret = LibreDWGPINVOKE.Dwg_Object_MLINESTYLE_desc_get(swigCPtr);
+      string ret = LibreDWGPINVOKE.Dwg_Object_MLINESTYLE_description_get(swigCPtr);
       return ret;
     } 
   }

@@ -43,6 +43,17 @@ public class Dwg_TABLESTYLE_border : global::System.IDisposable {
     }
   }
 
+  public Dwg_TABLESTYLE_rowstyles parent {
+    set {
+      LibreDWGPINVOKE.Dwg_TABLESTYLE_border_parent_set(swigCPtr, Dwg_TABLESTYLE_rowstyles.getCPtr(value));
+    } 
+    get {
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_TABLESTYLE_border_parent_get(swigCPtr);
+      Dwg_TABLESTYLE_rowstyles ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_TABLESTYLE_rowstyles(cPtr, false);
+      return ret;
+    } 
+  }
+
   public short linewt {
     set {
       LibreDWGPINVOKE.Dwg_TABLESTYLE_border_linewt_set(swigCPtr, value);
@@ -70,17 +81,6 @@ public class Dwg_TABLESTYLE_border : global::System.IDisposable {
     get {
       global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_TABLESTYLE_border_color_get(swigCPtr);
       Dwg_Color ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Color(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public Dwg_TABLESTYLE_rowstyles parent {
-    set {
-      LibreDWGPINVOKE.Dwg_TABLESTYLE_border_parent_set(swigCPtr, Dwg_TABLESTYLE_rowstyles.getCPtr(value));
-    } 
-    get {
-      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_TABLESTYLE_border_parent_get(swigCPtr);
-      Dwg_TABLESTYLE_rowstyles ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_TABLESTYLE_rowstyles(cPtr, false);
       return ret;
     } 
   }

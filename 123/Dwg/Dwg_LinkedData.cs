@@ -53,12 +53,12 @@ public class Dwg_LinkedData : global::System.IDisposable {
     } 
   }
 
-  public string desc {
+  public string description {
     set {
-      LibreDWGPINVOKE.Dwg_LinkedData_desc_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_LinkedData_description_set(swigCPtr, value);
     } 
     get {
-      string ret = LibreDWGPINVOKE.Dwg_LinkedData_desc_get(swigCPtr);
+      string ret = LibreDWGPINVOKE.Dwg_LinkedData_description_get(swigCPtr);
       return ret;
     } 
   }

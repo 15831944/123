@@ -54,55 +54,33 @@ public class Dwg_Object_LIGHTLIST : global::System.IDisposable {
     } 
   }
 
-  public Dwg_Object_Ref dictionary {
-    set {
-      LibreDWGPINVOKE.Dwg_Object_LIGHTLIST_dictionary_set(swigCPtr, Dwg_Object_Ref.getCPtr(value));
-    } 
-    get {
-      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Object_LIGHTLIST_dictionary_get(swigCPtr);
-      Dwg_Object_Ref ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Object_Ref(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public ushort class_version {
+  public uint class_version {
     set {
       LibreDWGPINVOKE.Dwg_Object_LIGHTLIST_class_version_set(swigCPtr, value);
     } 
     get {
-      ushort ret = LibreDWGPINVOKE.Dwg_Object_LIGHTLIST_class_version_get(swigCPtr);
+      uint ret = LibreDWGPINVOKE.Dwg_Object_LIGHTLIST_class_version_get(swigCPtr);
       return ret;
     } 
   }
 
-  public ushort num_lights {
+  public uint num_lights {
     set {
       LibreDWGPINVOKE.Dwg_Object_LIGHTLIST_num_lights_set(swigCPtr, value);
     } 
     get {
-      ushort ret = LibreDWGPINVOKE.Dwg_Object_LIGHTLIST_num_lights_get(swigCPtr);
+      uint ret = LibreDWGPINVOKE.Dwg_Object_LIGHTLIST_num_lights_get(swigCPtr);
       return ret;
     } 
   }
 
-  public SWIGTYPE_p_p__dwg_object_ref lights_handles {
+  public Dwg_LIGHTLIST_light lights {
     set {
-      LibreDWGPINVOKE.Dwg_Object_LIGHTLIST_lights_handles_set(swigCPtr, SWIGTYPE_p_p__dwg_object_ref.getCPtr(value));
+      LibreDWGPINVOKE.Dwg_Object_LIGHTLIST_lights_set(swigCPtr, Dwg_LIGHTLIST_light.getCPtr(value));
     } 
     get {
-      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Object_LIGHTLIST_lights_handles_get(swigCPtr);
-      SWIGTYPE_p_p__dwg_object_ref ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_p__dwg_object_ref(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public SWIGTYPE_p_p_char lights_names {
-    set {
-      LibreDWGPINVOKE.Dwg_Object_LIGHTLIST_lights_names_set(swigCPtr, SWIGTYPE_p_p_char.getCPtr(value));
-    } 
-    get {
-      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Object_LIGHTLIST_lights_names_get(swigCPtr);
-      SWIGTYPE_p_p_char ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_p_char(cPtr, false);
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Object_LIGHTLIST_lights_get(swigCPtr);
+      Dwg_LIGHTLIST_light ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_LIGHTLIST_light(cPtr, false);
       return ret;
     } 
   }

@@ -64,12 +64,13 @@ public class Dwg_Object_DYNAMICBLOCKPURGEPREVENTER : global::System.IDisposable 
     } 
   }
 
-  public ushort unknown_rs1 {
+  public Dwg_Object_Ref block {
     set {
-      LibreDWGPINVOKE.Dwg_Object_DYNAMICBLOCKPURGEPREVENTER_unknown_rs1_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_Object_DYNAMICBLOCKPURGEPREVENTER_block_set(swigCPtr, Dwg_Object_Ref.getCPtr(value));
     } 
     get {
-      ushort ret = LibreDWGPINVOKE.Dwg_Object_DYNAMICBLOCKPURGEPREVENTER_unknown_rs1_get(swigCPtr);
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Object_DYNAMICBLOCKPURGEPREVENTER_block_get(swigCPtr);
+      Dwg_Object_Ref ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Object_Ref(cPtr, false);
       return ret;
     } 
   }

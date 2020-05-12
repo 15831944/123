@@ -75,17 +75,6 @@ public class Dwg_Entity_GEOPOSITIONMARKER : global::System.IDisposable {
     } 
   }
 
-  public Dwg_Bitcode_3BD extrusion {
-    set {
-      LibreDWGPINVOKE.Dwg_Entity_GEOPOSITIONMARKER_extrusion_set(swigCPtr, Dwg_Bitcode_3BD.getCPtr(value));
-    } 
-    get {
-      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Entity_GEOPOSITIONMARKER_extrusion_get(swigCPtr);
-      Dwg_Bitcode_3BD ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Bitcode_3BD(cPtr, false);
-      return ret;
-    } 
-  }
-
   public double radius {
     set {
       LibreDWGPINVOKE.Dwg_Entity_GEOPOSITIONMARKER_radius_set(swigCPtr, value);
@@ -106,22 +95,22 @@ public class Dwg_Entity_GEOPOSITIONMARKER : global::System.IDisposable {
     } 
   }
 
-  public string text {
+  public string notes {
     set {
-      LibreDWGPINVOKE.Dwg_Entity_GEOPOSITIONMARKER_text_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_Entity_GEOPOSITIONMARKER_notes_set(swigCPtr, value);
     } 
     get {
-      string ret = LibreDWGPINVOKE.Dwg_Entity_GEOPOSITIONMARKER_text_get(swigCPtr);
+      string ret = LibreDWGPINVOKE.Dwg_Entity_GEOPOSITIONMARKER_notes_get(swigCPtr);
       return ret;
     } 
   }
 
-  public ushort text_alignment {
+  public byte text_alignment {
     set {
       LibreDWGPINVOKE.Dwg_Entity_GEOPOSITIONMARKER_text_alignment_set(swigCPtr, value);
     } 
     get {
-      ushort ret = LibreDWGPINVOKE.Dwg_Entity_GEOPOSITIONMARKER_text_alignment_get(swigCPtr);
+      byte ret = LibreDWGPINVOKE.Dwg_Entity_GEOPOSITIONMARKER_text_alignment_get(swigCPtr);
       return ret;
     } 
   }
@@ -146,34 +135,13 @@ public class Dwg_Entity_GEOPOSITIONMARKER : global::System.IDisposable {
     } 
   }
 
-  public string notes {
+  public Dwg_Object mtext {
     set {
-      LibreDWGPINVOKE.Dwg_Entity_GEOPOSITIONMARKER_notes_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_Entity_GEOPOSITIONMARKER_mtext_set(swigCPtr, Dwg_Object.getCPtr(value));
     } 
     get {
-      string ret = LibreDWGPINVOKE.Dwg_Entity_GEOPOSITIONMARKER_notes_get(swigCPtr);
-      return ret;
-    } 
-  }
-
-  public Dwg_Object_Ref mtext_handle {
-    set {
-      LibreDWGPINVOKE.Dwg_Entity_GEOPOSITIONMARKER_mtext_handle_set(swigCPtr, Dwg_Object_Ref.getCPtr(value));
-    } 
-    get {
-      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Entity_GEOPOSITIONMARKER_mtext_handle_get(swigCPtr);
-      Dwg_Object_Ref ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Object_Ref(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public Dwg_Object_Ref text_style {
-    set {
-      LibreDWGPINVOKE.Dwg_Entity_GEOPOSITIONMARKER_text_style_set(swigCPtr, Dwg_Object_Ref.getCPtr(value));
-    } 
-    get {
-      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Entity_GEOPOSITIONMARKER_text_style_get(swigCPtr);
-      Dwg_Object_Ref ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Object_Ref(cPtr, false);
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Entity_GEOPOSITIONMARKER_mtext_get(swigCPtr);
+      Dwg_Object ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Object(cPtr, false);
       return ret;
     } 
   }

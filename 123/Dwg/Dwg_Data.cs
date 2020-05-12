@@ -54,17 +54,6 @@ public class Dwg_Data : global::System.IDisposable {
     } 
   }
 
-  public Dwg_R2004_Header r2004_header {
-    set {
-      LibreDWGPINVOKE.Dwg_Data_r2004_header_set(swigCPtr, Dwg_R2004_Header.getCPtr(value));
-    } 
-    get {
-      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Data_r2004_header_get(swigCPtr);
-      Dwg_R2004_Header ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_R2004_Header(cPtr, false);
-      return ret;
-    } 
-  }
-
   public Dwg_AuxHeader auxheader {
     set {
       LibreDWGPINVOKE.Dwg_Data_auxheader_set(swigCPtr, Dwg_AuxHeader.getCPtr(value));
@@ -87,6 +76,105 @@ public class Dwg_Data : global::System.IDisposable {
     } 
   }
 
+  public Dwg_AppInfo appinfo {
+    set {
+      LibreDWGPINVOKE.Dwg_Data_appinfo_set(swigCPtr, Dwg_AppInfo.getCPtr(value));
+    } 
+    get {
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Data_appinfo_get(swigCPtr);
+      Dwg_AppInfo ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_AppInfo(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public Dwg_FileDepList filedeplist {
+    set {
+      LibreDWGPINVOKE.Dwg_Data_filedeplist_set(swigCPtr, Dwg_FileDepList.getCPtr(value));
+    } 
+    get {
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Data_filedeplist_get(swigCPtr);
+      Dwg_FileDepList ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_FileDepList(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public Dwg_Security security {
+    set {
+      LibreDWGPINVOKE.Dwg_Data_security_set(swigCPtr, Dwg_Security.getCPtr(value));
+    } 
+    get {
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Data_security_get(swigCPtr);
+      Dwg_Security ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Security(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public Dwg_VBAProject vbaproject {
+    set {
+      LibreDWGPINVOKE.Dwg_Data_vbaproject_set(swigCPtr, Dwg_VBAProject.getCPtr(value));
+    } 
+    get {
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Data_vbaproject_get(swigCPtr);
+      Dwg_VBAProject ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_VBAProject(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public Dwg_AppInfoHistory appinfohistory {
+    set {
+      LibreDWGPINVOKE.Dwg_Data_appinfohistory_set(swigCPtr, Dwg_AppInfoHistory.getCPtr(value));
+    } 
+    get {
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Data_appinfohistory_get(swigCPtr);
+      Dwg_AppInfoHistory ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_AppInfoHistory(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public Dwg_RevHistory revhistory {
+    set {
+      LibreDWGPINVOKE.Dwg_Data_revhistory_set(swigCPtr, Dwg_RevHistory.getCPtr(value));
+    } 
+    get {
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Data_revhistory_get(swigCPtr);
+      Dwg_RevHistory ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_RevHistory(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public Dwg_ObjFreeSpace objfreespace {
+    set {
+      LibreDWGPINVOKE.Dwg_Data_objfreespace_set(swigCPtr, Dwg_ObjFreeSpace.getCPtr(value));
+    } 
+    get {
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Data_objfreespace_get(swigCPtr);
+      Dwg_ObjFreeSpace ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_ObjFreeSpace(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public Dwg_Template template {
+    set {
+      LibreDWGPINVOKE.Dwg_Data_template_set(swigCPtr, Dwg_Template.getCPtr(value));
+    } 
+    get {
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Data_template_get(swigCPtr);
+      Dwg_Template ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Template(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public Dwg_AcDs acds {
+    set {
+      LibreDWGPINVOKE.Dwg_Data_acds_set(swigCPtr, Dwg_AcDs.getCPtr(value));
+    } 
+    get {
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Data_acds_get(swigCPtr);
+      Dwg_AcDs ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_AcDs(cPtr, false);
+      return ret;
+    } 
+  }
+
   public _dwg_second_header second_header {
     set {
       LibreDWGPINVOKE.Dwg_Data_second_header_set(swigCPtr, _dwg_second_header.getCPtr(value));
@@ -94,28 +182,6 @@ public class Dwg_Data : global::System.IDisposable {
     get {
       global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Data_second_header_get(swigCPtr);
       _dwg_second_header ret = (cPtr == global::System.IntPtr.Zero) ? null : new _dwg_second_header(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public Dwg_Chain thumbnail {
-    set {
-      LibreDWGPINVOKE.Dwg_Data_thumbnail_set(swigCPtr, Dwg_Chain.getCPtr(value));
-    } 
-    get {
-      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Data_thumbnail_get(swigCPtr);
-      Dwg_Chain ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Chain(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public Dwg_Header_Variables header_vars {
-    set {
-      LibreDWGPINVOKE.Dwg_Data_header_vars_set(swigCPtr, Dwg_Header_Variables.getCPtr(value));
-    } 
-    get {
-      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Data_header_vars_get(swigCPtr);
-      Dwg_Header_Variables ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Header_Variables(cPtr, false);
       return ret;
     } 
   }
@@ -210,6 +276,49 @@ public class Dwg_Data : global::System.IDisposable {
     } 
     get {
       int ret = LibreDWGPINVOKE.Dwg_Data_dirty_refs_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public uint opts {
+    set {
+      LibreDWGPINVOKE.Dwg_Data_opts_set(swigCPtr, value);
+    } 
+    get {
+      uint ret = LibreDWGPINVOKE.Dwg_Data_opts_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public Dwg_Header_Variables header_vars {
+    set {
+      LibreDWGPINVOKE.Dwg_Data_header_vars_set(swigCPtr, Dwg_Header_Variables.getCPtr(value));
+    } 
+    get {
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Data_header_vars_get(swigCPtr);
+      Dwg_Header_Variables ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Header_Variables(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public Dwg_Chain thumbnail {
+    set {
+      LibreDWGPINVOKE.Dwg_Data_thumbnail_set(swigCPtr, Dwg_Chain.getCPtr(value));
+    } 
+    get {
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Data_thumbnail_get(swigCPtr);
+      Dwg_Chain ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Chain(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public Dwg_R2004_Header r2004_header {
+    set {
+      LibreDWGPINVOKE.Dwg_Data_r2004_header_set(swigCPtr, Dwg_R2004_Header.getCPtr(value));
+    } 
+    get {
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Data_r2004_header_get(swigCPtr);
+      Dwg_R2004_Header ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_R2004_Header(cPtr, false);
       return ret;
     } 
   }
@@ -352,16 +461,6 @@ public class Dwg_Data : global::System.IDisposable {
     } 
     get {
       uint ret = LibreDWGPINVOKE.Dwg_Data_layout_type_get(swigCPtr);
-      return ret;
-    } 
-  }
-
-  public uint opts {
-    set {
-      LibreDWGPINVOKE.Dwg_Data_opts_set(swigCPtr, value);
-    } 
-    get {
-      uint ret = LibreDWGPINVOKE.Dwg_Data_opts_get(swigCPtr);
       return ret;
     } 
   }

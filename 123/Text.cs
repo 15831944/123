@@ -14,11 +14,17 @@ namespace _123
 
         public float Y { get; set; }
 
+        public float textHeight { get; set; }
         public Text(string text, float x, float y)
         {
             this.text = text;
             this.X = x;
             this.Y = y;
+        }
+
+        public Text(string text, float x, float y, float textHeight) : this(text, x, y)
+        {
+            this.textHeight = textHeight;
         }
     }
 }

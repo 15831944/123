@@ -43,6 +43,17 @@ public class Dwg_TABLESTYLE_rowstyles : global::System.IDisposable {
     }
   }
 
+  public Dwg_Object_TABLESTYLE parent {
+    set {
+      LibreDWGPINVOKE.Dwg_TABLESTYLE_rowstyles_parent_set(swigCPtr, Dwg_Object_TABLESTYLE.getCPtr(value));
+    } 
+    get {
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_TABLESTYLE_rowstyles_parent_get(swigCPtr);
+      Dwg_Object_TABLESTYLE ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Object_TABLESTYLE(cPtr, false);
+      return ret;
+    } 
+  }
+
   public Dwg_Object_Ref text_style {
     set {
       LibreDWGPINVOKE.Dwg_TABLESTYLE_rowstyles_text_style_set(swigCPtr, Dwg_Object_Ref.getCPtr(value));
@@ -154,17 +165,6 @@ public class Dwg_TABLESTYLE_rowstyles : global::System.IDisposable {
     get {
       global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_TABLESTYLE_rowstyles_format_string_get(swigCPtr);
       SWIGTYPE_p_unsigned_short ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_unsigned_short(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public Dwg_Object_TABLESTYLE parent {
-    set {
-      LibreDWGPINVOKE.Dwg_TABLESTYLE_rowstyles_parent_set(swigCPtr, Dwg_Object_TABLESTYLE.getCPtr(value));
-    } 
-    get {
-      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_TABLESTYLE_rowstyles_parent_get(swigCPtr);
-      Dwg_Object_TABLESTYLE ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Object_TABLESTYLE(cPtr, false);
       return ret;
     } 
   }

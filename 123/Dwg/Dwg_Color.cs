@@ -63,6 +63,16 @@ public class Dwg_Color : global::System.IDisposable {
     } 
   }
 
+  public ushort raw {
+    set {
+      LibreDWGPINVOKE.Dwg_Color_raw_set(swigCPtr, value);
+    } 
+    get {
+      ushort ret = LibreDWGPINVOKE.Dwg_Color_raw_get(swigCPtr);
+      return ret;
+    } 
+  }
+
   public uint rgb {
     set {
       LibreDWGPINVOKE.Dwg_Color_rgb_set(swigCPtr, value);
@@ -73,13 +83,12 @@ public class Dwg_Color : global::System.IDisposable {
     } 
   }
 
-  public Dwg_Object_Ref handle {
+  public uint method {
     set {
-      LibreDWGPINVOKE.Dwg_Color_handle_set(swigCPtr, Dwg_Object_Ref.getCPtr(value));
+      LibreDWGPINVOKE.Dwg_Color_method_set(swigCPtr, value);
     } 
     get {
-      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Color_handle_get(swigCPtr);
-      Dwg_Object_Ref ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Object_Ref(cPtr, false);
+      uint ret = LibreDWGPINVOKE.Dwg_Color_method_get(swigCPtr);
       return ret;
     } 
   }
@@ -100,6 +109,17 @@ public class Dwg_Color : global::System.IDisposable {
     } 
     get {
       string ret = LibreDWGPINVOKE.Dwg_Color_book_name_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public Dwg_Object_Ref handle {
+    set {
+      LibreDWGPINVOKE.Dwg_Color_handle_set(swigCPtr, Dwg_Object_Ref.getCPtr(value));
+    } 
+    get {
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Color_handle_get(swigCPtr);
+      Dwg_Object_Ref ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Object_Ref(cPtr, false);
       return ret;
     } 
   }

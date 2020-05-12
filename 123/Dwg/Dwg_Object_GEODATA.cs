@@ -118,6 +118,17 @@ public class Dwg_Object_GEODATA : global::System.IDisposable {
     } 
   }
 
+  public Dwg_Bitcode_3BD one3pt {
+    set {
+      LibreDWGPINVOKE.Dwg_Object_GEODATA_one3pt_set(swigCPtr, Dwg_Bitcode_3BD.getCPtr(value));
+    } 
+    get {
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Object_GEODATA_one3pt_get(swigCPtr);
+      Dwg_Bitcode_3BD ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Bitcode_3BD(cPtr, false);
+      return ret;
+    } 
+  }
+
   public double unit_scale_horiz {
     set {
       LibreDWGPINVOKE.Dwg_Object_GEODATA_unit_scale_horiz_set(swigCPtr, value);
@@ -358,6 +369,80 @@ public class Dwg_Object_GEODATA : global::System.IDisposable {
     } 
     get {
       byte ret = LibreDWGPINVOKE.Dwg_Object_GEODATA_obsolete_false_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public Dwg_Bitcode_2BD refpt0 {
+    set {
+      LibreDWGPINVOKE.Dwg_Object_GEODATA_refpt0_set(swigCPtr, Dwg_Bitcode_2BD.getCPtr(value));
+    } 
+    get {
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Object_GEODATA_refpt0_get(swigCPtr);
+      Dwg_Bitcode_2BD ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Bitcode_2BD(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public Dwg_Bitcode_2BD refpt1 {
+    set {
+      LibreDWGPINVOKE.Dwg_Object_GEODATA_refpt1_set(swigCPtr, Dwg_Bitcode_2BD.getCPtr(value));
+    } 
+    get {
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Object_GEODATA_refpt1_get(swigCPtr);
+      Dwg_Bitcode_2BD ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Bitcode_2BD(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public Dwg_Bitcode_3BD zero1 {
+    set {
+      LibreDWGPINVOKE.Dwg_Object_GEODATA_zero1_set(swigCPtr, Dwg_Bitcode_3BD.getCPtr(value));
+    } 
+    get {
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Object_GEODATA_zero1_get(swigCPtr);
+      Dwg_Bitcode_3BD ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Bitcode_3BD(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public Dwg_Bitcode_3BD zero2 {
+    set {
+      LibreDWGPINVOKE.Dwg_Object_GEODATA_zero2_set(swigCPtr, Dwg_Bitcode_3BD.getCPtr(value));
+    } 
+    get {
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Object_GEODATA_zero2_get(swigCPtr);
+      Dwg_Bitcode_3BD ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Bitcode_3BD(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public uint unknown1 {
+    set {
+      LibreDWGPINVOKE.Dwg_Object_GEODATA_unknown1_set(swigCPtr, value);
+    } 
+    get {
+      uint ret = LibreDWGPINVOKE.Dwg_Object_GEODATA_unknown1_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public uint unknown2 {
+    set {
+      LibreDWGPINVOKE.Dwg_Object_GEODATA_unknown2_set(swigCPtr, value);
+    } 
+    get {
+      uint ret = LibreDWGPINVOKE.Dwg_Object_GEODATA_unknown2_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public byte unknown_b {
+    set {
+      LibreDWGPINVOKE.Dwg_Object_GEODATA_unknown_b_set(swigCPtr, value);
+    } 
+    get {
+      byte ret = LibreDWGPINVOKE.Dwg_Object_GEODATA_unknown_b_get(swigCPtr);
       return ret;
     } 
   }

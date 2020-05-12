@@ -54,12 +54,12 @@ public class Dwg_Object_ASSOCPLANESURFACEACTIONBODY : global::System.IDisposable
     } 
   }
 
-  public uint aab_status {
+  public uint aab_version {
     set {
-      LibreDWGPINVOKE.Dwg_Object_ASSOCPLANESURFACEACTIONBODY_aab_status_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_Object_ASSOCPLANESURFACEACTIONBODY_aab_version_set(swigCPtr, value);
     } 
     get {
-      uint ret = LibreDWGPINVOKE.Dwg_Object_ASSOCPLANESURFACEACTIONBODY_aab_status_get(swigCPtr);
+      uint ret = LibreDWGPINVOKE.Dwg_Object_ASSOCPLANESURFACEACTIONBODY_aab_version_get(swigCPtr);
       return ret;
     } 
   }
@@ -84,23 +84,23 @@ public class Dwg_Object_ASSOCPLANESURFACEACTIONBODY : global::System.IDisposable
     } 
   }
 
-  public uint pab_l3 {
+  public uint num_deps {
     set {
-      LibreDWGPINVOKE.Dwg_Object_ASSOCPLANESURFACEACTIONBODY_pab_l3_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_Object_ASSOCPLANESURFACEACTIONBODY_num_deps_set(swigCPtr, value);
     } 
     get {
-      uint ret = LibreDWGPINVOKE.Dwg_Object_ASSOCPLANESURFACEACTIONBODY_pab_l3_get(swigCPtr);
+      uint ret = LibreDWGPINVOKE.Dwg_Object_ASSOCPLANESURFACEACTIONBODY_num_deps_get(swigCPtr);
       return ret;
     } 
   }
 
-  public Dwg_Object_Ref writedep {
+  public SWIGTYPE_p_p__dwg_object_ref writedeps {
     set {
-      LibreDWGPINVOKE.Dwg_Object_ASSOCPLANESURFACEACTIONBODY_writedep_set(swigCPtr, Dwg_Object_Ref.getCPtr(value));
+      LibreDWGPINVOKE.Dwg_Object_ASSOCPLANESURFACEACTIONBODY_writedeps_set(swigCPtr, SWIGTYPE_p_p__dwg_object_ref.getCPtr(value));
     } 
     get {
-      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Object_ASSOCPLANESURFACEACTIONBODY_writedep_get(swigCPtr);
-      Dwg_Object_Ref ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Object_Ref(cPtr, false);
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Object_ASSOCPLANESURFACEACTIONBODY_writedeps_get(swigCPtr);
+      SWIGTYPE_p_p__dwg_object_ref ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_p__dwg_object_ref(cPtr, false);
       return ret;
     } 
   }
@@ -125,13 +125,24 @@ public class Dwg_Object_ASSOCPLANESURFACEACTIONBODY : global::System.IDisposable
     } 
   }
 
-  public Dwg_Object_Ref readdep {
+  public SWIGTYPE_p_p__dwg_object_ref readdeps {
     set {
-      LibreDWGPINVOKE.Dwg_Object_ASSOCPLANESURFACEACTIONBODY_readdep_set(swigCPtr, Dwg_Object_Ref.getCPtr(value));
+      LibreDWGPINVOKE.Dwg_Object_ASSOCPLANESURFACEACTIONBODY_readdeps_set(swigCPtr, SWIGTYPE_p_p__dwg_object_ref.getCPtr(value));
     } 
     get {
-      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Object_ASSOCPLANESURFACEACTIONBODY_readdep_get(swigCPtr);
-      Dwg_Object_Ref ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Object_Ref(cPtr, false);
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Object_ASSOCPLANESURFACEACTIONBODY_readdeps_get(swigCPtr);
+      SWIGTYPE_p_p__dwg_object_ref ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_p__dwg_object_ref(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public SWIGTYPE_p_p_char descriptions {
+    set {
+      LibreDWGPINVOKE.Dwg_Object_ASSOCPLANESURFACEACTIONBODY_descriptions_set(swigCPtr, SWIGTYPE_p_p_char.getCPtr(value));
+    } 
+    get {
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Object_ASSOCPLANESURFACEACTIONBODY_descriptions_get(swigCPtr);
+      SWIGTYPE_p_p_char ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_p_char(cPtr, false);
       return ret;
     } 
   }

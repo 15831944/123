@@ -154,22 +154,22 @@ public class Dwg_R2004_Header : global::System.IDisposable {
     } 
   }
 
-  public uint num_gaps {
+  public uint numgaps {
     set {
-      LibreDWGPINVOKE.Dwg_R2004_Header_num_gaps_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_R2004_Header_numgaps_set(swigCPtr, value);
     } 
     get {
-      uint ret = LibreDWGPINVOKE.Dwg_R2004_Header_num_gaps_get(swigCPtr);
+      uint ret = LibreDWGPINVOKE.Dwg_R2004_Header_numgaps_get(swigCPtr);
       return ret;
     } 
   }
 
-  public uint num_sections {
+  public uint numsections {
     set {
-      LibreDWGPINVOKE.Dwg_R2004_Header_num_sections_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_R2004_Header_numsections_set(swigCPtr, value);
     } 
     get {
-      uint ret = LibreDWGPINVOKE.Dwg_R2004_Header_num_sections_get(swigCPtr);
+      uint ret = LibreDWGPINVOKE.Dwg_R2004_Header_numsections_get(swigCPtr);
       return ret;
     } 
   }
@@ -224,12 +224,12 @@ public class Dwg_R2004_Header : global::System.IDisposable {
     } 
   }
 
-  public uint section_info_id {
+  public int section_info_id {
     set {
       LibreDWGPINVOKE.Dwg_R2004_Header_section_info_id_set(swigCPtr, value);
     } 
     get {
-      uint ret = LibreDWGPINVOKE.Dwg_R2004_Header_section_info_id_get(swigCPtr);
+      int ret = LibreDWGPINVOKE.Dwg_R2004_Header_section_info_id_get(swigCPtr);
       return ret;
     } 
   }

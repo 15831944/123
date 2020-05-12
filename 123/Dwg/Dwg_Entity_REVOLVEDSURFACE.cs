@@ -158,12 +158,12 @@ public class Dwg_Entity_REVOLVEDSURFACE : global::System.IDisposable {
     } 
   }
 
-  public uint num_isolines {
+  public uint isolines {
     set {
-      LibreDWGPINVOKE.Dwg_Entity_REVOLVEDSURFACE_num_isolines_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_Entity_REVOLVEDSURFACE_isolines_set(swigCPtr, value);
     } 
     get {
-      uint ret = LibreDWGPINVOKE.Dwg_Entity_REVOLVEDSURFACE_num_isolines_get(swigCPtr);
+      uint ret = LibreDWGPINVOKE.Dwg_Entity_REVOLVEDSURFACE_isolines_get(swigCPtr);
       return ret;
     } 
   }

@@ -153,6 +153,17 @@ public class Dwg_Object : global::System.IDisposable {
     } 
   }
 
+  public Dwg_Class klass {
+    set {
+      LibreDWGPINVOKE.Dwg_Object_klass_set(swigCPtr, Dwg_Class.getCPtr(value));
+    } 
+    get {
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Object_klass_get(swigCPtr);
+      Dwg_Class ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Class(cPtr, false);
+      return ret;
+    } 
+  }
+
   public uint bitsize {
     set {
       LibreDWGPINVOKE.Dwg_Object_bitsize_set(swigCPtr, value);
@@ -179,6 +190,16 @@ public class Dwg_Object : global::System.IDisposable {
     } 
     get {
       uint ret = LibreDWGPINVOKE.Dwg_Object_hdlpos_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public byte was_bitsize_set {
+    set {
+      LibreDWGPINVOKE.Dwg_Object_was_bitsize_set_set(swigCPtr, value);
+    } 
+    get {
+      byte ret = LibreDWGPINVOKE.Dwg_Object_was_bitsize_set_get(swigCPtr);
       return ret;
     } 
   }
@@ -233,12 +254,13 @@ public class Dwg_Object : global::System.IDisposable {
     } 
   }
 
-  public string unknown_bits {
+  public SWIGTYPE_p_unsigned_char unknown_bits {
     set {
-      LibreDWGPINVOKE.Dwg_Object_unknown_bits_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_Object_unknown_bits_set(swigCPtr, SWIGTYPE_p_unsigned_char.getCPtr(value));
     } 
     get {
-      string ret = LibreDWGPINVOKE.Dwg_Object_unknown_bits_get(swigCPtr);
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Object_unknown_bits_get(swigCPtr);
+      SWIGTYPE_p_unsigned_char ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_unsigned_char(cPtr, false);
       return ret;
     } 
   }

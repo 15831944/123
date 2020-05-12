@@ -206,13 +206,13 @@ public class Dwg_Entity_SPLINE : global::System.IDisposable {
     } 
   }
 
-  public Dwg_SPLINE_point fit_pts {
+  public Dwg_Bitcode_3BD fit_pts {
     set {
-      LibreDWGPINVOKE.Dwg_Entity_SPLINE_fit_pts_set(swigCPtr, Dwg_SPLINE_point.getCPtr(value));
+      LibreDWGPINVOKE.Dwg_Entity_SPLINE_fit_pts_set(swigCPtr, Dwg_Bitcode_3BD.getCPtr(value));
     } 
     get {
       global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Entity_SPLINE_fit_pts_get(swigCPtr);
-      Dwg_SPLINE_point ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_SPLINE_point(cPtr, false);
+      Dwg_Bitcode_3BD ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Bitcode_3BD(cPtr, false);
       return ret;
     } 
   }

@@ -54,12 +54,12 @@ public class Dwg_Object_ASSOCALIGNEDDIMACTIONBODY : global::System.IDisposable {
     } 
   }
 
-  public uint aab_status {
+  public uint aab_version {
     set {
-      LibreDWGPINVOKE.Dwg_Object_ASSOCALIGNEDDIMACTIONBODY_aab_status_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_Object_ASSOCALIGNEDDIMACTIONBODY_aab_version_set(swigCPtr, value);
     } 
     get {
-      uint ret = LibreDWGPINVOKE.Dwg_Object_ASSOCALIGNEDDIMACTIONBODY_aab_status_get(swigCPtr);
+      uint ret = LibreDWGPINVOKE.Dwg_Object_ASSOCALIGNEDDIMACTIONBODY_aab_version_get(swigCPtr);
       return ret;
     } 
   }

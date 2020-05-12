@@ -9,20 +9,20 @@
 //------------------------------------------------------------------------------
 
 
-public class Dwg_Object_ANNOTSCALEOBJECTCONTEXTDATA : global::System.IDisposable {
+public class Dwg_Object_MTEXTATTRIBUTEOBJECTCONTEXTDATA : global::System.IDisposable {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   protected bool swigCMemOwn;
 
-  internal Dwg_Object_ANNOTSCALEOBJECTCONTEXTDATA(global::System.IntPtr cPtr, bool cMemoryOwn) {
+  internal Dwg_Object_MTEXTATTRIBUTEOBJECTCONTEXTDATA(global::System.IntPtr cPtr, bool cMemoryOwn) {
     swigCMemOwn = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
 
-  internal static global::System.Runtime.InteropServices.HandleRef getCPtr(Dwg_Object_ANNOTSCALEOBJECTCONTEXTDATA obj) {
+  internal static global::System.Runtime.InteropServices.HandleRef getCPtr(Dwg_Object_MTEXTATTRIBUTEOBJECTCONTEXTDATA obj) {
     return (obj == null) ? new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero) : obj.swigCPtr;
   }
 
-  ~Dwg_Object_ANNOTSCALEOBJECTCONTEXTDATA() {
+  ~Dwg_Object_MTEXTATTRIBUTEOBJECTCONTEXTDATA() {
     Dispose(false);
   }
 
@@ -36,7 +36,7 @@ public class Dwg_Object_ANNOTSCALEOBJECTCONTEXTDATA : global::System.IDisposable
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          LibreDWGPINVOKE.delete_Dwg_Object_ANNOTSCALEOBJECTCONTEXTDATA(swigCPtr);
+          LibreDWGPINVOKE.delete_Dwg_Object_MTEXTATTRIBUTEOBJECTCONTEXTDATA(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -45,10 +45,10 @@ public class Dwg_Object_ANNOTSCALEOBJECTCONTEXTDATA : global::System.IDisposable
 
   public Dwg_Object_Object parent {
     set {
-      LibreDWGPINVOKE.Dwg_Object_ANNOTSCALEOBJECTCONTEXTDATA_parent_set(swigCPtr, Dwg_Object_Object.getCPtr(value));
+      LibreDWGPINVOKE.Dwg_Object_MTEXTATTRIBUTEOBJECTCONTEXTDATA_parent_set(swigCPtr, Dwg_Object_Object.getCPtr(value));
     } 
     get {
-      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Object_ANNOTSCALEOBJECTCONTEXTDATA_parent_get(swigCPtr);
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Object_MTEXTATTRIBUTEOBJECTCONTEXTDATA_parent_get(swigCPtr);
       Dwg_Object_Object ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Object_Object(cPtr, false);
       return ret;
     } 
@@ -56,46 +56,46 @@ public class Dwg_Object_ANNOTSCALEOBJECTCONTEXTDATA : global::System.IDisposable
 
   public ushort class_version {
     set {
-      LibreDWGPINVOKE.Dwg_Object_ANNOTSCALEOBJECTCONTEXTDATA_class_version_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_Object_MTEXTATTRIBUTEOBJECTCONTEXTDATA_class_version_set(swigCPtr, value);
     } 
     get {
-      ushort ret = LibreDWGPINVOKE.Dwg_Object_ANNOTSCALEOBJECTCONTEXTDATA_class_version_get(swigCPtr);
+      ushort ret = LibreDWGPINVOKE.Dwg_Object_MTEXTATTRIBUTEOBJECTCONTEXTDATA_class_version_get(swigCPtr);
       return ret;
     } 
   }
 
-  public byte has_file {
+  public byte is_default {
     set {
-      LibreDWGPINVOKE.Dwg_Object_ANNOTSCALEOBJECTCONTEXTDATA_has_file_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_Object_MTEXTATTRIBUTEOBJECTCONTEXTDATA_is_default_set(swigCPtr, value);
     } 
     get {
-      byte ret = LibreDWGPINVOKE.Dwg_Object_ANNOTSCALEOBJECTCONTEXTDATA_has_file_get(swigCPtr);
+      byte ret = LibreDWGPINVOKE.Dwg_Object_MTEXTATTRIBUTEOBJECTCONTEXTDATA_is_default_get(swigCPtr);
       return ret;
     } 
   }
 
-  public byte defaultflag {
+  public byte in_dwg {
     set {
-      LibreDWGPINVOKE.Dwg_Object_ANNOTSCALEOBJECTCONTEXTDATA_defaultflag_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_Object_MTEXTATTRIBUTEOBJECTCONTEXTDATA_in_dwg_set(swigCPtr, value);
     } 
     get {
-      byte ret = LibreDWGPINVOKE.Dwg_Object_ANNOTSCALEOBJECTCONTEXTDATA_defaultflag_get(swigCPtr);
+      byte ret = LibreDWGPINVOKE.Dwg_Object_MTEXTATTRIBUTEOBJECTCONTEXTDATA_in_dwg_get(swigCPtr);
       return ret;
     } 
   }
 
   public Dwg_Object_Ref scale {
     set {
-      LibreDWGPINVOKE.Dwg_Object_ANNOTSCALEOBJECTCONTEXTDATA_scale_set(swigCPtr, Dwg_Object_Ref.getCPtr(value));
+      LibreDWGPINVOKE.Dwg_Object_MTEXTATTRIBUTEOBJECTCONTEXTDATA_scale_set(swigCPtr, Dwg_Object_Ref.getCPtr(value));
     } 
     get {
-      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Object_ANNOTSCALEOBJECTCONTEXTDATA_scale_get(swigCPtr);
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Object_MTEXTATTRIBUTEOBJECTCONTEXTDATA_scale_get(swigCPtr);
       Dwg_Object_Ref ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Object_Ref(cPtr, false);
       return ret;
     } 
   }
 
-  public Dwg_Object_ANNOTSCALEOBJECTCONTEXTDATA() : this(LibreDWGPINVOKE.new_Dwg_Object_ANNOTSCALEOBJECTCONTEXTDATA(), true) {
+  public Dwg_Object_MTEXTATTRIBUTEOBJECTCONTEXTDATA() : this(LibreDWGPINVOKE.new_Dwg_Object_MTEXTATTRIBUTEOBJECTCONTEXTDATA(), true) {
   }
 
 }

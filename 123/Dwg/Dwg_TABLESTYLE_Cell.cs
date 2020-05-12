@@ -43,6 +43,17 @@ public class Dwg_TABLESTYLE_Cell : global::System.IDisposable {
     }
   }
 
+  public Dwg_Object_TABLESTYLE parent {
+    set {
+      LibreDWGPINVOKE.Dwg_TABLESTYLE_Cell_parent_set(swigCPtr, Dwg_Object_TABLESTYLE.getCPtr(value));
+    } 
+    get {
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_TABLESTYLE_Cell_parent_get(swigCPtr);
+      Dwg_Object_TABLESTYLE ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Object_TABLESTYLE(cPtr, false);
+      return ret;
+    } 
+  }
+
   public Dwg_TABLE_Cell cell {
     set {
       LibreDWGPINVOKE.Dwg_TABLESTYLE_Cell_cell_set(swigCPtr, Dwg_TABLE_Cell.getCPtr(value));
@@ -80,17 +91,6 @@ public class Dwg_TABLESTYLE_Cell : global::System.IDisposable {
     } 
     get {
       string ret = LibreDWGPINVOKE.Dwg_TABLESTYLE_Cell_name_get(swigCPtr);
-      return ret;
-    } 
-  }
-
-  public Dwg_Object_TABLESTYLE parent {
-    set {
-      LibreDWGPINVOKE.Dwg_TABLESTYLE_Cell_parent_set(swigCPtr, Dwg_Object_TABLESTYLE.getCPtr(value));
-    } 
-    get {
-      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_TABLESTYLE_Cell_parent_get(swigCPtr);
-      Dwg_Object_TABLESTYLE ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Object_TABLESTYLE(cPtr, false);
       return ret;
     } 
   }

@@ -114,23 +114,23 @@ public class Dwg_Object_ASSOCOSNAPPOINTREFACTIONPARAM : global::System.IDisposab
     } 
   }
 
-  public ushort num_params {
+  public ushort num_actions {
     set {
-      LibreDWGPINVOKE.Dwg_Object_ASSOCOSNAPPOINTREFACTIONPARAM_num_params_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_Object_ASSOCOSNAPPOINTREFACTIONPARAM_num_actions_set(swigCPtr, value);
     } 
     get {
-      ushort ret = LibreDWGPINVOKE.Dwg_Object_ASSOCOSNAPPOINTREFACTIONPARAM_num_params_get(swigCPtr);
+      ushort ret = LibreDWGPINVOKE.Dwg_Object_ASSOCOSNAPPOINTREFACTIONPARAM_num_actions_get(swigCPtr);
       return ret;
     } 
   }
 
-  public Dwg_Object_Ref actionparam {
+  public SWIGTYPE_p_p__dwg_object_ref actions {
     set {
-      LibreDWGPINVOKE.Dwg_Object_ASSOCOSNAPPOINTREFACTIONPARAM_actionparam_set(swigCPtr, Dwg_Object_Ref.getCPtr(value));
+      LibreDWGPINVOKE.Dwg_Object_ASSOCOSNAPPOINTREFACTIONPARAM_actions_set(swigCPtr, SWIGTYPE_p_p__dwg_object_ref.getCPtr(value));
     } 
     get {
-      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Object_ASSOCOSNAPPOINTREFACTIONPARAM_actionparam_get(swigCPtr);
-      Dwg_Object_Ref ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Object_Ref(cPtr, false);
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Object_ASSOCOSNAPPOINTREFACTIONPARAM_actions_get(swigCPtr);
+      SWIGTYPE_p_p__dwg_object_ref ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_p__dwg_object_ref(cPtr, false);
       return ret;
     } 
   }

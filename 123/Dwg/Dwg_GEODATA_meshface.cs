@@ -73,16 +73,6 @@ public class Dwg_GEODATA_meshface : global::System.IDisposable {
     } 
   }
 
-  public uint face4 {
-    set {
-      LibreDWGPINVOKE.Dwg_GEODATA_meshface_face4_set(swigCPtr, value);
-    } 
-    get {
-      uint ret = LibreDWGPINVOKE.Dwg_GEODATA_meshface_face4_get(swigCPtr);
-      return ret;
-    } 
-  }
-
   public Dwg_GEODATA_meshface() : this(LibreDWGPINVOKE.new_Dwg_GEODATA_meshface(), true) {
   }
 

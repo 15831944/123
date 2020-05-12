@@ -64,145 +64,45 @@ public class Dwg_Object_MATERIAL : global::System.IDisposable {
     } 
   }
 
-  public string desc {
+  public string description {
     set {
-      LibreDWGPINVOKE.Dwg_Object_MATERIAL_desc_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_Object_MATERIAL_description_set(swigCPtr, value);
     } 
     get {
-      string ret = LibreDWGPINVOKE.Dwg_Object_MATERIAL_desc_get(swigCPtr);
+      string ret = LibreDWGPINVOKE.Dwg_Object_MATERIAL_description_get(swigCPtr);
       return ret;
     } 
   }
 
-  public ushort ambient_color_flag {
+  public Dwg_MATERIAL_color ambient_color {
     set {
-      LibreDWGPINVOKE.Dwg_Object_MATERIAL_ambient_color_flag_set(swigCPtr, value);
-    } 
-    get {
-      ushort ret = LibreDWGPINVOKE.Dwg_Object_MATERIAL_ambient_color_flag_get(swigCPtr);
-      return ret;
-    } 
-  }
-
-  public double ambient_color_factor {
-    set {
-      LibreDWGPINVOKE.Dwg_Object_MATERIAL_ambient_color_factor_set(swigCPtr, value);
-    } 
-    get {
-      double ret = LibreDWGPINVOKE.Dwg_Object_MATERIAL_ambient_color_factor_get(swigCPtr);
-      return ret;
-    } 
-  }
-
-  public Dwg_Color ambient_color {
-    set {
-      LibreDWGPINVOKE.Dwg_Object_MATERIAL_ambient_color_set(swigCPtr, Dwg_Color.getCPtr(value));
+      LibreDWGPINVOKE.Dwg_Object_MATERIAL_ambient_color_set(swigCPtr, Dwg_MATERIAL_color.getCPtr(value));
     } 
     get {
       global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Object_MATERIAL_ambient_color_get(swigCPtr);
-      Dwg_Color ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Color(cPtr, false);
+      Dwg_MATERIAL_color ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_MATERIAL_color(cPtr, false);
       return ret;
     } 
   }
 
-  public ushort diffuse_color_flag {
+  public Dwg_MATERIAL_color diffuse_color {
     set {
-      LibreDWGPINVOKE.Dwg_Object_MATERIAL_diffuse_color_flag_set(swigCPtr, value);
-    } 
-    get {
-      ushort ret = LibreDWGPINVOKE.Dwg_Object_MATERIAL_diffuse_color_flag_get(swigCPtr);
-      return ret;
-    } 
-  }
-
-  public double diffuse_color_factor {
-    set {
-      LibreDWGPINVOKE.Dwg_Object_MATERIAL_diffuse_color_factor_set(swigCPtr, value);
-    } 
-    get {
-      double ret = LibreDWGPINVOKE.Dwg_Object_MATERIAL_diffuse_color_factor_get(swigCPtr);
-      return ret;
-    } 
-  }
-
-  public Dwg_Color diffuse_color {
-    set {
-      LibreDWGPINVOKE.Dwg_Object_MATERIAL_diffuse_color_set(swigCPtr, Dwg_Color.getCPtr(value));
+      LibreDWGPINVOKE.Dwg_Object_MATERIAL_diffuse_color_set(swigCPtr, Dwg_MATERIAL_color.getCPtr(value));
     } 
     get {
       global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Object_MATERIAL_diffuse_color_get(swigCPtr);
-      Dwg_Color ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Color(cPtr, false);
+      Dwg_MATERIAL_color ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_MATERIAL_color(cPtr, false);
       return ret;
     } 
   }
 
-  public ushort diffusemap_source {
+  public Dwg_MATERIAL_mapper diffusemap {
     set {
-      LibreDWGPINVOKE.Dwg_Object_MATERIAL_diffusemap_source_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_Object_MATERIAL_diffusemap_set(swigCPtr, Dwg_MATERIAL_mapper.getCPtr(value));
     } 
     get {
-      ushort ret = LibreDWGPINVOKE.Dwg_Object_MATERIAL_diffusemap_source_get(swigCPtr);
-      return ret;
-    } 
-  }
-
-  public string diffusemap_filename {
-    set {
-      LibreDWGPINVOKE.Dwg_Object_MATERIAL_diffusemap_filename_set(swigCPtr, value);
-    } 
-    get {
-      string ret = LibreDWGPINVOKE.Dwg_Object_MATERIAL_diffusemap_filename_get(swigCPtr);
-      return ret;
-    } 
-  }
-
-  public double diffusemap_blendfactor {
-    set {
-      LibreDWGPINVOKE.Dwg_Object_MATERIAL_diffusemap_blendfactor_set(swigCPtr, value);
-    } 
-    get {
-      double ret = LibreDWGPINVOKE.Dwg_Object_MATERIAL_diffusemap_blendfactor_get(swigCPtr);
-      return ret;
-    } 
-  }
-
-  public ushort diffusemap_projection {
-    set {
-      LibreDWGPINVOKE.Dwg_Object_MATERIAL_diffusemap_projection_set(swigCPtr, value);
-    } 
-    get {
-      ushort ret = LibreDWGPINVOKE.Dwg_Object_MATERIAL_diffusemap_projection_get(swigCPtr);
-      return ret;
-    } 
-  }
-
-  public ushort diffusemap_tiling {
-    set {
-      LibreDWGPINVOKE.Dwg_Object_MATERIAL_diffusemap_tiling_set(swigCPtr, value);
-    } 
-    get {
-      ushort ret = LibreDWGPINVOKE.Dwg_Object_MATERIAL_diffusemap_tiling_get(swigCPtr);
-      return ret;
-    } 
-  }
-
-  public ushort diffusemap_autotransform {
-    set {
-      LibreDWGPINVOKE.Dwg_Object_MATERIAL_diffusemap_autotransform_set(swigCPtr, value);
-    } 
-    get {
-      ushort ret = LibreDWGPINVOKE.Dwg_Object_MATERIAL_diffusemap_autotransform_get(swigCPtr);
-      return ret;
-    } 
-  }
-
-  public SWIGTYPE_p_double diffusemap_transmatrix {
-    set {
-      LibreDWGPINVOKE.Dwg_Object_MATERIAL_diffusemap_transmatrix_set(swigCPtr, SWIGTYPE_p_double.getCPtr(value));
-    } 
-    get {
-      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Object_MATERIAL_diffusemap_transmatrix_get(swigCPtr);
-      SWIGTYPE_p_double ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_double(cPtr, false);
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Object_MATERIAL_diffusemap_get(swigCPtr);
+      Dwg_MATERIAL_mapper ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_MATERIAL_mapper(cPtr, false);
       return ret;
     } 
   }
@@ -217,175 +117,35 @@ public class Dwg_Object_MATERIAL : global::System.IDisposable {
     } 
   }
 
-  public ushort specular_color_flag {
+  public Dwg_MATERIAL_color specular_color {
     set {
-      LibreDWGPINVOKE.Dwg_Object_MATERIAL_specular_color_flag_set(swigCPtr, value);
-    } 
-    get {
-      ushort ret = LibreDWGPINVOKE.Dwg_Object_MATERIAL_specular_color_flag_get(swigCPtr);
-      return ret;
-    } 
-  }
-
-  public double specular_color_factor {
-    set {
-      LibreDWGPINVOKE.Dwg_Object_MATERIAL_specular_color_factor_set(swigCPtr, value);
-    } 
-    get {
-      double ret = LibreDWGPINVOKE.Dwg_Object_MATERIAL_specular_color_factor_get(swigCPtr);
-      return ret;
-    } 
-  }
-
-  public Dwg_Color specular_color {
-    set {
-      LibreDWGPINVOKE.Dwg_Object_MATERIAL_specular_color_set(swigCPtr, Dwg_Color.getCPtr(value));
+      LibreDWGPINVOKE.Dwg_Object_MATERIAL_specular_color_set(swigCPtr, Dwg_MATERIAL_color.getCPtr(value));
     } 
     get {
       global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Object_MATERIAL_specular_color_get(swigCPtr);
-      Dwg_Color ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Color(cPtr, false);
+      Dwg_MATERIAL_color ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_MATERIAL_color(cPtr, false);
       return ret;
     } 
   }
 
-  public ushort specularmap_source {
+  public Dwg_MATERIAL_mapper specularmap {
     set {
-      LibreDWGPINVOKE.Dwg_Object_MATERIAL_specularmap_source_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_Object_MATERIAL_specularmap_set(swigCPtr, Dwg_MATERIAL_mapper.getCPtr(value));
     } 
     get {
-      ushort ret = LibreDWGPINVOKE.Dwg_Object_MATERIAL_specularmap_source_get(swigCPtr);
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Object_MATERIAL_specularmap_get(swigCPtr);
+      Dwg_MATERIAL_mapper ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_MATERIAL_mapper(cPtr, false);
       return ret;
     } 
   }
 
-  public string specularmap_filename {
+  public Dwg_MATERIAL_mapper reflectionmap {
     set {
-      LibreDWGPINVOKE.Dwg_Object_MATERIAL_specularmap_filename_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_Object_MATERIAL_reflectionmap_set(swigCPtr, Dwg_MATERIAL_mapper.getCPtr(value));
     } 
     get {
-      string ret = LibreDWGPINVOKE.Dwg_Object_MATERIAL_specularmap_filename_get(swigCPtr);
-      return ret;
-    } 
-  }
-
-  public double specularmap_blendfactor {
-    set {
-      LibreDWGPINVOKE.Dwg_Object_MATERIAL_specularmap_blendfactor_set(swigCPtr, value);
-    } 
-    get {
-      double ret = LibreDWGPINVOKE.Dwg_Object_MATERIAL_specularmap_blendfactor_get(swigCPtr);
-      return ret;
-    } 
-  }
-
-  public ushort specularmap_projection {
-    set {
-      LibreDWGPINVOKE.Dwg_Object_MATERIAL_specularmap_projection_set(swigCPtr, value);
-    } 
-    get {
-      ushort ret = LibreDWGPINVOKE.Dwg_Object_MATERIAL_specularmap_projection_get(swigCPtr);
-      return ret;
-    } 
-  }
-
-  public ushort specularmap_tiling {
-    set {
-      LibreDWGPINVOKE.Dwg_Object_MATERIAL_specularmap_tiling_set(swigCPtr, value);
-    } 
-    get {
-      ushort ret = LibreDWGPINVOKE.Dwg_Object_MATERIAL_specularmap_tiling_get(swigCPtr);
-      return ret;
-    } 
-  }
-
-  public ushort specularmap_autotransform {
-    set {
-      LibreDWGPINVOKE.Dwg_Object_MATERIAL_specularmap_autotransform_set(swigCPtr, value);
-    } 
-    get {
-      ushort ret = LibreDWGPINVOKE.Dwg_Object_MATERIAL_specularmap_autotransform_get(swigCPtr);
-      return ret;
-    } 
-  }
-
-  public SWIGTYPE_p_double specularmap_transmatrix {
-    set {
-      LibreDWGPINVOKE.Dwg_Object_MATERIAL_specularmap_transmatrix_set(swigCPtr, SWIGTYPE_p_double.getCPtr(value));
-    } 
-    get {
-      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Object_MATERIAL_specularmap_transmatrix_get(swigCPtr);
-      SWIGTYPE_p_double ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_double(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public ushort reflectionmap_source {
-    set {
-      LibreDWGPINVOKE.Dwg_Object_MATERIAL_reflectionmap_source_set(swigCPtr, value);
-    } 
-    get {
-      ushort ret = LibreDWGPINVOKE.Dwg_Object_MATERIAL_reflectionmap_source_get(swigCPtr);
-      return ret;
-    } 
-  }
-
-  public string reflectionmap_filename {
-    set {
-      LibreDWGPINVOKE.Dwg_Object_MATERIAL_reflectionmap_filename_set(swigCPtr, value);
-    } 
-    get {
-      string ret = LibreDWGPINVOKE.Dwg_Object_MATERIAL_reflectionmap_filename_get(swigCPtr);
-      return ret;
-    } 
-  }
-
-  public double reflectionmap_blendfactor {
-    set {
-      LibreDWGPINVOKE.Dwg_Object_MATERIAL_reflectionmap_blendfactor_set(swigCPtr, value);
-    } 
-    get {
-      double ret = LibreDWGPINVOKE.Dwg_Object_MATERIAL_reflectionmap_blendfactor_get(swigCPtr);
-      return ret;
-    } 
-  }
-
-  public ushort reflectionmap_projection {
-    set {
-      LibreDWGPINVOKE.Dwg_Object_MATERIAL_reflectionmap_projection_set(swigCPtr, value);
-    } 
-    get {
-      ushort ret = LibreDWGPINVOKE.Dwg_Object_MATERIAL_reflectionmap_projection_get(swigCPtr);
-      return ret;
-    } 
-  }
-
-  public ushort reflectionmap_tiling {
-    set {
-      LibreDWGPINVOKE.Dwg_Object_MATERIAL_reflectionmap_tiling_set(swigCPtr, value);
-    } 
-    get {
-      ushort ret = LibreDWGPINVOKE.Dwg_Object_MATERIAL_reflectionmap_tiling_get(swigCPtr);
-      return ret;
-    } 
-  }
-
-  public ushort reflectionmap_autotransform {
-    set {
-      LibreDWGPINVOKE.Dwg_Object_MATERIAL_reflectionmap_autotransform_set(swigCPtr, value);
-    } 
-    get {
-      ushort ret = LibreDWGPINVOKE.Dwg_Object_MATERIAL_reflectionmap_autotransform_get(swigCPtr);
-      return ret;
-    } 
-  }
-
-  public SWIGTYPE_p_double reflectionmap_transmatrix {
-    set {
-      LibreDWGPINVOKE.Dwg_Object_MATERIAL_reflectionmap_transmatrix_set(swigCPtr, SWIGTYPE_p_double.getCPtr(value));
-    } 
-    get {
-      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Object_MATERIAL_reflectionmap_transmatrix_get(swigCPtr);
-      SWIGTYPE_p_double ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_double(cPtr, false);
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Object_MATERIAL_reflectionmap_get(swigCPtr);
+      Dwg_MATERIAL_mapper ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_MATERIAL_mapper(cPtr, false);
       return ret;
     } 
   }
@@ -400,144 +160,24 @@ public class Dwg_Object_MATERIAL : global::System.IDisposable {
     } 
   }
 
-  public ushort opacitymap_source {
+  public Dwg_MATERIAL_mapper opacitymap {
     set {
-      LibreDWGPINVOKE.Dwg_Object_MATERIAL_opacitymap_source_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_Object_MATERIAL_opacitymap_set(swigCPtr, Dwg_MATERIAL_mapper.getCPtr(value));
     } 
     get {
-      ushort ret = LibreDWGPINVOKE.Dwg_Object_MATERIAL_opacitymap_source_get(swigCPtr);
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Object_MATERIAL_opacitymap_get(swigCPtr);
+      Dwg_MATERIAL_mapper ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_MATERIAL_mapper(cPtr, false);
       return ret;
     } 
   }
 
-  public string opacitymap_filename {
+  public Dwg_MATERIAL_mapper bumpmap {
     set {
-      LibreDWGPINVOKE.Dwg_Object_MATERIAL_opacitymap_filename_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_Object_MATERIAL_bumpmap_set(swigCPtr, Dwg_MATERIAL_mapper.getCPtr(value));
     } 
     get {
-      string ret = LibreDWGPINVOKE.Dwg_Object_MATERIAL_opacitymap_filename_get(swigCPtr);
-      return ret;
-    } 
-  }
-
-  public double opacitymap_blendfactor {
-    set {
-      LibreDWGPINVOKE.Dwg_Object_MATERIAL_opacitymap_blendfactor_set(swigCPtr, value);
-    } 
-    get {
-      double ret = LibreDWGPINVOKE.Dwg_Object_MATERIAL_opacitymap_blendfactor_get(swigCPtr);
-      return ret;
-    } 
-  }
-
-  public ushort opacitymap_projection {
-    set {
-      LibreDWGPINVOKE.Dwg_Object_MATERIAL_opacitymap_projection_set(swigCPtr, value);
-    } 
-    get {
-      ushort ret = LibreDWGPINVOKE.Dwg_Object_MATERIAL_opacitymap_projection_get(swigCPtr);
-      return ret;
-    } 
-  }
-
-  public ushort opacitymap_tiling {
-    set {
-      LibreDWGPINVOKE.Dwg_Object_MATERIAL_opacitymap_tiling_set(swigCPtr, value);
-    } 
-    get {
-      ushort ret = LibreDWGPINVOKE.Dwg_Object_MATERIAL_opacitymap_tiling_get(swigCPtr);
-      return ret;
-    } 
-  }
-
-  public ushort opacitymap_autotransform {
-    set {
-      LibreDWGPINVOKE.Dwg_Object_MATERIAL_opacitymap_autotransform_set(swigCPtr, value);
-    } 
-    get {
-      ushort ret = LibreDWGPINVOKE.Dwg_Object_MATERIAL_opacitymap_autotransform_get(swigCPtr);
-      return ret;
-    } 
-  }
-
-  public SWIGTYPE_p_double opacitymap_transmatrix {
-    set {
-      LibreDWGPINVOKE.Dwg_Object_MATERIAL_opacitymap_transmatrix_set(swigCPtr, SWIGTYPE_p_double.getCPtr(value));
-    } 
-    get {
-      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Object_MATERIAL_opacitymap_transmatrix_get(swigCPtr);
-      SWIGTYPE_p_double ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_double(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public ushort bumpmap_source {
-    set {
-      LibreDWGPINVOKE.Dwg_Object_MATERIAL_bumpmap_source_set(swigCPtr, value);
-    } 
-    get {
-      ushort ret = LibreDWGPINVOKE.Dwg_Object_MATERIAL_bumpmap_source_get(swigCPtr);
-      return ret;
-    } 
-  }
-
-  public string bumpmap_filename {
-    set {
-      LibreDWGPINVOKE.Dwg_Object_MATERIAL_bumpmap_filename_set(swigCPtr, value);
-    } 
-    get {
-      string ret = LibreDWGPINVOKE.Dwg_Object_MATERIAL_bumpmap_filename_get(swigCPtr);
-      return ret;
-    } 
-  }
-
-  public double bumpmap_blendfactor {
-    set {
-      LibreDWGPINVOKE.Dwg_Object_MATERIAL_bumpmap_blendfactor_set(swigCPtr, value);
-    } 
-    get {
-      double ret = LibreDWGPINVOKE.Dwg_Object_MATERIAL_bumpmap_blendfactor_get(swigCPtr);
-      return ret;
-    } 
-  }
-
-  public ushort bumpmap_projection {
-    set {
-      LibreDWGPINVOKE.Dwg_Object_MATERIAL_bumpmap_projection_set(swigCPtr, value);
-    } 
-    get {
-      ushort ret = LibreDWGPINVOKE.Dwg_Object_MATERIAL_bumpmap_projection_get(swigCPtr);
-      return ret;
-    } 
-  }
-
-  public ushort bumpmap_tiling {
-    set {
-      LibreDWGPINVOKE.Dwg_Object_MATERIAL_bumpmap_tiling_set(swigCPtr, value);
-    } 
-    get {
-      ushort ret = LibreDWGPINVOKE.Dwg_Object_MATERIAL_bumpmap_tiling_get(swigCPtr);
-      return ret;
-    } 
-  }
-
-  public ushort bumpmap_autotransform {
-    set {
-      LibreDWGPINVOKE.Dwg_Object_MATERIAL_bumpmap_autotransform_set(swigCPtr, value);
-    } 
-    get {
-      ushort ret = LibreDWGPINVOKE.Dwg_Object_MATERIAL_bumpmap_autotransform_get(swigCPtr);
-      return ret;
-    } 
-  }
-
-  public SWIGTYPE_p_double bumpmap_transmatrix {
-    set {
-      LibreDWGPINVOKE.Dwg_Object_MATERIAL_bumpmap_transmatrix_set(swigCPtr, SWIGTYPE_p_double.getCPtr(value));
-    } 
-    get {
-      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Object_MATERIAL_bumpmap_transmatrix_get(swigCPtr);
-      SWIGTYPE_p_double ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_double(cPtr, false);
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Object_MATERIAL_bumpmap_get(swigCPtr);
+      Dwg_MATERIAL_mapper ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_MATERIAL_mapper(cPtr, false);
       return ret;
     } 
   }
@@ -552,73 +192,13 @@ public class Dwg_Object_MATERIAL : global::System.IDisposable {
     } 
   }
 
-  public ushort refractionmap_source {
+  public Dwg_MATERIAL_mapper refractionmap {
     set {
-      LibreDWGPINVOKE.Dwg_Object_MATERIAL_refractionmap_source_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_Object_MATERIAL_refractionmap_set(swigCPtr, Dwg_MATERIAL_mapper.getCPtr(value));
     } 
     get {
-      ushort ret = LibreDWGPINVOKE.Dwg_Object_MATERIAL_refractionmap_source_get(swigCPtr);
-      return ret;
-    } 
-  }
-
-  public string refractionmap_filename {
-    set {
-      LibreDWGPINVOKE.Dwg_Object_MATERIAL_refractionmap_filename_set(swigCPtr, value);
-    } 
-    get {
-      string ret = LibreDWGPINVOKE.Dwg_Object_MATERIAL_refractionmap_filename_get(swigCPtr);
-      return ret;
-    } 
-  }
-
-  public double refractionmap_blendfactor {
-    set {
-      LibreDWGPINVOKE.Dwg_Object_MATERIAL_refractionmap_blendfactor_set(swigCPtr, value);
-    } 
-    get {
-      double ret = LibreDWGPINVOKE.Dwg_Object_MATERIAL_refractionmap_blendfactor_get(swigCPtr);
-      return ret;
-    } 
-  }
-
-  public ushort refractionmap_projection {
-    set {
-      LibreDWGPINVOKE.Dwg_Object_MATERIAL_refractionmap_projection_set(swigCPtr, value);
-    } 
-    get {
-      ushort ret = LibreDWGPINVOKE.Dwg_Object_MATERIAL_refractionmap_projection_get(swigCPtr);
-      return ret;
-    } 
-  }
-
-  public ushort refractionmap_tiling {
-    set {
-      LibreDWGPINVOKE.Dwg_Object_MATERIAL_refractionmap_tiling_set(swigCPtr, value);
-    } 
-    get {
-      ushort ret = LibreDWGPINVOKE.Dwg_Object_MATERIAL_refractionmap_tiling_get(swigCPtr);
-      return ret;
-    } 
-  }
-
-  public ushort refractionmap_autotransform {
-    set {
-      LibreDWGPINVOKE.Dwg_Object_MATERIAL_refractionmap_autotransform_set(swigCPtr, value);
-    } 
-    get {
-      ushort ret = LibreDWGPINVOKE.Dwg_Object_MATERIAL_refractionmap_autotransform_get(swigCPtr);
-      return ret;
-    } 
-  }
-
-  public SWIGTYPE_p_double refractionmap_transmatrix {
-    set {
-      LibreDWGPINVOKE.Dwg_Object_MATERIAL_refractionmap_transmatrix_set(swigCPtr, SWIGTYPE_p_double.getCPtr(value));
-    } 
-    get {
-      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Object_MATERIAL_refractionmap_transmatrix_get(swigCPtr);
-      SWIGTYPE_p_double ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_double(cPtr, false);
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Object_MATERIAL_refractionmap_get(swigCPtr);
+      Dwg_MATERIAL_mapper ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_MATERIAL_mapper(cPtr, false);
       return ret;
     } 
   }
@@ -633,12 +213,12 @@ public class Dwg_Object_MATERIAL : global::System.IDisposable {
     } 
   }
 
-  public double indirect_dump_scale {
+  public double indirect_bump_scale {
     set {
-      LibreDWGPINVOKE.Dwg_Object_MATERIAL_indirect_dump_scale_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_Object_MATERIAL_indirect_bump_scale_set(swigCPtr, value);
     } 
     get {
-      double ret = LibreDWGPINVOKE.Dwg_Object_MATERIAL_indirect_dump_scale_get(swigCPtr);
+      double ret = LibreDWGPINVOKE.Dwg_Object_MATERIAL_indirect_bump_scale_get(swigCPtr);
       return ret;
     } 
   }
@@ -693,123 +273,62 @@ public class Dwg_Object_MATERIAL : global::System.IDisposable {
     } 
   }
 
-  public ushort normalmap_method {
+  public double translucence {
     set {
-      LibreDWGPINVOKE.Dwg_Object_MATERIAL_normalmap_method_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_Object_MATERIAL_translucence_set(swigCPtr, value);
     } 
     get {
-      ushort ret = LibreDWGPINVOKE.Dwg_Object_MATERIAL_normalmap_method_get(swigCPtr);
+      double ret = LibreDWGPINVOKE.Dwg_Object_MATERIAL_translucence_get(swigCPtr);
       return ret;
     } 
   }
 
-  public double normalmap_strength {
+  public double self_illumination {
     set {
-      LibreDWGPINVOKE.Dwg_Object_MATERIAL_normalmap_strength_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_Object_MATERIAL_self_illumination_set(swigCPtr, value);
     } 
     get {
-      double ret = LibreDWGPINVOKE.Dwg_Object_MATERIAL_normalmap_strength_get(swigCPtr);
+      double ret = LibreDWGPINVOKE.Dwg_Object_MATERIAL_self_illumination_get(swigCPtr);
       return ret;
     } 
   }
 
-  public ushort normalmap_source {
+  public double reflectivity {
     set {
-      LibreDWGPINVOKE.Dwg_Object_MATERIAL_normalmap_source_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_Object_MATERIAL_reflectivity_set(swigCPtr, value);
     } 
     get {
-      ushort ret = LibreDWGPINVOKE.Dwg_Object_MATERIAL_normalmap_source_get(swigCPtr);
+      double ret = LibreDWGPINVOKE.Dwg_Object_MATERIAL_reflectivity_get(swigCPtr);
       return ret;
     } 
   }
 
-  public string normalmap_filename {
+  public uint illumination_model {
     set {
-      LibreDWGPINVOKE.Dwg_Object_MATERIAL_normalmap_filename_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_Object_MATERIAL_illumination_model_set(swigCPtr, value);
     } 
     get {
-      string ret = LibreDWGPINVOKE.Dwg_Object_MATERIAL_normalmap_filename_get(swigCPtr);
+      uint ret = LibreDWGPINVOKE.Dwg_Object_MATERIAL_illumination_model_get(swigCPtr);
       return ret;
     } 
   }
 
-  public double normalmap_blendfactor {
+  public uint channel_flags {
     set {
-      LibreDWGPINVOKE.Dwg_Object_MATERIAL_normalmap_blendfactor_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_Object_MATERIAL_channel_flags_set(swigCPtr, value);
     } 
     get {
-      double ret = LibreDWGPINVOKE.Dwg_Object_MATERIAL_normalmap_blendfactor_get(swigCPtr);
+      uint ret = LibreDWGPINVOKE.Dwg_Object_MATERIAL_channel_flags_get(swigCPtr);
       return ret;
     } 
   }
 
-  public ushort normalmap_projection {
+  public uint mode {
     set {
-      LibreDWGPINVOKE.Dwg_Object_MATERIAL_normalmap_projection_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_Object_MATERIAL_mode_set(swigCPtr, value);
     } 
     get {
-      ushort ret = LibreDWGPINVOKE.Dwg_Object_MATERIAL_normalmap_projection_get(swigCPtr);
-      return ret;
-    } 
-  }
-
-  public ushort normalmap_tiling {
-    set {
-      LibreDWGPINVOKE.Dwg_Object_MATERIAL_normalmap_tiling_set(swigCPtr, value);
-    } 
-    get {
-      ushort ret = LibreDWGPINVOKE.Dwg_Object_MATERIAL_normalmap_tiling_get(swigCPtr);
-      return ret;
-    } 
-  }
-
-  public ushort normalmap_autotransform {
-    set {
-      LibreDWGPINVOKE.Dwg_Object_MATERIAL_normalmap_autotransform_set(swigCPtr, value);
-    } 
-    get {
-      ushort ret = LibreDWGPINVOKE.Dwg_Object_MATERIAL_normalmap_autotransform_get(swigCPtr);
-      return ret;
-    } 
-  }
-
-  public SWIGTYPE_p_double normalmap_transmatrix {
-    set {
-      LibreDWGPINVOKE.Dwg_Object_MATERIAL_normalmap_transmatrix_set(swigCPtr, SWIGTYPE_p_double.getCPtr(value));
-    } 
-    get {
-      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Object_MATERIAL_normalmap_transmatrix_get(swigCPtr);
-      SWIGTYPE_p_double ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_double(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public byte materials_anonymous {
-    set {
-      LibreDWGPINVOKE.Dwg_Object_MATERIAL_materials_anonymous_set(swigCPtr, value);
-    } 
-    get {
-      byte ret = LibreDWGPINVOKE.Dwg_Object_MATERIAL_materials_anonymous_get(swigCPtr);
-      return ret;
-    } 
-  }
-
-  public ushort global_illumination_mode {
-    set {
-      LibreDWGPINVOKE.Dwg_Object_MATERIAL_global_illumination_mode_set(swigCPtr, value);
-    } 
-    get {
-      ushort ret = LibreDWGPINVOKE.Dwg_Object_MATERIAL_global_illumination_mode_get(swigCPtr);
-      return ret;
-    } 
-  }
-
-  public ushort final_gather_mode {
-    set {
-      LibreDWGPINVOKE.Dwg_Object_MATERIAL_final_gather_mode_set(swigCPtr, value);
-    } 
-    get {
-      ushort ret = LibreDWGPINVOKE.Dwg_Object_MATERIAL_final_gather_mode_get(swigCPtr);
+      uint ret = LibreDWGPINVOKE.Dwg_Object_MATERIAL_mode_get(swigCPtr);
       return ret;
     } 
   }
@@ -820,6 +339,16 @@ public class Dwg_Object_MATERIAL : global::System.IDisposable {
     } 
     get {
       string ret = LibreDWGPINVOKE.Dwg_Object_MATERIAL_genprocname_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public ushort genproctype {
+    set {
+      LibreDWGPINVOKE.Dwg_Object_MATERIAL_genproctype_set(swigCPtr, value);
+    } 
+    get {
+      ushort ret = LibreDWGPINVOKE.Dwg_Object_MATERIAL_genproctype_get(swigCPtr);
       return ret;
     } 
   }
@@ -864,6 +393,17 @@ public class Dwg_Object_MATERIAL : global::System.IDisposable {
     } 
   }
 
+  public Dwg_Color genprocvalcolor {
+    set {
+      LibreDWGPINVOKE.Dwg_Object_MATERIAL_genprocvalcolor_set(swigCPtr, Dwg_Color.getCPtr(value));
+    } 
+    get {
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Object_MATERIAL_genprocvalcolor_get(swigCPtr);
+      Dwg_Color ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Color(cPtr, false);
+      return ret;
+    } 
+  }
+
   public byte genproctableend {
     set {
       LibreDWGPINVOKE.Dwg_Object_MATERIAL_genproctableend_set(swigCPtr, value);
@@ -874,93 +414,23 @@ public class Dwg_Object_MATERIAL : global::System.IDisposable {
     } 
   }
 
-  public Dwg_Color genprocvalcolorindex {
+  public ushort num_gentextures {
     set {
-      LibreDWGPINVOKE.Dwg_Object_MATERIAL_genprocvalcolorindex_set(swigCPtr, Dwg_Color.getCPtr(value));
+      LibreDWGPINVOKE.Dwg_Object_MATERIAL_num_gentextures_set(swigCPtr, value);
     } 
     get {
-      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Object_MATERIAL_genprocvalcolorindex_get(swigCPtr);
-      Dwg_Color ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Color(cPtr, false);
+      ushort ret = LibreDWGPINVOKE.Dwg_Object_MATERIAL_num_gentextures_get(swigCPtr);
       return ret;
     } 
   }
 
-  public ushort genprocvalcolorrgb {
+  public Dwg_MATERIAL_gentexture gentextures {
     set {
-      LibreDWGPINVOKE.Dwg_Object_MATERIAL_genprocvalcolorrgb_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_Object_MATERIAL_gentextures_set(swigCPtr, Dwg_MATERIAL_gentexture.getCPtr(value));
     } 
     get {
-      ushort ret = LibreDWGPINVOKE.Dwg_Object_MATERIAL_genprocvalcolorrgb_get(swigCPtr);
-      return ret;
-    } 
-  }
-
-  public string genprocvalcolorname {
-    set {
-      LibreDWGPINVOKE.Dwg_Object_MATERIAL_genprocvalcolorname_set(swigCPtr, value);
-    } 
-    get {
-      string ret = LibreDWGPINVOKE.Dwg_Object_MATERIAL_genprocvalcolorname_get(swigCPtr);
-      return ret;
-    } 
-  }
-
-  public ushort map_utile {
-    set {
-      LibreDWGPINVOKE.Dwg_Object_MATERIAL_map_utile_set(swigCPtr, value);
-    } 
-    get {
-      ushort ret = LibreDWGPINVOKE.Dwg_Object_MATERIAL_map_utile_get(swigCPtr);
-      return ret;
-    } 
-  }
-
-  public double translucence {
-    set {
-      LibreDWGPINVOKE.Dwg_Object_MATERIAL_translucence_set(swigCPtr, value);
-    } 
-    get {
-      double ret = LibreDWGPINVOKE.Dwg_Object_MATERIAL_translucence_get(swigCPtr);
-      return ret;
-    } 
-  }
-
-  public uint self_illumination {
-    set {
-      LibreDWGPINVOKE.Dwg_Object_MATERIAL_self_illumination_set(swigCPtr, value);
-    } 
-    get {
-      uint ret = LibreDWGPINVOKE.Dwg_Object_MATERIAL_self_illumination_get(swigCPtr);
-      return ret;
-    } 
-  }
-
-  public double reflectivity {
-    set {
-      LibreDWGPINVOKE.Dwg_Object_MATERIAL_reflectivity_set(swigCPtr, value);
-    } 
-    get {
-      double ret = LibreDWGPINVOKE.Dwg_Object_MATERIAL_reflectivity_get(swigCPtr);
-      return ret;
-    } 
-  }
-
-  public uint illumination_model {
-    set {
-      LibreDWGPINVOKE.Dwg_Object_MATERIAL_illumination_model_set(swigCPtr, value);
-    } 
-    get {
-      uint ret = LibreDWGPINVOKE.Dwg_Object_MATERIAL_illumination_model_get(swigCPtr);
-      return ret;
-    } 
-  }
-
-  public uint channel_flags {
-    set {
-      LibreDWGPINVOKE.Dwg_Object_MATERIAL_channel_flags_set(swigCPtr, value);
-    } 
-    get {
-      uint ret = LibreDWGPINVOKE.Dwg_Object_MATERIAL_channel_flags_get(swigCPtr);
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Object_MATERIAL_gentextures_get(swigCPtr);
+      Dwg_MATERIAL_gentexture ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_MATERIAL_gentexture(cPtr, false);
       return ret;
     } 
   }

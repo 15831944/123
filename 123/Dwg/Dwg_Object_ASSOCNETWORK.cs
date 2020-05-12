@@ -54,12 +54,12 @@ public class Dwg_Object_ASSOCNETWORK : global::System.IDisposable {
     } 
   }
 
-  public uint solution_status {
+  public ushort class_version {
     set {
-      LibreDWGPINVOKE.Dwg_Object_ASSOCNETWORK_solution_status_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_Object_ASSOCNETWORK_class_version_set(swigCPtr, value);
     } 
     get {
-      uint ret = LibreDWGPINVOKE.Dwg_Object_ASSOCNETWORK_solution_status_get(swigCPtr);
+      ushort ret = LibreDWGPINVOKE.Dwg_Object_ASSOCNETWORK_class_version_get(swigCPtr);
       return ret;
     } 
   }
@@ -74,54 +74,107 @@ public class Dwg_Object_ASSOCNETWORK : global::System.IDisposable {
     } 
   }
 
-  public Dwg_Object_Ref readdep {
+  public Dwg_Object_Ref owningnetwork {
     set {
-      LibreDWGPINVOKE.Dwg_Object_ASSOCNETWORK_readdep_set(swigCPtr, Dwg_Object_Ref.getCPtr(value));
+      LibreDWGPINVOKE.Dwg_Object_ASSOCNETWORK_owningnetwork_set(swigCPtr, Dwg_Object_Ref.getCPtr(value));
     } 
     get {
-      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Object_ASSOCNETWORK_readdep_get(swigCPtr);
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Object_ASSOCNETWORK_owningnetwork_get(swigCPtr);
       Dwg_Object_Ref ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Object_Ref(cPtr, false);
       return ret;
     } 
   }
 
-  public Dwg_Object_Ref writedep {
+  public Dwg_Object_Ref actionbody {
     set {
-      LibreDWGPINVOKE.Dwg_Object_ASSOCNETWORK_writedep_set(swigCPtr, Dwg_Object_Ref.getCPtr(value));
+      LibreDWGPINVOKE.Dwg_Object_ASSOCNETWORK_actionbody_set(swigCPtr, Dwg_Object_Ref.getCPtr(value));
     } 
     get {
-      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Object_ASSOCNETWORK_writedep_get(swigCPtr);
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Object_ASSOCNETWORK_actionbody_get(swigCPtr);
       Dwg_Object_Ref ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Object_Ref(cPtr, false);
       return ret;
     } 
   }
 
-  public uint constraint_status {
+  public uint action_index {
     set {
-      LibreDWGPINVOKE.Dwg_Object_ASSOCNETWORK_constraint_status_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_Object_ASSOCNETWORK_action_index_set(swigCPtr, value);
     } 
     get {
-      uint ret = LibreDWGPINVOKE.Dwg_Object_ASSOCNETWORK_constraint_status_get(swigCPtr);
+      uint ret = LibreDWGPINVOKE.Dwg_Object_ASSOCNETWORK_action_index_get(swigCPtr);
       return ret;
     } 
   }
 
-  public uint dof {
+  public uint max_assoc_dep_index {
     set {
-      LibreDWGPINVOKE.Dwg_Object_ASSOCNETWORK_dof_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_Object_ASSOCNETWORK_max_assoc_dep_index_set(swigCPtr, value);
     } 
     get {
-      uint ret = LibreDWGPINVOKE.Dwg_Object_ASSOCNETWORK_dof_get(swigCPtr);
+      uint ret = LibreDWGPINVOKE.Dwg_Object_ASSOCNETWORK_max_assoc_dep_index_get(swigCPtr);
       return ret;
     } 
   }
 
-  public byte is_body_a_proxy {
+  public uint num_deps {
     set {
-      LibreDWGPINVOKE.Dwg_Object_ASSOCNETWORK_is_body_a_proxy_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_Object_ASSOCNETWORK_num_deps_set(swigCPtr, value);
     } 
     get {
-      byte ret = LibreDWGPINVOKE.Dwg_Object_ASSOCNETWORK_is_body_a_proxy_get(swigCPtr);
+      uint ret = LibreDWGPINVOKE.Dwg_Object_ASSOCNETWORK_num_deps_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public Dwg_ASSOCACTION_Deps deps {
+    set {
+      LibreDWGPINVOKE.Dwg_Object_ASSOCNETWORK_deps_set(swigCPtr, Dwg_ASSOCACTION_Deps.getCPtr(value));
+    } 
+    get {
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Object_ASSOCNETWORK_deps_get(swigCPtr);
+      Dwg_ASSOCACTION_Deps ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_ASSOCACTION_Deps(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public uint num_owned_params {
+    set {
+      LibreDWGPINVOKE.Dwg_Object_ASSOCNETWORK_num_owned_params_set(swigCPtr, value);
+    } 
+    get {
+      uint ret = LibreDWGPINVOKE.Dwg_Object_ASSOCNETWORK_num_owned_params_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public SWIGTYPE_p_p__dwg_object_ref owned_params {
+    set {
+      LibreDWGPINVOKE.Dwg_Object_ASSOCNETWORK_owned_params_set(swigCPtr, SWIGTYPE_p_p__dwg_object_ref.getCPtr(value));
+    } 
+    get {
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Object_ASSOCNETWORK_owned_params_get(swigCPtr);
+      SWIGTYPE_p_p__dwg_object_ref ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_p__dwg_object_ref(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public uint num_owned_value_param_names {
+    set {
+      LibreDWGPINVOKE.Dwg_Object_ASSOCNETWORK_num_owned_value_param_names_set(swigCPtr, value);
+    } 
+    get {
+      uint ret = LibreDWGPINVOKE.Dwg_Object_ASSOCNETWORK_num_owned_value_param_names_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public SWIGTYPE_p_p__dwg_object_ref owned_value_param_names {
+    set {
+      LibreDWGPINVOKE.Dwg_Object_ASSOCNETWORK_owned_value_param_names_set(swigCPtr, SWIGTYPE_p_p__dwg_object_ref.getCPtr(value));
+    } 
+    get {
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Object_ASSOCNETWORK_owned_value_param_names_get(swigCPtr);
+      SWIGTYPE_p_p__dwg_object_ref ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_p__dwg_object_ref(cPtr, false);
       return ret;
     } 
   }

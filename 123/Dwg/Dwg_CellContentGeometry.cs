@@ -105,12 +105,12 @@ public class Dwg_CellContentGeometry : global::System.IDisposable {
     } 
   }
 
-  public double unknown {
+  public uint unknown {
     set {
       LibreDWGPINVOKE.Dwg_CellContentGeometry_unknown_set(swigCPtr, value);
     } 
     get {
-      double ret = LibreDWGPINVOKE.Dwg_CellContentGeometry_unknown_get(swigCPtr);
+      uint ret = LibreDWGPINVOKE.Dwg_CellContentGeometry_unknown_get(swigCPtr);
       return ret;
     } 
   }

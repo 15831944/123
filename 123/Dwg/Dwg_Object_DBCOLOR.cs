@@ -54,66 +54,6 @@ public class Dwg_Object_DBCOLOR : global::System.IDisposable {
     } 
   }
 
-  public uint class_version {
-    set {
-      LibreDWGPINVOKE.Dwg_Object_DBCOLOR_class_version_set(swigCPtr, value);
-    } 
-    get {
-      uint ret = LibreDWGPINVOKE.Dwg_Object_DBCOLOR_class_version_get(swigCPtr);
-      return ret;
-    } 
-  }
-
-  public byte unknown1 {
-    set {
-      LibreDWGPINVOKE.Dwg_Object_DBCOLOR_unknown1_set(swigCPtr, value);
-    } 
-    get {
-      byte ret = LibreDWGPINVOKE.Dwg_Object_DBCOLOR_unknown1_get(swigCPtr);
-      return ret;
-    } 
-  }
-
-  public uint rgb {
-    set {
-      LibreDWGPINVOKE.Dwg_Object_DBCOLOR_rgb_set(swigCPtr, value);
-    } 
-    get {
-      uint ret = LibreDWGPINVOKE.Dwg_Object_DBCOLOR_rgb_get(swigCPtr);
-      return ret;
-    } 
-  }
-
-  public byte unknown2 {
-    set {
-      LibreDWGPINVOKE.Dwg_Object_DBCOLOR_unknown2_set(swigCPtr, value);
-    } 
-    get {
-      byte ret = LibreDWGPINVOKE.Dwg_Object_DBCOLOR_unknown2_get(swigCPtr);
-      return ret;
-    } 
-  }
-
-  public string name {
-    set {
-      LibreDWGPINVOKE.Dwg_Object_DBCOLOR_name_set(swigCPtr, value);
-    } 
-    get {
-      string ret = LibreDWGPINVOKE.Dwg_Object_DBCOLOR_name_get(swigCPtr);
-      return ret;
-    } 
-  }
-
-  public string catalog {
-    set {
-      LibreDWGPINVOKE.Dwg_Object_DBCOLOR_catalog_set(swigCPtr, value);
-    } 
-    get {
-      string ret = LibreDWGPINVOKE.Dwg_Object_DBCOLOR_catalog_get(swigCPtr);
-      return ret;
-    } 
-  }
-
   public Dwg_Color color {
     set {
       LibreDWGPINVOKE.Dwg_Object_DBCOLOR_color_set(swigCPtr, Dwg_Color.getCPtr(value));

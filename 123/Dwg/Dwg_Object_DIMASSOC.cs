@@ -54,6 +54,17 @@ public class Dwg_Object_DIMASSOC : global::System.IDisposable {
     } 
   }
 
+  public Dwg_Object_Ref dimensionobj {
+    set {
+      LibreDWGPINVOKE.Dwg_Object_DIMASSOC_dimensionobj_set(swigCPtr, Dwg_Object_Ref.getCPtr(value));
+    } 
+    get {
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Object_DIMASSOC_dimensionobj_get(swigCPtr);
+      Dwg_Object_Ref ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Object_Ref(cPtr, false);
+      return ret;
+    } 
+  }
+
   public uint associativity {
     set {
       LibreDWGPINVOKE.Dwg_Object_DIMASSOC_associativity_set(swigCPtr, value);
@@ -74,6 +85,16 @@ public class Dwg_Object_DIMASSOC : global::System.IDisposable {
     } 
   }
 
+  public byte rotated_type {
+    set {
+      LibreDWGPINVOKE.Dwg_Object_DIMASSOC_rotated_type_set(swigCPtr, value);
+    } 
+    get {
+      byte ret = LibreDWGPINVOKE.Dwg_Object_DIMASSOC_rotated_type_get(swigCPtr);
+      return ret;
+    } 
+  }
+
   public Dwg_DIMASSOC_Ref ref_ {
     set {
       LibreDWGPINVOKE.Dwg_Object_DIMASSOC_ref__set(swigCPtr, Dwg_DIMASSOC_Ref.getCPtr(value));
@@ -81,16 +102,6 @@ public class Dwg_Object_DIMASSOC : global::System.IDisposable {
     get {
       global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Object_DIMASSOC_ref__get(swigCPtr);
       Dwg_DIMASSOC_Ref ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_DIMASSOC_Ref(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public uint intsect_gsmarker {
-    set {
-      LibreDWGPINVOKE.Dwg_Object_DIMASSOC_intsect_gsmarker_set(swigCPtr, value);
-    } 
-    get {
-      uint ret = LibreDWGPINVOKE.Dwg_Object_DIMASSOC_intsect_gsmarker_get(swigCPtr);
       return ret;
     } 
   }

@@ -123,6 +123,16 @@ public class Dwg_Section_Info : global::System.IDisposable {
     } 
   }
 
+  public Dwg_Section_Type fixedtype {
+    set {
+      LibreDWGPINVOKE.Dwg_Section_Info_fixedtype_set(swigCPtr, (int)value);
+    } 
+    get {
+      Dwg_Section_Type ret = (Dwg_Section_Type)LibreDWGPINVOKE.Dwg_Section_Info_fixedtype_get(swigCPtr);
+      return ret;
+    } 
+  }
+
   public SWIGTYPE_p_p__dwg_section sections {
     set {
       LibreDWGPINVOKE.Dwg_Section_Info_sections_set(swigCPtr, SWIGTYPE_p_p__dwg_section.getCPtr(value));

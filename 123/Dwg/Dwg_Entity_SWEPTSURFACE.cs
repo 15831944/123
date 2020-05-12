@@ -158,12 +158,12 @@ public class Dwg_Entity_SWEPTSURFACE : global::System.IDisposable {
     } 
   }
 
-  public uint num_isolines {
+  public uint isolines {
     set {
-      LibreDWGPINVOKE.Dwg_Entity_SWEPTSURFACE_num_isolines_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_Entity_SWEPTSURFACE_isolines_set(swigCPtr, value);
     } 
     get {
-      uint ret = LibreDWGPINVOKE.Dwg_Entity_SWEPTSURFACE_num_isolines_get(swigCPtr);
+      uint ret = LibreDWGPINVOKE.Dwg_Entity_SWEPTSURFACE_isolines_get(swigCPtr);
       return ret;
     } 
   }
@@ -322,22 +322,23 @@ public class Dwg_Entity_SWEPTSURFACE : global::System.IDisposable {
     } 
   }
 
-  public uint size_sweepdata {
+  public uint sweepdata_size {
     set {
-      LibreDWGPINVOKE.Dwg_Entity_SWEPTSURFACE_size_sweepdata_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_Entity_SWEPTSURFACE_sweepdata_size_set(swigCPtr, value);
     } 
     get {
-      uint ret = LibreDWGPINVOKE.Dwg_Entity_SWEPTSURFACE_size_sweepdata_get(swigCPtr);
+      uint ret = LibreDWGPINVOKE.Dwg_Entity_SWEPTSURFACE_sweepdata_size_get(swigCPtr);
       return ret;
     } 
   }
 
-  public string sweepdata {
+  public SWIGTYPE_p_unsigned_char sweepdata {
     set {
-      LibreDWGPINVOKE.Dwg_Entity_SWEPTSURFACE_sweepdata_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_Entity_SWEPTSURFACE_sweepdata_set(swigCPtr, SWIGTYPE_p_unsigned_char.getCPtr(value));
     } 
     get {
-      string ret = LibreDWGPINVOKE.Dwg_Entity_SWEPTSURFACE_sweepdata_get(swigCPtr);
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Entity_SWEPTSURFACE_sweepdata_get(swigCPtr);
+      SWIGTYPE_p_unsigned_char ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_unsigned_char(cPtr, false);
       return ret;
     } 
   }
@@ -352,22 +353,23 @@ public class Dwg_Entity_SWEPTSURFACE : global::System.IDisposable {
     } 
   }
 
-  public uint size_pathdata {
+  public uint pathdata_size {
     set {
-      LibreDWGPINVOKE.Dwg_Entity_SWEPTSURFACE_size_pathdata_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_Entity_SWEPTSURFACE_pathdata_size_set(swigCPtr, value);
     } 
     get {
-      uint ret = LibreDWGPINVOKE.Dwg_Entity_SWEPTSURFACE_size_pathdata_get(swigCPtr);
+      uint ret = LibreDWGPINVOKE.Dwg_Entity_SWEPTSURFACE_pathdata_size_get(swigCPtr);
       return ret;
     } 
   }
 
-  public string pathdata {
+  public SWIGTYPE_p_unsigned_char pathdata {
     set {
-      LibreDWGPINVOKE.Dwg_Entity_SWEPTSURFACE_pathdata_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_Entity_SWEPTSURFACE_pathdata_set(swigCPtr, SWIGTYPE_p_unsigned_char.getCPtr(value));
     } 
     get {
-      string ret = LibreDWGPINVOKE.Dwg_Entity_SWEPTSURFACE_pathdata_get(swigCPtr);
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Entity_SWEPTSURFACE_pathdata_get(swigCPtr);
+      SWIGTYPE_p_unsigned_char ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_unsigned_char(cPtr, false);
       return ret;
     } 
   }

@@ -94,33 +94,54 @@ public class Dwg_Entity_PROXY_ENTITY : global::System.IDisposable {
     } 
   }
 
-  public string data {
+  public uint data_numbits {
     set {
-      LibreDWGPINVOKE.Dwg_Entity_PROXY_ENTITY_data_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_Entity_PROXY_ENTITY_data_numbits_set(swigCPtr, value);
     } 
     get {
-      string ret = LibreDWGPINVOKE.Dwg_Entity_PROXY_ENTITY_data_get(swigCPtr);
+      uint ret = LibreDWGPINVOKE.Dwg_Entity_PROXY_ENTITY_data_numbits_get(swigCPtr);
       return ret;
     } 
   }
 
-  public SWIGTYPE_p_p__dwg_object_ref objid_object_handles {
+  public uint data_size {
     set {
-      LibreDWGPINVOKE.Dwg_Entity_PROXY_ENTITY_objid_object_handles_set(swigCPtr, SWIGTYPE_p_p__dwg_object_ref.getCPtr(value));
+      LibreDWGPINVOKE.Dwg_Entity_PROXY_ENTITY_data_size_set(swigCPtr, value);
     } 
     get {
-      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Entity_PROXY_ENTITY_objid_object_handles_get(swigCPtr);
+      uint ret = LibreDWGPINVOKE.Dwg_Entity_PROXY_ENTITY_data_size_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public SWIGTYPE_p_unsigned_char data {
+    set {
+      LibreDWGPINVOKE.Dwg_Entity_PROXY_ENTITY_data_set(swigCPtr, SWIGTYPE_p_unsigned_char.getCPtr(value));
+    } 
+    get {
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Entity_PROXY_ENTITY_data_get(swigCPtr);
+      SWIGTYPE_p_unsigned_char ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_unsigned_char(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public uint num_objids {
+    set {
+      LibreDWGPINVOKE.Dwg_Entity_PROXY_ENTITY_num_objids_set(swigCPtr, value);
+    } 
+    get {
+      uint ret = LibreDWGPINVOKE.Dwg_Entity_PROXY_ENTITY_num_objids_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public SWIGTYPE_p_p__dwg_object_ref objids {
+    set {
+      LibreDWGPINVOKE.Dwg_Entity_PROXY_ENTITY_objids_set(swigCPtr, SWIGTYPE_p_p__dwg_object_ref.getCPtr(value));
+    } 
+    get {
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Entity_PROXY_ENTITY_objids_get(swigCPtr);
       SWIGTYPE_p_p__dwg_object_ref ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_p__dwg_object_ref(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public uint size {
-    set {
-      LibreDWGPINVOKE.Dwg_Entity_PROXY_ENTITY_size_set(swigCPtr, value);
-    } 
-    get {
-      uint ret = LibreDWGPINVOKE.Dwg_Entity_PROXY_ENTITY_size_get(swigCPtr);
       return ret;
     } 
   }

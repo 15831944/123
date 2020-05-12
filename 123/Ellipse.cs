@@ -10,15 +10,14 @@ namespace _123
     {
         public float x { get; set; }
         public float y { get; set; }
-        public float endAngle { get; set; }
-        public float startAngle { get; set; }
+        public float ratio { get; set; }
 
-        public Ellipse(float x, float y, float endAngle, float startAngle)
+
+        public Ellipse(float x, float y, float ratio)
         {
             this.x = x;
             this.y = y;
-            this.endAngle = endAngle;
-            this.startAngle = startAngle;
+            this.ratio = ratio;
         }
     }
 }

@@ -113,12 +113,12 @@ public class Dwg_TABLE_Cell : global::System.IDisposable {
     } 
   }
 
-  public string text_string {
+  public string text_value {
     set {
-      LibreDWGPINVOKE.Dwg_TABLE_Cell_text_string_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_TABLE_Cell_text_value_set(swigCPtr, value);
     } 
     get {
-      string ret = LibreDWGPINVOKE.Dwg_TABLE_Cell_text_string_get(swigCPtr);
+      string ret = LibreDWGPINVOKE.Dwg_TABLE_Cell_text_value_get(swigCPtr);
       return ret;
     } 
   }

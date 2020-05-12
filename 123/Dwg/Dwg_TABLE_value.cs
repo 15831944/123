@@ -103,12 +103,13 @@ public class Dwg_TABLE_value : global::System.IDisposable {
     } 
   }
 
-  public string data_date {
+  public SWIGTYPE_p_unsigned_char data_date {
     set {
-      LibreDWGPINVOKE.Dwg_TABLE_value_data_date_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_TABLE_value_data_date_set(swigCPtr, SWIGTYPE_p_unsigned_char.getCPtr(value));
     } 
     get {
-      string ret = LibreDWGPINVOKE.Dwg_TABLE_value_data_date_get(swigCPtr);
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_TABLE_value_data_date_get(swigCPtr);
+      SWIGTYPE_p_unsigned_char ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_unsigned_char(cPtr, false);
       return ret;
     } 
   }

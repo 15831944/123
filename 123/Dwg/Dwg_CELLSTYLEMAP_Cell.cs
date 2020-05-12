@@ -43,6 +43,17 @@ public class Dwg_CELLSTYLEMAP_Cell : global::System.IDisposable {
     }
   }
 
+  public Dwg_Object_CELLSTYLEMAP parent {
+    set {
+      LibreDWGPINVOKE.Dwg_CELLSTYLEMAP_Cell_parent_set(swigCPtr, Dwg_Object_CELLSTYLEMAP.getCPtr(value));
+    } 
+    get {
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_CELLSTYLEMAP_Cell_parent_get(swigCPtr);
+      Dwg_Object_CELLSTYLEMAP ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Object_CELLSTYLEMAP(cPtr, false);
+      return ret;
+    } 
+  }
+
   public Dwg_CellStyle style {
     set {
       LibreDWGPINVOKE.Dwg_CELLSTYLEMAP_Cell_style_set(swigCPtr, Dwg_CellStyle.getCPtr(value));
@@ -80,17 +91,6 @@ public class Dwg_CELLSTYLEMAP_Cell : global::System.IDisposable {
     } 
     get {
       string ret = LibreDWGPINVOKE.Dwg_CELLSTYLEMAP_Cell_name_get(swigCPtr);
-      return ret;
-    } 
-  }
-
-  public Dwg_Object_CELLSTYLEMAP parent {
-    set {
-      LibreDWGPINVOKE.Dwg_CELLSTYLEMAP_Cell_parent_set(swigCPtr, Dwg_Object_CELLSTYLEMAP.getCPtr(value));
-    } 
-    get {
-      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_CELLSTYLEMAP_Cell_parent_get(swigCPtr);
-      Dwg_Object_CELLSTYLEMAP ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Object_CELLSTYLEMAP(cPtr, false);
       return ret;
     } 
   }

@@ -54,26 +54,6 @@ public class Dwg_Object_LAYER_INDEX : global::System.IDisposable {
     } 
   }
 
-  public uint timestamp1 {
-    set {
-      LibreDWGPINVOKE.Dwg_Object_LAYER_INDEX_timestamp1_set(swigCPtr, value);
-    } 
-    get {
-      uint ret = LibreDWGPINVOKE.Dwg_Object_LAYER_INDEX_timestamp1_get(swigCPtr);
-      return ret;
-    } 
-  }
-
-  public uint timestamp2 {
-    set {
-      LibreDWGPINVOKE.Dwg_Object_LAYER_INDEX_timestamp2_set(swigCPtr, value);
-    } 
-    get {
-      uint ret = LibreDWGPINVOKE.Dwg_Object_LAYER_INDEX_timestamp2_get(swigCPtr);
-      return ret;
-    } 
-  }
-
   public uint num_entries {
     set {
       LibreDWGPINVOKE.Dwg_Object_LAYER_INDEX_num_entries_set(swigCPtr, value);
@@ -91,17 +71,6 @@ public class Dwg_Object_LAYER_INDEX : global::System.IDisposable {
     get {
       global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Object_LAYER_INDEX_entries_get(swigCPtr);
       Dwg_LAYER_entry ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_LAYER_entry(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public SWIGTYPE_p_p__dwg_object_ref layer_entries {
-    set {
-      LibreDWGPINVOKE.Dwg_Object_LAYER_INDEX_layer_entries_set(swigCPtr, SWIGTYPE_p_p__dwg_object_ref.getCPtr(value));
-    } 
-    get {
-      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Object_LAYER_INDEX_layer_entries_get(swigCPtr);
-      SWIGTYPE_p_p__dwg_object_ref ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_p__dwg_object_ref(cPtr, false);
       return ret;
     } 
   }

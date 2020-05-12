@@ -425,6 +425,105 @@ public class Dwg_Entity_VIEWPORT : global::System.IDisposable {
     } 
   }
 
+  public Dwg_Object_Ref vport_entity_header {
+    set {
+      LibreDWGPINVOKE.Dwg_Entity_VIEWPORT_vport_entity_header_set(swigCPtr, Dwg_Object_Ref.getCPtr(value));
+    } 
+    get {
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Entity_VIEWPORT_vport_entity_header_get(swigCPtr);
+      Dwg_Object_Ref ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Object_Ref(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public SWIGTYPE_p_p__dwg_object_ref frozen_layers {
+    set {
+      LibreDWGPINVOKE.Dwg_Entity_VIEWPORT_frozen_layers_set(swigCPtr, SWIGTYPE_p_p__dwg_object_ref.getCPtr(value));
+    } 
+    get {
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Entity_VIEWPORT_frozen_layers_get(swigCPtr);
+      SWIGTYPE_p_p__dwg_object_ref ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_p__dwg_object_ref(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public Dwg_Object_Ref clip_boundary {
+    set {
+      LibreDWGPINVOKE.Dwg_Entity_VIEWPORT_clip_boundary_set(swigCPtr, Dwg_Object_Ref.getCPtr(value));
+    } 
+    get {
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Entity_VIEWPORT_clip_boundary_get(swigCPtr);
+      Dwg_Object_Ref ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Object_Ref(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public Dwg_Object_Ref named_ucs {
+    set {
+      LibreDWGPINVOKE.Dwg_Entity_VIEWPORT_named_ucs_set(swigCPtr, Dwg_Object_Ref.getCPtr(value));
+    } 
+    get {
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Entity_VIEWPORT_named_ucs_get(swigCPtr);
+      Dwg_Object_Ref ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Object_Ref(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public Dwg_Object_Ref base_ucs {
+    set {
+      LibreDWGPINVOKE.Dwg_Entity_VIEWPORT_base_ucs_set(swigCPtr, Dwg_Object_Ref.getCPtr(value));
+    } 
+    get {
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Entity_VIEWPORT_base_ucs_get(swigCPtr);
+      Dwg_Object_Ref ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Object_Ref(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public Dwg_Object_Ref background {
+    set {
+      LibreDWGPINVOKE.Dwg_Entity_VIEWPORT_background_set(swigCPtr, Dwg_Object_Ref.getCPtr(value));
+    } 
+    get {
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Entity_VIEWPORT_background_get(swigCPtr);
+      Dwg_Object_Ref ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Object_Ref(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public Dwg_Object_Ref visualstyle {
+    set {
+      LibreDWGPINVOKE.Dwg_Entity_VIEWPORT_visualstyle_set(swigCPtr, Dwg_Object_Ref.getCPtr(value));
+    } 
+    get {
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Entity_VIEWPORT_visualstyle_get(swigCPtr);
+      Dwg_Object_Ref ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Object_Ref(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public Dwg_Object_Ref shadeplot {
+    set {
+      LibreDWGPINVOKE.Dwg_Entity_VIEWPORT_shadeplot_set(swigCPtr, Dwg_Object_Ref.getCPtr(value));
+    } 
+    get {
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Entity_VIEWPORT_shadeplot_get(swigCPtr);
+      Dwg_Object_Ref ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Object_Ref(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public Dwg_Object_Ref sun {
+    set {
+      LibreDWGPINVOKE.Dwg_Entity_VIEWPORT_sun_set(swigCPtr, Dwg_Object_Ref.getCPtr(value));
+    } 
+    get {
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Entity_VIEWPORT_sun_get(swigCPtr);
+      Dwg_Object_Ref ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Object_Ref(cPtr, false);
+      return ret;
+    } 
+  }
+
   public Dwg_Entity_VIEWPORT() : this(LibreDWGPINVOKE.new_Dwg_Entity_VIEWPORT(), true) {
   }
 

@@ -43,26 +43,6 @@ public class Dwg_LAYER_entry : global::System.IDisposable {
     }
   }
 
-  public uint idxlong {
-    set {
-      LibreDWGPINVOKE.Dwg_LAYER_entry_idxlong_set(swigCPtr, value);
-    } 
-    get {
-      uint ret = LibreDWGPINVOKE.Dwg_LAYER_entry_idxlong_get(swigCPtr);
-      return ret;
-    } 
-  }
-
-  public string layername {
-    set {
-      LibreDWGPINVOKE.Dwg_LAYER_entry_layername_set(swigCPtr, value);
-    } 
-    get {
-      string ret = LibreDWGPINVOKE.Dwg_LAYER_entry_layername_get(swigCPtr);
-      return ret;
-    } 
-  }
-
   public Dwg_Object_LAYER_INDEX parent {
     set {
       LibreDWGPINVOKE.Dwg_LAYER_entry_parent_set(swigCPtr, Dwg_Object_LAYER_INDEX.getCPtr(value));
@@ -70,6 +50,37 @@ public class Dwg_LAYER_entry : global::System.IDisposable {
     get {
       global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_LAYER_entry_parent_get(swigCPtr);
       Dwg_Object_LAYER_INDEX ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Object_LAYER_INDEX(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public uint numlayers {
+    set {
+      LibreDWGPINVOKE.Dwg_LAYER_entry_numlayers_set(swigCPtr, value);
+    } 
+    get {
+      uint ret = LibreDWGPINVOKE.Dwg_LAYER_entry_numlayers_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public string name {
+    set {
+      LibreDWGPINVOKE.Dwg_LAYER_entry_name_set(swigCPtr, value);
+    } 
+    get {
+      string ret = LibreDWGPINVOKE.Dwg_LAYER_entry_name_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public Dwg_Object_Ref handle {
+    set {
+      LibreDWGPINVOKE.Dwg_LAYER_entry_handle_set(swigCPtr, Dwg_Object_Ref.getCPtr(value));
+    } 
+    get {
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_LAYER_entry_handle_get(swigCPtr);
+      Dwg_Object_Ref ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Object_Ref(cPtr, false);
       return ret;
     } 
   }

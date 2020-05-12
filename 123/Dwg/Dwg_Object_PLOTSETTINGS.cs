@@ -84,6 +84,26 @@ public class Dwg_Object_PLOTSETTINGS : global::System.IDisposable {
     } 
   }
 
+  public string canonical_media_name {
+    set {
+      LibreDWGPINVOKE.Dwg_Object_PLOTSETTINGS_canonical_media_name_set(swigCPtr, value);
+    } 
+    get {
+      string ret = LibreDWGPINVOKE.Dwg_Object_PLOTSETTINGS_canonical_media_name_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public ushort flags {
+    set {
+      LibreDWGPINVOKE.Dwg_Object_PLOTSETTINGS_flags_set(swigCPtr, value);
+    } 
+    get {
+      ushort ret = LibreDWGPINVOKE.Dwg_Object_PLOTSETTINGS_flags_get(swigCPtr);
+      return ret;
+    } 
+  }
+
   public Dwg_Object_Ref plotview {
     set {
       LibreDWGPINVOKE.Dwg_Object_PLOTSETTINGS_plotview_set(swigCPtr, Dwg_Object_Ref.getCPtr(value));
@@ -188,42 +208,32 @@ public class Dwg_Object_PLOTSETTINGS : global::System.IDisposable {
     } 
   }
 
-  public double num_custom_print_scale {
+  public double paper_units {
     set {
-      LibreDWGPINVOKE.Dwg_Object_PLOTSETTINGS_num_custom_print_scale_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_Object_PLOTSETTINGS_paper_units_set(swigCPtr, value);
     } 
     get {
-      double ret = LibreDWGPINVOKE.Dwg_Object_PLOTSETTINGS_num_custom_print_scale_get(swigCPtr);
+      double ret = LibreDWGPINVOKE.Dwg_Object_PLOTSETTINGS_paper_units_get(swigCPtr);
       return ret;
     } 
   }
 
-  public double den_custom_print_scale {
+  public double drawing_units {
     set {
-      LibreDWGPINVOKE.Dwg_Object_PLOTSETTINGS_den_custom_print_scale_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_Object_PLOTSETTINGS_drawing_units_set(swigCPtr, value);
     } 
     get {
-      double ret = LibreDWGPINVOKE.Dwg_Object_PLOTSETTINGS_den_custom_print_scale_get(swigCPtr);
+      double ret = LibreDWGPINVOKE.Dwg_Object_PLOTSETTINGS_drawing_units_get(swigCPtr);
       return ret;
     } 
   }
 
-  public ushort plot_layout {
+  public ushort plot_paper_unit {
     set {
-      LibreDWGPINVOKE.Dwg_Object_PLOTSETTINGS_plot_layout_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_Object_PLOTSETTINGS_plot_paper_unit_set(swigCPtr, value);
     } 
     get {
-      ushort ret = LibreDWGPINVOKE.Dwg_Object_PLOTSETTINGS_plot_layout_get(swigCPtr);
-      return ret;
-    } 
-  }
-
-  public ushort plot_paper_units {
-    set {
-      LibreDWGPINVOKE.Dwg_Object_PLOTSETTINGS_plot_paper_units_set(swigCPtr, value);
-    } 
-    get {
-      ushort ret = LibreDWGPINVOKE.Dwg_Object_PLOTSETTINGS_plot_paper_units_get(swigCPtr);
+      ushort ret = LibreDWGPINVOKE.Dwg_Object_PLOTSETTINGS_plot_paper_unit_get(swigCPtr);
       return ret;
     } 
   }
@@ -248,23 +258,12 @@ public class Dwg_Object_PLOTSETTINGS : global::System.IDisposable {
     } 
   }
 
-  public Dwg_Object_Ref stylesheet {
+  public string stylesheet {
     set {
-      LibreDWGPINVOKE.Dwg_Object_PLOTSETTINGS_stylesheet_set(swigCPtr, Dwg_Object_Ref.getCPtr(value));
+      LibreDWGPINVOKE.Dwg_Object_PLOTSETTINGS_stylesheet_set(swigCPtr, value);
     } 
     get {
-      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Object_PLOTSETTINGS_stylesheet_get(swigCPtr);
-      Dwg_Object_Ref ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Object_Ref(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public byte use_std_scale {
-    set {
-      LibreDWGPINVOKE.Dwg_Object_PLOTSETTINGS_use_std_scale_set(swigCPtr, value);
-    } 
-    get {
-      byte ret = LibreDWGPINVOKE.Dwg_Object_PLOTSETTINGS_use_std_scale_get(swigCPtr);
+      string ret = LibreDWGPINVOKE.Dwg_Object_PLOTSETTINGS_stylesheet_get(swigCPtr);
       return ret;
     } 
   }
@@ -299,22 +298,22 @@ public class Dwg_Object_PLOTSETTINGS : global::System.IDisposable {
     } 
   }
 
-  public ushort shade_plot_res_level {
+  public ushort shade_plot_reslevel {
     set {
-      LibreDWGPINVOKE.Dwg_Object_PLOTSETTINGS_shade_plot_res_level_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_Object_PLOTSETTINGS_shade_plot_reslevel_set(swigCPtr, value);
     } 
     get {
-      ushort ret = LibreDWGPINVOKE.Dwg_Object_PLOTSETTINGS_shade_plot_res_level_get(swigCPtr);
+      ushort ret = LibreDWGPINVOKE.Dwg_Object_PLOTSETTINGS_shade_plot_reslevel_get(swigCPtr);
       return ret;
     } 
   }
 
-  public ushort shade_plot_custom_dpi {
+  public ushort shade_plot_customdpi {
     set {
-      LibreDWGPINVOKE.Dwg_Object_PLOTSETTINGS_shade_plot_custom_dpi_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_Object_PLOTSETTINGS_shade_plot_customdpi_set(swigCPtr, value);
     } 
     get {
-      ushort ret = LibreDWGPINVOKE.Dwg_Object_PLOTSETTINGS_shade_plot_custom_dpi_get(swigCPtr);
+      ushort ret = LibreDWGPINVOKE.Dwg_Object_PLOTSETTINGS_shade_plot_customdpi_get(swigCPtr);
       return ret;
     } 
   }
@@ -330,12 +329,12 @@ public class Dwg_Object_PLOTSETTINGS : global::System.IDisposable {
     } 
   }
 
-  public Dwg_Object_Ref shade_plot_id {
+  public Dwg_Object_Ref shadeplot {
     set {
-      LibreDWGPINVOKE.Dwg_Object_PLOTSETTINGS_shade_plot_id_set(swigCPtr, Dwg_Object_Ref.getCPtr(value));
+      LibreDWGPINVOKE.Dwg_Object_PLOTSETTINGS_shadeplot_set(swigCPtr, Dwg_Object_Ref.getCPtr(value));
     } 
     get {
-      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Object_PLOTSETTINGS_shade_plot_id_get(swigCPtr);
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_Object_PLOTSETTINGS_shadeplot_get(swigCPtr);
       Dwg_Object_Ref ret = (cPtr == global::System.IntPtr.Zero) ? null : new Dwg_Object_Ref(cPtr, false);
       return ret;
     } 

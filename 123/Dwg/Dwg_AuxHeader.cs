@@ -74,12 +74,12 @@ public class Dwg_AuxHeader : global::System.IDisposable {
     } 
   }
 
-  public uint num_saves {
+  public uint numsaves {
     set {
-      LibreDWGPINVOKE.Dwg_AuxHeader_num_saves_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_AuxHeader_numsaves_set(swigCPtr, value);
     } 
     get {
-      uint ret = LibreDWGPINVOKE.Dwg_AuxHeader_num_saves_get(swigCPtr);
+      uint ret = LibreDWGPINVOKE.Dwg_AuxHeader_numsaves_get(swigCPtr);
       return ret;
     } 
   }
@@ -94,22 +94,22 @@ public class Dwg_AuxHeader : global::System.IDisposable {
     } 
   }
 
-  public ushort num_saves_1 {
+  public ushort numsaves_1 {
     set {
-      LibreDWGPINVOKE.Dwg_AuxHeader_num_saves_1_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_AuxHeader_numsaves_1_set(swigCPtr, value);
     } 
     get {
-      ushort ret = LibreDWGPINVOKE.Dwg_AuxHeader_num_saves_1_get(swigCPtr);
+      ushort ret = LibreDWGPINVOKE.Dwg_AuxHeader_numsaves_1_get(swigCPtr);
       return ret;
     } 
   }
 
-  public ushort num_saves_2 {
+  public ushort numsaves_2 {
     set {
-      LibreDWGPINVOKE.Dwg_AuxHeader_num_saves_2_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_AuxHeader_numsaves_2_set(swigCPtr, value);
     } 
     get {
-      ushort ret = LibreDWGPINVOKE.Dwg_AuxHeader_num_saves_2_get(swigCPtr);
+      ushort ret = LibreDWGPINVOKE.Dwg_AuxHeader_numsaves_2_get(swigCPtr);
       return ret;
     } 
   }
@@ -164,24 +164,24 @@ public class Dwg_AuxHeader : global::System.IDisposable {
     } 
   }
 
-  public SWIGTYPE_p_unsigned_short unknown_rs {
+  public SWIGTYPE_p_unsigned_short unknown_6rs {
     set {
-      LibreDWGPINVOKE.Dwg_AuxHeader_unknown_rs_set(swigCPtr, SWIGTYPE_p_unsigned_short.getCPtr(value));
+      LibreDWGPINVOKE.Dwg_AuxHeader_unknown_6rs_set(swigCPtr, SWIGTYPE_p_unsigned_short.getCPtr(value));
     } 
     get {
-      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_AuxHeader_unknown_rs_get(swigCPtr);
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_AuxHeader_unknown_6rs_get(swigCPtr);
       SWIGTYPE_p_unsigned_short ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_unsigned_short(cPtr, false);
       return ret;
     } 
   }
 
-  public SWIGTYPE_p_unsigned_char unknown_rc {
+  public SWIGTYPE_p_unsigned_int unknown_5rl {
     set {
-      LibreDWGPINVOKE.Dwg_AuxHeader_unknown_rc_set(swigCPtr, SWIGTYPE_p_unsigned_char.getCPtr(value));
+      LibreDWGPINVOKE.Dwg_AuxHeader_unknown_5rl_set(swigCPtr, SWIGTYPE_p_unsigned_int.getCPtr(value));
     } 
     get {
-      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_AuxHeader_unknown_rc_get(swigCPtr);
-      SWIGTYPE_p_unsigned_char ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_unsigned_char(cPtr, false);
+      global::System.IntPtr cPtr = LibreDWGPINVOKE.Dwg_AuxHeader_unknown_5rl_get(swigCPtr);
+      SWIGTYPE_p_unsigned_int ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_unsigned_int(cPtr, false);
       return ret;
     } 
   }
@@ -236,12 +236,12 @@ public class Dwg_AuxHeader : global::System.IDisposable {
     } 
   }
 
-  public ushort num_saves_3 {
+  public ushort numsaves_3 {
     set {
-      LibreDWGPINVOKE.Dwg_AuxHeader_num_saves_3_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_AuxHeader_numsaves_3_set(swigCPtr, value);
     } 
     get {
-      ushort ret = LibreDWGPINVOKE.Dwg_AuxHeader_num_saves_3_get(swigCPtr);
+      ushort ret = LibreDWGPINVOKE.Dwg_AuxHeader_numsaves_3_get(swigCPtr);
       return ret;
     } 
   }
@@ -276,12 +276,12 @@ public class Dwg_AuxHeader : global::System.IDisposable {
     } 
   }
 
-  public uint num_saves_4 {
+  public uint numsaves_4 {
     set {
-      LibreDWGPINVOKE.Dwg_AuxHeader_num_saves_4_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_AuxHeader_numsaves_4_set(swigCPtr, value);
     } 
     get {
-      uint ret = LibreDWGPINVOKE.Dwg_AuxHeader_num_saves_4_get(swigCPtr);
+      uint ret = LibreDWGPINVOKE.Dwg_AuxHeader_numsaves_4_get(swigCPtr);
       return ret;
     } 
   }

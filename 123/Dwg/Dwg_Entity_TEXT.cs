@@ -117,12 +117,12 @@ public class Dwg_Entity_TEXT : global::System.IDisposable {
     } 
   }
 
-  public double oblique_ang {
+  public double oblique_angle {
     set {
-      LibreDWGPINVOKE.Dwg_Entity_TEXT_oblique_ang_set(swigCPtr, value);
+      LibreDWGPINVOKE.Dwg_Entity_TEXT_oblique_angle_set(swigCPtr, value);
     } 
     get {
-      double ret = LibreDWGPINVOKE.Dwg_Entity_TEXT_oblique_ang_get(swigCPtr);
+      double ret = LibreDWGPINVOKE.Dwg_Entity_TEXT_oblique_angle_get(swigCPtr);
       return ret;
     } 
   }

@@ -73,6 +73,16 @@ public class Dwg_Handle : global::System.IDisposable {
     } 
   }
 
+  public byte is_global {
+    set {
+      LibreDWGPINVOKE.Dwg_Handle_is_global_set(swigCPtr, value);
+    } 
+    get {
+      byte ret = LibreDWGPINVOKE.Dwg_Handle_is_global_get(swigCPtr);
+      return ret;
+    } 
+  }
+
   public Dwg_Handle() : this(LibreDWGPINVOKE.new_Dwg_Handle(), true) {
   }
 
