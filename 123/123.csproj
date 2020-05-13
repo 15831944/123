@@ -561,6 +561,7 @@
     <Compile Include="Lines.cs" />
     <Compile Include="Polygon2d.cs" />
     <Compile Include="Polygon3d.cs" />
+    <Compile Include="Solid.cs" />
     <Compile Include="Text.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>

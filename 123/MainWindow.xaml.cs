@@ -58,6 +58,7 @@ namespace _123
         List<Polygon2d> poly2 = new List<Polygon2d>();
         List<Points> pkt = new List<Points>();
         List<Points> rayy = new List<Points>();
+        List<Solid> solids = new List<Solid>();
         public void FindMin(int x, int y)
         {
             if (MinPointX > x)
@@ -152,6 +153,48 @@ namespace _123
                 }
             }
 
+            for (int i = 0; i < poly2.Count; i++)
+            {
+                if (MinPointX < 0 && MinPointY < 0)
+                {
+                    poly2[i].X += minX;
+                    poly2[i].Y += minY;
+                    FindMax(Convert.ToInt32(poly2[i].X), Convert.ToInt32(poly2[i].Y));
+
+                }
+                else if (MinPointX < 0 && MinPointY > 0)
+                {
+                    poly2[i].X += minX;
+                    FindMax(Convert.ToInt32(poly2[i].X));
+                }
+                else if (MinPointX > 0 && MinPointY < 0)
+                {
+                    poly2[i].Y += minY;
+                    FindMaxy(Convert.ToInt32(poly2[i].Y));
+                }
+            }
+
+            for (int i = 0; i < hatchList.Count; i++)
+            {
+                if (MinPointX < 0 && MinPointY < 0)
+                {
+                    hatchList[i].X += minX;
+                    hatchList[i].Y += minY;
+                    FindMax(Convert.ToInt32(hatchList[i].X), Convert.ToInt32(hatchList[i].Y));
+
+                }
+                else if (MinPointX < 0 && MinPointY > 0)
+                {
+                    hatchList[i].X += minX;
+                    FindMax(Convert.ToInt32(hatchList[i].X));
+                }
+                else if (MinPointX > 0 && MinPointY < 0)
+                {
+                    hatchList[i].Y += minY;
+                    FindMaxy(Convert.ToInt32(hatchList[i].Y));
+                }
+            }
+
             for (int i = 0; i < pkt.Count; i++)
             {
                 if (MinPointX < 0 && MinPointY < 0)
@@ -210,6 +253,51 @@ namespace _123
                 {
                     ellipse[i].y += minY;
                     FindMaxy(Convert.ToInt32(ellipse[i].y));
+                }
+            }
+
+            for (int i = 0; i < solids.Count; i++)
+            {
+                if (MinPointX < 0 && MinPointY < 0)
+                {
+                    solids[i].X1 += minX;
+                    solids[i].Y1 += minY;
+
+                    solids[i].X2 += minX;
+                    solids[i].Y2 += minY;
+
+                    solids[i].X3 += minX;
+                    solids[i].Y3 += minY;
+
+                    solids[i].X4 += minX;
+                    solids[i].Y4 += minY;
+                    FindMax(Convert.ToInt32(solids[i].X1), Convert.ToInt32(solids[i].Y1));
+                    FindMax(Convert.ToInt32(solids[i].X2), Convert.ToInt32(solids[i].Y2));
+                    FindMax(Convert.ToInt32(solids[i].X3), Convert.ToInt32(solids[i].Y3));
+                    FindMax(Convert.ToInt32(solids[i].X4), Convert.ToInt32(solids[i].Y4));
+
+                }
+                else if (MinPointX < 0 && MinPointY > 0)
+                {
+                    solids[i].X1 += minX;
+                    solids[i].X2 += minX;
+                    solids[i].X3 += minX;
+                    solids[i].X4 += minX;
+                    FindMax(Convert.ToInt32(solids[i].X1));
+                    FindMax(Convert.ToInt32(solids[i].X2));
+                    FindMax(Convert.ToInt32(solids[i].X3));
+                    FindMax(Convert.ToInt32(solids[i].X4));
+                }
+                else if (MinPointX > 0 && MinPointY < 0)
+                {
+                    solids[i].Y1 += minY;
+                    solids[i].Y2 += minY;
+                    solids[i].Y3 += minY;
+                    solids[i].Y4 += minY;
+                    FindMaxy(Convert.ToInt32(solids[i].Y1));
+                    FindMaxy(Convert.ToInt32(solids[i].Y2));
+                    FindMaxy(Convert.ToInt32(solids[i].Y3));
+                    FindMaxy(Convert.ToInt32(solids[i].Y4));
                 }
             }
             for (int i = 0; i < texts.Count; i++)
@@ -435,9 +523,18 @@ namespace _123
                 var pty = dwg_Entity_SPLINE.fit_pts.y;
 
                 spline.Add(new Polygon3d((float)ptx, (float)pty));
+                            FindMin((int)ptx, (int)pty);
              }
-                      
-                    
+
+                        if (dwg_Entity_SPLINE.ctrl_pts != null)
+                        {
+                            var ptx = dwg_Entity_SPLINE.ctrl_pts.x;
+                            var pty = dwg_Entity_SPLINE.ctrl_pts.y;
+
+                            spline.Add(new Polygon3d((float)ptx, (float)pty));
+                            FindMin((int)ptx, (int)pty);
+                        }
+
 
                         break;
                     case Dwg_Object_Type.DWG_TYPE_POINT:
@@ -449,7 +546,7 @@ namespace _123
 
                         break;
 
-
+                
                     case Dwg_Object_Type.DWG_TYPE_MTEXT:
                         Dwg_Entity_MTEXT mtext = x.tio.entity.tio.MTEXT;
                         mmtext.Add(new Text(mtext.text, (float)mtext.insertion_pt.x, (float)mtext.insertion_pt.y,(float) mtext.text_height));
@@ -464,42 +561,39 @@ namespace _123
                   
                    
                         break;
-                    case Dwg_Object_Type.DWG_TYPE_XLINE:
-                        Dwg_Entity_RAY xline = x.tio.entity.tio.XLINE;
-                        rayy.Add(new Points(xline.point.x, xline.point.y));
+                    case Dwg_Object_Type.DWG_TYPE_SOLID:
+                        Dwg_Entity_SOLID solid = x.tio.entity.tio.SOLID;
+                        solids.Add(new Solid((float)solid.corner1.x,(float)solid.corner1.y, (float)solid.corner2.x, (float)solid.corner2.y, (float)solid.corner3.x, (float)solid.corner3.y, (float)solid.corner4.x, (float)solid.corner4.y));
+                        FindMin((int)solid.corner1.x, (int)solid.corner1.y);
+                        FindMin((int)solid.corner2.x, (int)solid.corner2.y);
+                        FindMin((int)solid.corner3.x, (int)solid.corner3.y);
+                        FindMin((int)solid.corner4.x, (int)solid.corner4.y);
                         break;
                  
                      
                     case Dwg_Object_Type.DWG_TYPE_HATCH:
                         Dwg_Entity_HATCH hatch = x.tio.entity.tio.HATCH;
-                        hatchList.Add(new Polygon2d((float)hatch.extrusion.x, (float)hatch.extrusion.y));
-                        //mmtext.Add(new Text(mtext.text, (float)mtext.extrusion.x, (float)mtext.extrusion.y));
-                        //FindMin(Convert.ToInt32(mtext.extrusion.x), Convert.ToInt32(mtext.extrusion.y));
+
+                        if(hatch.paths.polyline_paths !=null)
+                        {
+                hatchList.Add(new Polygon2d((float)hatch.paths.polyline_paths.point.x, (float)hatch.paths.polyline_paths.point.y));
+
+                FindMin(Convert.ToInt32(hatch.paths.polyline_paths.point.x), Convert.ToInt32(hatch.paths.polyline_paths.point.y));
+            }
                         break;
-                    //case Dwg_Object_Type.DWG_TYPE_VERTEX_2D:
-                    //    Console.WriteLine("Polyline 2D");
-                    //    Dwg_Entity_VERTEX_2D pol2d = x.tio.entity.tio.VERTEX_2D;
-                    //    polygon.Add(new Polygon2d((float)pol2d.point.x,(float)pol2d.point.y));
-                    //    FindMin(Convert.ToInt32(pol2d.point.x), Convert.ToInt32(pol2d.point.y));
-                    //    break;
+               
                     case Dwg_Object_Type.DWG_TYPE_LWPOLYLINE:
                         Console.WriteLine("LWPOLYLINE");
                         Dwg_Entity_LWPOLYLINE pol3d = x.tio.entity.tio.LWPOLYLINE;
                         lines.Add(new Lines((float)pol3d.points.x, (float)pol3d.extrusion.y));
                         FindMin(Convert.ToInt32(pol3d.points.x), Convert.ToInt32(pol3d.points.y));
                         break;
-                    //case Dwg_Object_Type.DWG_TYPE_ATTRIB:
-                    //    Console.WriteLine("LWPOLYLINE");
-                    //    Dwg_Entity_ATTRIB attrib = x.tio.entity.tio.ATTRIB;
-                    //    att.Add(new Polygon3d((float)attrib.insertion_pt.x, (float)attrib.insertion_pt.y));
-                    //    FindMin(Convert.ToInt32(attrib.insertion_pt.x), Convert.ToInt32(attrib.insertion_pt.y));
-                    //    break;
-                    //case Dwg_Object_Type.DWG_TYPE_VERTEX_3D:
-                    //    Console.WriteLine("Polyline 3D");
-                    //    Dwg_Entity_LWPOLYLINE vert3 = x.tio.entity.tio.LWPOLYLINE;
-                    //    vertex3d.Add(new Polygon3d((float)vert3.points.x, (float)vert3.points.y));
-                    //    FindMin(Convert.ToInt32(vert3.points.x), Convert.ToInt32(vert3.points.y));
-                    //    break;
+
+                    case Dwg_Object_Type.DWG_TYPE_VERTEX_2D:
+                        Dwg_Entity_VERTEX_2D linear = x.tio.entity.tio.VERTEX_2D;
+                        poly2.Add(new Polygon2d((float)linear.point.x,(float)linear.point.y));
+                        FindMin( (int)linear.point.x,(int)linear.point.y);
+                        break;
 
                     case Dwg_Object_Type.DWG_TYPE_ARC:
                         Dwg_Entity_ARC arc = x.tio.entity.tio.ARC;
@@ -508,8 +602,7 @@ namespace _123
                         FindMin(Convert.ToInt32(arc.center.x), Convert.ToInt32(arc.center.y));
                         break;
                     case Dwg_Object_Type.DWG_TYPE_CAMERA:
-                        //Dwg_Entity_CAMERA camera
-                        //    = x.tio.entity.tio.CAMERA;
+                     
                         break;
                     case Dwg_Object_Type.DWG_TYPE_CIRCLE:
                         Dwg_Entity_CIRCLE dwg_Entity_CIRCLE = x.tio.entity.tio.CIRCLE;
@@ -520,10 +613,8 @@ namespace _123
                         break;
                     case Dwg_Object_Type.DWG_TYPE_ELLIPSE:
                         Dwg_Entity_ELLIPSE el = x.tio.entity.tio.ELLIPSE;
-                          
-                        ellipse.Add(new Ellipse((float) el.sm_axis.x, (float)el.sm_axis.y, (float)(Math.Round(el.axis_ratio))));
-                        var asda = el.center.x;
-                            var sdffd = el.center.y;
+
+                        ellipse.Add(new Ellipse((float)el.sm_axis.x, (float)el.sm_axis.y, (float)(Math.Round(el.axis_ratio))));
                         FindMin(Convert.ToInt32( el.center.x),Convert.ToInt32( el.sm_axis.y));
                       
                         break;
@@ -587,21 +678,19 @@ namespace _123
             System.Drawing.Pen pen = new System.Drawing.Pen(System.Drawing.Brushes.Black);
 
 
+            for(int i = 0; i < solids.Count; i++)
+            {
+                graph.DrawBezier(pen, (float)(solids[i].X1 *wpx),(float)(solids[i].Y1 *wpy), (float)(solids[i].X2 *wpx),(float)(solids[i].Y2*wpy),(float)(solids[i].X3 *wpx), (float)(solids[i].Y3 *wpy), (float)(solids[i].X4 *wpx),(float) (solids[i].Y4 *wpy));
+            }
+
             System.Drawing.Point[] pktPkt = new System.Drawing.Point[pkt.Count()];
-            for (int i = 0; i < pkt.Count; i++) {
-                //pktPkt[i].X =Convert.ToInt32( pkt[i].X1 * wpx);
-                //pktPkt[i].Y = Convert.ToInt32(pkt[i].Y1 * wpy);
+            for (int i = 0; i < pkt.Count; i++)
+            {
+               
                 graph.DrawEllipse(pen, (float) pkt[i].X1, (float)pkt[i].Y1, 5, 5);
             }
 
-            //System.Drawing.Point[] rayPoints = new System.Drawing.Point[rayy.Count];
-            //for (int i = 0; i < rayy.Count; i++)
-            //{
-            //    rayPoints[i].X = Convert.ToInt32(rayy[i].X1);
-            //    rayPoints[i].Y = Convert.ToInt32(rayy[i].Y1);
-            //}
-
-            //graph.DrawPolygon(pen, rayPoints);
+         
             for (int i = 0; i < Punkty.Count; i++)
             {
 
@@ -617,7 +706,7 @@ namespace _123
                 System.Drawing.Rectangle rect = new System.Drawing.Rectangle(Convert.ToInt32(ellipse[i].x * wpx), Convert.ToInt32(ellipse[i].y * wpy), Convert.ToInt32(width), 100);
 
                 graph.DrawEllipse(pen, rect);
-
+                
 
             }
             for (int i = 0; i < circles.Count; i++)
@@ -645,13 +734,13 @@ namespace _123
             }
             for (int i = 0; i < texts.Count; i++)
             {
-                var item = ((float)(texts[i].textHeight * wpx)) > 1 ? 1 : (float)(texts[i].textHeight * wpx);
+                var item = ((float)(texts[i].textHeight * wpx)) > 10 ? 10 : (float)(texts[i].textHeight * wpx);
                 graph.DrawString(texts[i].text, new Font(new System.Drawing.FontFamily("Arial"),item),
                 System.Drawing.Brushes.Blue, texts[i].X * (float)wpx, texts[i].Y * (float)wpy);
             }
             for (int i = 0; i < mmtext.Count; i++)
             {
-                var item = ((float)(texts[i].textHeight * wpx)) > 1 ? 1 : (float)(texts[i].textHeight * wpx);
+                var item = ((float)(texts[i].textHeight * wpx)) > 10 ? 10 : (float)(texts[i].textHeight * wpx);
                 graph.DrawString(mmtext[i].text, new Font(new System.Drawing.FontFamily("Arial"), item),
                 System.Drawing.Brushes.Blue, mmtext[i].X * (float)wpx, mmtext[i].Y * (float)wpy);
             }
@@ -672,11 +761,7 @@ namespace _123
                 pktlines[i] = new System.Drawing.Point(Convert.ToInt32(lines[i].X * wpx), Convert.ToInt32(lines[i].Y * wpy));
             }
 
-            System.Drawing.Point[] pktvertex3d = new System.Drawing.Point[vertex3d.Count()];
-            for (int i = 0; i < vertex3d.Count; i++)
-            {
-                pktvertex3d[i] = new System.Drawing.Point(Convert.ToInt32(vertex3d[i].X * wpx), Convert.ToInt32(vertex3d[i].Y * wpy));
-            }
+         
 
             System.Drawing.Point[] sppoints = new System.Drawing.Point[spline.Count()];
             for (int i = 0; i < spline.Count; i++)
@@ -693,16 +778,28 @@ namespace _123
                 }
                 sppoints[i] = new System.Drawing.Point(Convert.ToInt32(x), Convert.ToInt32(y));
             }
+
+
+            System.Drawing.Point[] hatchPoints = new System.Drawing.Point[hatchList.Count()];
+            for (int i = 0; i < hatchList.Count; i++)
+            {
+                var x = 1.00;
+                var y = 1.00;
+                
+                hatchPoints[i] = new System.Drawing.Point(Convert.ToInt32(hatchList[i].X *wpx), Convert.ToInt32(hatchList[i].Y * wpy));
+            }
+           if(hatchPoints.Count() > 0)
+            {
+                graph.DrawPolygon(pen, hatchPoints);
+            }
+
             if (pktlines.Count() > 0)
                 graph.DrawPolygon(pen, pktlines);
 
             if (pointsPolygon.Count() > 0)
                 graph.DrawPolygon(pen, pointsPolygon);
 
-            if (vertex3d.Count() > 0)
-            {
-                graph.DrawPolygon(pen, pktvertex3d);
-            }
+         
             if(sppoints.Count() > 0)
             {
                 graph.DrawCurve(pen, sppoints);
